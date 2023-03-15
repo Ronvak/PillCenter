@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls',
 ]
 
 MIDDLEWARE = [
@@ -74,10 +75,14 @@ WSGI_APPLICATION = 'pillCenter_Backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+  'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pillcenter_db',
+        'USER': 'root',
+        'PASSWORD': '318180700',
+        'HOST': 'localhost',
+        'PORT': '3306',
+  }
 }
 
 
