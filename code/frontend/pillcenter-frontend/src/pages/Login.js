@@ -12,8 +12,10 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import axios from "axios";
+import AuthContext from "../context/AuthContext";
+import { useContext } from "react";
 import { useState } from "react";
+import { Alert } from "@mui/material";
 
 function Copyright(props) {
   return (
@@ -24,8 +26,8 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="/">
+        PillCenter
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -36,37 +38,14 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  // Create the submit method.
-  const submit = async (e) => {
-    e.preventDefault();
-    const user = {
-      username: username,
-      password: password,
-    };
-    // Create the POST requuest
-    const { data } = await axios
-      .post("http://localhost:8000/token/", user, {
-        headers: { "Content-Type": "application/json" },
-        withCredentials: true,
-      })
-      // Initialize the access & refresh token in localstorage.
-      .localStorage.clear();
-    localStorage.setItem("access_token", data.access);
-    localStorage.setItem("refresh_token", data.refresh);
-    axios.defaults.headers.common["Authorization"] = `Bearer ${data["access"]}`;
-    window.location.href = "/";
-  };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
-  };
+  let { loginUser } = useContext(AuthContext);
+  const [valid, setValid] = useState(false);
 
+  async function handleSubmit(e) {
+    loginUser(e).catch((error) => {
+      setValid(true);
+    });
+  }
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -83,22 +62,29 @@ export default function Login() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            התחבר
           </Typography>
+
           <Box
             component="form"
             onSubmit={handleSubmit}
             noValidate
+            error
             sx={{ mt: 1 }}
           >
+            {valid ? (
+              <Alert severity="error">Invalid username or password</Alert>
+            ) : (
+              " "
+            )}
             <TextField
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="username"
+              label="שם משתמש"
+              name="username"
+              autoComplete="username"
               autoFocus
             />
             <TextField
@@ -106,32 +92,29 @@ export default function Login() {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="סיסמא"
               type="password"
               id="password"
               autoComplete="current-password"
             />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign In
+              התחבר
             </Button>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
-                  Forgot password?
+                  ? שכחת סיסמא
                 </Link>
               </Grid>
               <Grid item>
                 <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                  {"אין לך משתמש ? הרשם עכשיו"}
                 </Link>
               </Grid>
             </Grid>
