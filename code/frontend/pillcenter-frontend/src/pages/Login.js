@@ -62,7 +62,7 @@ export default function Login() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            התחבר
+            התחברות
           </Typography>
 
           <Box
@@ -73,7 +73,7 @@ export default function Login() {
             sx={{ mt: 1 }}
           >
             {valid ? (
-              <Alert severity="error">Invalid username or password</Alert>
+              <Alert severity="error">שם משתמש או סיסמא לא נכונים</Alert>
             ) : (
               " "
             )}
@@ -109,7 +109,7 @@ export default function Login() {
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
-                  ? שכחת סיסמא
+                  שכחת סיסמא ?
                 </Link>
               </Grid>
               <Grid item>
