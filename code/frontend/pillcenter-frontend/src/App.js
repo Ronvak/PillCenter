@@ -8,6 +8,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
 import Login from "./pages/Login";
+import SignUp from "./pages/Signup";
 import PrivateRoute from "./utils/PrivateRoute";
 
 const cacheRtl = createCache({
@@ -38,6 +39,7 @@ function App() {
                     }
                   />
                   <Route path="/login" element={<Login />} />
+                  <Route path="/signup" element={<SignUp />} />
                 </Routes>
               </AuthProvider>
             </Router>

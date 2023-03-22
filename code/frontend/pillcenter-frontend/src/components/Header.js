@@ -7,14 +7,14 @@ const Header = () => {
 
   return (
     <div>
-      <Link to="/">Home</Link>
+      <Link to="/">בית</Link>
       <span> | </span>
       {user ? (
-        <button onClick={logoutUser}>Logout</button>
+        <button onClick={logoutUser}>התנתקות</button>
       ) : (
-        <Link to="/login">Login</Link>
+        <Link to="/login">התחברות</Link>
       )}
-      {user && <p>Hello {user.username}!</p>}
+      {user && <p>שלום {user.username}!</p>}
     </div>
   );
 };

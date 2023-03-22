@@ -21,6 +21,21 @@ export const AuthProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
+  let signUp = async (e) => {
+    const response = await fetch("http://127.0.0.1:8000/api/register/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(e),
+    });
+
+    let data = await response.json();
+    if (data) {
+      navigate("/login");
+    }
+  };
+
   let loginUser = async (e) => {
     e.preventDefault();
     const response = await fetch("http://127.0.0.1:8000/api/token/", {
@@ -82,6 +97,7 @@ export const AuthProvider = ({ children }) => {
     authTokens: authTokens,
     loginUser: loginUser,
     logoutUser: logoutUser,
+    signUp: signUp,
   };
 
   useEffect(() => {
