@@ -18,7 +18,6 @@ const HomePage = () => {
       },
     });
     let data = await response.json();
-    console.log(data);
     if (response.status === 200) {
       setProfile(data);
     } else if (response.statusText === "Unauthorized") {
