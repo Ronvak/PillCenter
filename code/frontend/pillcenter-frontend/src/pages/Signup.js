@@ -3,7 +3,6 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import axios from "axios";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -15,7 +14,7 @@ import { Link as RouterLink, MemoryRouter } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import { useContext } from "react";
 import { useState } from "react";
-
+import { MuiTelInput } from "mui-tel-input";
 function Copyright(props) {
   return (
     <Typography
@@ -39,6 +38,8 @@ const theme = createTheme();
 export default function SignUp() {
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
+  const [phone, setPhone] = useState("050");
+  const [id, setId] = useState("");
 
   let { signUp } = useContext(AuthContext);
   async function handleSubmit(e) {
@@ -49,6 +50,7 @@ export default function SignUp() {
       email: e.target.email.value,
       first_name: first,
       last_name: last,
+      profile: { phone: phone, id_user: id },
     };
     signUp(user);
   }
@@ -90,6 +92,35 @@ export default function SignUp() {
                   autoFocus
                 />
               </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="id"
+                  label="תעודת זהות"
+                  name="id"
+                  autoFocus
+                  onChange={(e) => {
+                    setId(e.target.value);
+                  }}
+                />
+              </Grid>
+
+              <Grid item xs={12}>
+                <TextField
+                  name="phone"
+                  required
+                  fullWidth
+                  id="phone"
+                  label="מספר פלאפון"
+                  autoFocus
+                  onChange={(e) => {
+                    setPhone(e.target.value);
+                  }}
+                />
+              </Grid>
+
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="given-name"
@@ -104,6 +135,7 @@ export default function SignUp() {
                   }}
                 />
               </Grid>
+
               <Grid item xs={12} sm={6}>
                 <TextField
                   required
