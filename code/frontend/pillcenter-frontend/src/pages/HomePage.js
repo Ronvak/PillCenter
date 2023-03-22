@@ -32,6 +32,8 @@ const HomePage = () => {
         שם : {profile.first_name} {profile.last_name}
       </p>
       <p>אימייל: {profile.email}</p>
+      <p>ת"ז: {profile.profile.id_user}</p>
+      <p>מספר פלאפון: {profile.profile.phone}</p>
     </div>
   );
 };
