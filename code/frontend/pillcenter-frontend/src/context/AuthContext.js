@@ -22,18 +22,23 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
 
   let signUp = async (e) => {
+    let res;
     const response = await fetch("http://127.0.0.1:8000/api/register/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(e),
-    });
+    })
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        res = data;
+        return res;
+      });
 
-    let data = await response.json();
-    if (data) {
-      navigate("/login");
-    }
+    return res;
   };
 
   let loginUser = async (e) => {
@@ -48,7 +53,6 @@ export const AuthProvider = ({ children }) => {
         password: e.target.password.value,
       }),
     });
-
     let data = await response.json();
 
     if (data) {

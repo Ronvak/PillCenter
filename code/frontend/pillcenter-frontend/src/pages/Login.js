@@ -15,7 +15,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import { Alert } from "@mui/material";
 import { Link as RouterLink, MemoryRouter } from "react-router-dom";
-
+import logo from "./logo.png";
 function Copyright(props) {
   return (
     <Typography
@@ -57,12 +57,7 @@ export default function Login() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            התחברות
-          </Typography>
+          <img src={logo} alt="logo"></img>
 
           <Box
             component="form"

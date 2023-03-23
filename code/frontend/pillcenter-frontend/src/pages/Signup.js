@@ -6,7 +6,6 @@ import TextField from "@mui/material/TextField";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -14,7 +13,9 @@ import { Link as RouterLink, MemoryRouter } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import { useContext } from "react";
 import { useState } from "react";
-import { MuiTelInput } from "mui-tel-input";
+import { useNavigate } from "react-router-dom";
+import { Alert } from "@mui/material";
+import logo from "./logo.png";
 function Copyright(props) {
   return (
     <Typography
@@ -36,10 +37,62 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignUp() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+  const [email, setEmail] = useState("");
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
-  const [phone, setPhone] = useState("050");
+  const [phone, setPhone] = useState("");
   const [id, setId] = useState("");
+  const [userTaken, setUserTaken] = useState(false);
+  const [emailTaken, setEmailTaken] = useState(false);
+  const [idTaken, setIdTaken] = useState(false);
+  const [formFlag, setformFlag] = useState(false);
+
+  const navigate = useNavigate();
+
+  String.prototype.isNumber = function () {
+    return /^\d+$/.test(this);
+  };
+
+  const validateEmail = () => {
+    if (email.length == 0) return true;
+    return email.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+  };
+
+  function validId() {
+    if (id.length == 0) return true;
+
+    return id.length == 9 && id.isNumber() == true;
+  }
+  function validPhone() {
+    if (phone.length == 0) return true;
+
+    return /^([0]\d{1,3}[-])?\d{7,10}$/.test(phone);
+  }
+
+  function validUserName() {
+    if (username.length == 0) return true;
+    return /^[a-zA-Z]+$/.test(username) && username.length >= 2;
+  }
+
+  function validPassword() {
+    if (password.length === 0) return true;
+    return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(password);
+  }
+  function validForm() {
+    return (
+      validId() &&
+      validPhone() &&
+      validateEmail() &&
+      validUserName() &&
+      validPassword &&
+      password === confirmPass
+    );
+  }
 
   let { signUp } = useContext(AuthContext);
   async function handleSubmit(e) {
@@ -52,7 +105,15 @@ export default function SignUp() {
       last_name: last,
       profile: { phone: phone, id_user: id },
     };
-    signUp(user);
+    var response = signUp(user);
+    console.log(response);
+    response.then((value) => {
+      console.log(value);
+      if (value.includes("username already exists")) setUserTaken(true);
+      if (value.includes("address already exists")) setEmailTaken(true);
+      if (value.includes("User Created Successfully")) navigate("/login");
+      if (value.includes("id user already exists")) setIdTaken(true);
+    });
   }
 
   return (
@@ -67,20 +128,18 @@ export default function SignUp() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            הרשמה
-          </Typography>
-          <Box
-            component="form"
-            noValidate
-            onSubmit={handleSubmit}
-            sx={{ mt: 3 }}
-          >
+          <img src={logo} alt="logo"></img>
+
+          <Box component="form" Validate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
+                {userTaken ? (
+                  <Alert severity="error">
+                    שם המשתמש שבחרת תפוס , נא בחר שם משתמש אחר .
+                  </Alert>
+                ) : (
+                  ""
+                )}
                 <TextField
                   margin="normal"
                   required
@@ -90,9 +149,26 @@ export default function SignUp() {
                   name="username"
                   autoComplete="username"
                   autoFocus
+                  error={!validUserName()}
+                  helperText={
+                    !validUserName()
+                      ? "שם משתמש חייב להכיל אותיות באנגלית בלבד (לפחות שתי אותיות)"
+                      : ""
+                  }
+                  onChange={(e) => {
+                    setUsername(e.target.value);
+                    setUserTaken(false);
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
+                {idTaken ? (
+                  <Alert severity="error">
+                    כבר קיים משתמש עם תעודת זהות זהה לזאת שהזנת.
+                  </Alert>
+                ) : (
+                  ""
+                )}
                 <TextField
                   margin="normal"
                   required
@@ -101,8 +177,11 @@ export default function SignUp() {
                   label="תעודת זהות"
                   name="id"
                   autoFocus
+                  error={!validId()}
+                  helperText={!validId() ? "תעודת זהות לא תקינה" : ""}
                   onChange={(e) => {
                     setId(e.target.value);
+                    setIdTaken(false);
                   }}
                 />
               </Grid>
@@ -115,6 +194,8 @@ export default function SignUp() {
                   id="phone"
                   label="מספר פלאפון"
                   autoFocus
+                  error={!validPhone()}
+                  helperText={!validPhone() ? "מספר פלאפון לא תקין" : ""}
                   onChange={(e) => {
                     setPhone(e.target.value);
                   }}
@@ -148,6 +229,13 @@ export default function SignUp() {
                 />
               </Grid>
               <Grid item xs={12}>
+                {emailTaken ? (
+                  <Alert severity="error">
+                    כבר קיים משתמש עם כתובת דואר אלקטרוני זהה לזאת שהזנת
+                  </Alert>
+                ) : (
+                  ""
+                )}
                 <TextField
                   required
                   fullWidth
@@ -155,9 +243,17 @@ export default function SignUp() {
                   label="דואר אלקטרוני"
                   name="email"
                   autoComplete="email"
+                  error={!validateEmail()}
+                  helperText={
+                    !validateEmail() ? "כתובת דואר אלקטרוני לא תקינה" : ""
+                  }
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    setEmailTaken(false);
+                  }}
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -166,6 +262,33 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  error={!validPassword()}
+                  helperText={
+                    !validPassword()
+                      ? "סיסמא חייבת להכיל לפחות 8 תווים , אות קטנה וגדולה באנגלית "
+                      : ""
+                  }
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  name="password2"
+                  label="אימות סיסמא"
+                  type="password"
+                  id="password2"
+                  error={confirmPass != password}
+                  helperText={
+                    confirmPass != password ? "הסיסמאות אינם תואמות" : ""
+                  }
+                  autoComplete="new-password"
+                  onChange={(e) => {
+                    setConfirmPass(e.target.value);
+                  }}
                 />
               </Grid>
             </Grid>
@@ -174,6 +297,7 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              disabled={!validForm()}
             >
               הרשם
             </Button>
