@@ -11,17 +11,16 @@ class Profile(models.Model):
 
 
 class Medicine(models.Model):
-    medicine_id = models.IntegerField()
     prescription = models.CharField(max_length=50)
     image_URL = models.CharField(max_length=400)
-    price = models.FloatField
+    price = models.FloatField(default=0)
     brand = models.CharField(max_length=30)
     description = models.CharField(max_length=50)
+    medicine_name = models.CharField(default="", max_length=30)
 
 
 class Products(models.Model):
-    product_id = models.IntegerField()
-    medcine_id = models.ForeignKey(Medicine, on_delete=models.CASCADE)
+    medicine_id = models.ForeignKey(Medicine, on_delete=models.CASCADE)
     expired_date = models.DateField()
 
 
@@ -30,7 +29,6 @@ class Order_status(models.Model):
 
 
 class Orders(models.Model):
-    order_id = models.IntegerField()
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     product_id = models.ForeignKey(Products, on_delete=models.CASCADE)
     order_status = models.ForeignKey(Order_status, on_delete=models.CASCADE)
@@ -38,15 +36,15 @@ class Orders(models.Model):
     pharmacist_instruction = models.CharField(max_length=300)
 
 
-class Inventory(models.Model):
-    machine_id = models.IntegerField()
-    product_id = models.ForeignKey(Products, on_delete=models.CASCADE)
-
-
 class Vending_machines(models.Model):
-    machine_id = models.ForeignKey(Inventory, on_delete=models.CASCADE)
     address = models.CharField(max_length=30)
     city = models.CharField(max_length=30)
 
-    def __str__(self):
-        return self.user.username
+
+class Inventory(models.Model):
+    machine_id = models.ForeignKey(Vending_machines, on_delete=models.CASCADE)
+    product_id = models.ForeignKey(Products, on_delete=models.CASCADE)
+
+
+def __str__(self):
+    return self.user.username
