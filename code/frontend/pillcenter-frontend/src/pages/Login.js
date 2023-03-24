@@ -76,7 +76,7 @@ export default function Login() {
               required
               fullWidth
               id="username"
-              label="שם משתמש"
+              label="  שם משתמש / דואר אלקטרוני"
               name="username"
               autoComplete="username"
               autoFocus
