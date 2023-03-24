@@ -57,7 +57,7 @@ export default function Login() {
             alignItems: "center",
           }}
         >
-          <img src={logo} alt="logo"></img>
+          <img src={logo} alt="logo" width="300"></img>
 
           <Box
             component="form"
