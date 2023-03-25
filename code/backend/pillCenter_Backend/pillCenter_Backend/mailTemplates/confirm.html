@@ -6,8 +6,8 @@
   </head>
   <body>
     <div id="center">
-      {% if success %} {{ user.username }},החשבון שלך מאושר ! {% else %} שגיאה ,
-      קישור לא תקין {% endif %}
+      {% if success %} {{ user.first_name }},החשבון שלך מאושר ! {% else %} שגיאה
+      , קישור לא תקין {% endif %}
     </div>
   </body>
 </html>
