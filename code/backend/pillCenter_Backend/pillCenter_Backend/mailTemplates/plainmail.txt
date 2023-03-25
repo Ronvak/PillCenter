@@ -1,0 +1,3 @@
+היי {{ user.username }}! {{ expiry|time:"TIME_FORMAT" }}
+לחץ כאן כדי לאמת את הדואר אלקטרוני שלך:
+{{ link }}

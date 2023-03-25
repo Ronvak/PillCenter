@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% if success %}אימייל מאושר {% else %} Error {% endif %}</title>
+  </head>
+  <body>
+    <div id="center">
+      {% if success %} {{ user.username }},החשבון שלך מאושר ! {% else %} שגיאה ,
+      קישור לא תקין {% endif %}
+    </div>
+  </body>
+</html>

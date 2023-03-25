@@ -7,6 +7,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from polls.serializers import UserSerializer , RegisterSerializer ,ProfileSerializer
 from rest_framework import generics
 from django.contrib.auth import  get_user_model
+from verify_email.email_handler import send_verification_email
 
 User = get_user_model()
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
