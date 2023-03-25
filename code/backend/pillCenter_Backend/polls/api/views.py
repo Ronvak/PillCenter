@@ -1,4 +1,3 @@
-from django.http import JsonResponse
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
@@ -7,15 +6,27 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from polls.serializers import UserSerializer , RegisterSerializer ,ProfileSerializer
 from rest_framework import generics
+from django.contrib.auth import  get_user_model
+from verify_email.email_handler import send_verification_email
 
-
-
+User = get_user_model()
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
-    @classmethod
-    def get_token(cls, user):
-        token = super().get_token(user)
-        token['username'] = user.username
-        return token
+        def validate(self, attrs):
+            credentials = {
+                'username': '',
+                'password': attrs.get("password")
+            }
+
+            user_obj = User.objects.filter(email=attrs.get("username")).first() or User.objects.filter(username=attrs.get("username")).first()
+            if user_obj:
+                credentials['username'] = user_obj.username
+
+            return super().validate(credentials)
+#    @classmethod
+ #   def get_token(cls, user):
+  #      token = super().get_token(user)
+   #     token['username'] = user.username
+    #    return token
 
 
 class RegisterApi(generics.GenericAPIView):

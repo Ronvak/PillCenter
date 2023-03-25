@@ -1,5 +1,4 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -9,7 +8,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Link as RouterLink, MemoryRouter } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import { useContext } from "react";
 import { useState } from "react";
@@ -48,7 +47,6 @@ export default function SignUp() {
   const [userTaken, setUserTaken] = useState(false);
   const [emailTaken, setEmailTaken] = useState(false);
   const [idTaken, setIdTaken] = useState(false);
-  const [formFlag, setformFlag] = useState(false);
 
   const navigate = useNavigate();
 
@@ -76,7 +74,9 @@ export default function SignUp() {
 
   function validUserName() {
     if (username.length == 0) return true;
-    return /^[a-zA-Z]+$/.test(username) && username.length >= 2;
+    return /^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){2,18}[a-zA-Z0-9]$/.test(
+      username
+    );
   }
 
   function validPassword() {
@@ -128,7 +128,7 @@ export default function SignUp() {
             alignItems: "center",
           }}
         >
-          <img src={logo} alt="logo"></img>
+          <img src={logo} alt="logo" width="300"></img>
 
           <Box component="form" Validate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -152,7 +152,7 @@ export default function SignUp() {
                   error={!validUserName()}
                   helperText={
                     !validUserName()
-                      ? "שם משתמש חייב להכיל אותיות באנגלית בלבד (לפחות שתי אותיות)"
+                      ? "שם משתמש חייב להכיל אותיות באנגלית ומספרים  בלבד (לפחות ארבעה תווים)"
                       : ""
                   }
                   onChange={(e) => {

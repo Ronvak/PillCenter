@@ -2,6 +2,7 @@ from rest_framework import serializers
 from polls.models import *
 from rest_framework import  serializers
 from django.contrib.auth.models import User
+from django_email_verification import send_email
 
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
@@ -35,4 +36,6 @@ class RegisterSerializer(serializers.ModelSerializer):
         profile_data = validated_data.pop('profile')
         user = User.objects.create_user(validated_data['username'],     password = validated_data['password']  ,    first_name=validated_data['first_name']  ,    last_name=validated_data['last_name'] ,    email=validated_data['email']  )
         Profile.objects.create(**profile_data, user=user)
+        user.is_active = False
+        send_email(user)
         return user
