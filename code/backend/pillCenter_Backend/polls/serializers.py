@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from polls.models import *
 from rest_framework import  serializers
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User ,Group
 from django_email_verification import send_email
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -37,5 +37,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(validated_data['username'],     password = validated_data['password']  ,    first_name=validated_data['first_name']  ,    last_name=validated_data['last_name'] ,    email=validated_data['email']  )
         Profile.objects.create(**profile_data, user=user)
         user.is_active = False
+        group = Group.objects.get(name='patient') 
+        group.user_set.add(user)
         send_email(user)
         return user
