@@ -102,7 +102,10 @@ export default function Login() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link
+                  href="http://localhost:8000/accounts/password_reset/"
+                  variant="body2"
+                >
                   שכחת סיסמא ?
                 </Link>
               </Grid>
