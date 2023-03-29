@@ -15,6 +15,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Alert } from "@mui/material";
 import logo from "./logo.png";
+import MyButton from "../components/buttons/ButtonTemplate";
 function Copyright(props) {
   return (
     <Typography
@@ -176,7 +177,6 @@ export default function SignUp() {
                   id="id"
                   label="תעודת זהות"
                   name="id"
-                  autoFocus
                   error={!validId()}
                   helperText={!validId() ? "תעודת זהות לא תקינה" : ""}
                   onChange={(e) => {
@@ -193,7 +193,6 @@ export default function SignUp() {
                   fullWidth
                   id="phone"
                   label="מספר פלאפון"
-                  autoFocus
                   error={!validPhone()}
                   helperText={!validPhone() ? "מספר פלאפון לא תקין" : ""}
                   onChange={(e) => {
@@ -210,7 +209,6 @@ export default function SignUp() {
                   fullWidth
                   id="first_name"
                   label="שם פרטי"
-                  autoFocus
                   onChange={(e) => {
                     setFirst(e.target.value);
                   }}
@@ -292,7 +290,7 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-            <Button
+            <MyButton
               type="submit"
               fullWidth
               variant="contained"
@@ -300,7 +298,7 @@ export default function SignUp() {
               disabled={!validForm()}
             >
               הרשם
-            </Button>
+            </MyButton>
 
             <Grid item>
               <Link component={RouterLink} to="/login">

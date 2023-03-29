@@ -16,6 +16,7 @@ import { useState } from "react";
 import { Alert } from "@mui/material";
 import { Link as RouterLink, MemoryRouter } from "react-router-dom";
 import logo from "./logo.png";
+import ButtonTemplate from "../components/buttons/ButtonTemplate";
 function Copyright(props) {
   return (
     <Typography
@@ -92,14 +93,14 @@ export default function Login() {
               autoComplete="current-password"
             />
 
-            <Button
+            <ButtonTemplate
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
               התחבר
-            </Button>
+            </ButtonTemplate>
             <Grid container>
               <Grid item xs>
                 <Link
