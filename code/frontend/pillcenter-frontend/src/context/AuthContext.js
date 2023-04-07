@@ -18,7 +18,11 @@ export const AuthProvider = ({ children }) => {
       : null
   );
   let [loading, setLoading] = useState(true);
-
+  let [auth, setAuth] = useState(() =>
+    localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user"))
+      : null
+  );
   const navigate = useNavigate();
 
   let signUp = async (e) => {
@@ -59,6 +63,8 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("authTokens", JSON.stringify(data));
       setAuthTokens(data);
       setUser(jwtDecode(data.access));
+      localStorage.setItem("user", JSON.stringify(data.user));
+      setAuth(data.user);
       navigate("/");
     } else {
       alert("Something went wrong while logging in the user!");
@@ -68,6 +74,7 @@ export const AuthProvider = ({ children }) => {
   let logoutUser = (e) => {
     // e.preventDefault();
     localStorage.removeItem("authTokens");
+    localStorage.removeItem("user");
     setAuthTokens(null);
     setUser(null);
     navigate("/login");
@@ -102,6 +109,8 @@ export const AuthProvider = ({ children }) => {
     loginUser: loginUser,
     logoutUser: logoutUser,
     signUp: signUp,
+    auth: auth,
+    setAuth: setAuth,
   };
 
   useEffect(() => {

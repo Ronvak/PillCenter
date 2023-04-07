@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import AuthContext from "../context/AuthContext";
 
 const HomePage = () => {
-  const { authTokens, logoutUser } = useContext(AuthContext);
-  let [profile, setProfile] = useState([]);
+  const { profile, setProfile, authTokens, logoutUser } =
+    useContext(AuthContext);
 
   useEffect(() => {
     getProfile();
@@ -20,6 +20,7 @@ const HomePage = () => {
     let data = await response.json();
     if (response.status === 200) {
       setProfile(data);
+      console.log(data);
     } else if (response.statusText === "Unauthorized") {
       logoutUser();
     }
