@@ -1,5 +1,18 @@
 [
   {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "pharmacist",
+      "permissions": [60, 44, 40, 56, 52, 36, 48]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": { "name": "patient", "permissions": [16, 20, 60, 40, 56, 36, 48] }
+  },
+  {
     "model": "auth.user",
     "pk": 2,
     "fields": {
