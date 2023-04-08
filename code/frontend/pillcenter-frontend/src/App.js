@@ -5,11 +5,12 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import { prefixer } from "stylis";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import HomePage from "./pages/HomePage";
-import Header from "./components/Header";
+import Navbar from "./components/navs/Navbar";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import PrivateRoute from "./utils/PrivateRoute";
+import PatientLandingPage from "./pages/PatientLandingPage";
+import UnauthorizedPage from "./pages/UnauthorizedPage";
 
 const cacheRtl = createCache({
   key: "muirtl",
@@ -28,16 +29,17 @@ function App() {
           <div dir="rtl">
             <Router>
               <AuthProvider>
-                <Header />
                 <Routes>
                   <Route
                     path="/"
                     element={
-                      <PrivateRoute>
-                        <HomePage />
+                      <PrivateRoute allowedRoles={["patient"]}>
+                        <Navbar />
+                        <PatientLandingPage />
                       </PrivateRoute>
                     }
                   />
+                  <Route path="/unauthorized" element={<UnauthorizedPage />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<SignUp />} />
                 </Routes>
