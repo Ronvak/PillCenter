@@ -6,6 +6,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from polls.serializers import UserSerializer , RegisterSerializer ,ProfileSerializer
 from rest_framework import generics
+from polls.models import Medicine
 from django.contrib.auth import  get_user_model
 
 User = get_user_model()
@@ -73,4 +74,11 @@ def userCreate(request ):
         user = userSerializer.save()
         return Response(status=status.HTTP_200_OK)
     return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+def getMedicines(request):
+    prescription = Medicine.objects.all().values()
+    return Response(prescription)
+
 
