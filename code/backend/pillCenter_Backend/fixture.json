@@ -1,1 +1,208 @@
-[{"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2023-03-23T18:16:55.912Z", "user": 3, "content_type": 13, "object_id": "1", "object_repr": "Medicine object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2023-03-23T18:36:34.056Z", "user": 3, "content_type": 13, "object_id": "2", "object_repr": "Medicine object (2)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2023-03-23T18:36:55.073Z", "user": 3, "content_type": 13, "object_id": "1", "object_repr": "Medicine object (1)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Prescription\"]}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2023-03-23T18:41:20.972Z", "user": 3, "content_type": 13, "object_id": "3", "object_repr": "Medicine object (3)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2023-03-23T18:42:50.351Z", "user": 3, "content_type": 13, "object_id": "4", "object_repr": "Medicine object (4)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2023-03-23T18:45:07.284Z", "user": 3, "content_type": 13, "object_id": "5", "object_repr": "Medicine object (5)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2023-03-23T18:48:27.981Z", "user": 3, "content_type": 14, "object_id": "1", "object_repr": "Vending_machines object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2023-03-23T18:48:50.791Z", "user": 3, "content_type": 14, "object_id": "2", "object_repr": "Vending_machines object (2)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2023-03-23T18:49:07.711Z", "user": 3, "content_type": 14, "object_id": "3", "object_repr": "Vending_machines object (3)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2023-03-23T18:49:34.356Z", "user": 3, "content_type": 14, "object_id": "4", "object_repr": "Vending_machines object (4)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2023-03-23T18:49:51.010Z", "user": 3, "content_type": 14, "object_id": "5", "object_repr": "Vending_machines object (5)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2023-03-23T18:50:12.205Z", "user": 3, "content_type": 14, "object_id": "6", "object_repr": "Vending_machines object (6)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2023-03-23T18:55:00.067Z", "user": 3, "content_type": 10, "object_id": "1", "object_repr": "Products object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2023-03-23T18:55:32.110Z", "user": 3, "content_type": 10, "object_id": "2", "object_repr": "Products object (2)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2023-03-23T18:56:00.800Z", "user": 3, "content_type": 10, "object_id": "3", "object_repr": "Products object (3)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 16, "fields": {"action_time": "2023-03-23T18:56:33.494Z", "user": 3, "content_type": 10, "object_id": "4", "object_repr": "Products object (4)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 17, "fields": {"action_time": "2023-03-23T18:56:59.060Z", "user": 3, "content_type": 10, "object_id": "5", "object_repr": "Products object (5)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 18, "fields": {"action_time": "2023-03-23T19:03:06.432Z", "user": 3, "content_type": 12, "object_id": "5", "object_repr": "Inventory object (5)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 19, "fields": {"action_time": "2023-03-23T19:03:30.600Z", "user": 3, "content_type": 12, "object_id": "6", "object_repr": "Inventory object (6)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 20, "fields": {"action_time": "2023-03-23T19:03:42.655Z", "user": 3, "content_type": 12, "object_id": "7", "object_repr": "Inventory object (7)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 21, "fields": {"action_time": "2023-03-23T19:03:52.111Z", "user": 3, "content_type": 12, "object_id": "8", "object_repr": "Inventory object (8)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 22, "fields": {"action_time": "2023-03-23T19:04:02.143Z", "user": 3, "content_type": 12, "object_id": "9", "object_repr": "Inventory object (9)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 23, "fields": {"action_time": "2023-03-23T19:04:14.000Z", "user": 3, "content_type": 12, "object_id": "10", "object_repr": "Inventory object (10)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 24, "fields": {"action_time": "2023-03-23T19:04:22.800Z", "user": 3, "content_type": 12, "object_id": "11", "object_repr": "Inventory object (11)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 25, "fields": {"action_time": "2023-03-23T19:04:31.596Z", "user": 3, "content_type": 12, "object_id": "12", "object_repr": "Inventory object (12)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 26, "fields": {"action_time": "2023-03-23T19:04:39.441Z", "user": 3, "content_type": 12, "object_id": "13", "object_repr": "Inventory object (13)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 27, "fields": {"action_time": "2023-03-23T19:07:16.929Z", "user": 3, "content_type": 15, "object_id": "1", "object_repr": "Order_status object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 28, "fields": {"action_time": "2023-03-23T19:07:25.496Z", "user": 3, "content_type": 15, "object_id": "2", "object_repr": "Order_status object (2)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 29, "fields": {"action_time": "2023-03-23T19:12:25.914Z", "user": 3, "content_type": 9, "object_id": "1", "object_repr": "Orders object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 30, "fields": {"action_time": "2023-03-23T19:15:54.198Z", "user": 3, "content_type": 9, "object_id": "2", "object_repr": "Orders object (2)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 31, "fields": {"action_time": "2023-03-23T19:16:31.476Z", "user": 3, "content_type": 9, "object_id": "3", "object_repr": "Orders object (3)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 32, "fields": {"action_time": "2023-03-23T19:17:14.558Z", "user": 3, "content_type": 9, "object_id": "4", "object_repr": "Orders object (4)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 33, "fields": {"action_time": "2023-03-23T19:19:45.379Z", "user": 3, "content_type": 12, "object_id": "14", "object_repr": "Inventory object (14)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 34, "fields": {"action_time": "2023-03-23T19:20:13.397Z", "user": 3, "content_type": 12, "object_id": "15", "object_repr": "Inventory object (15)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 35, "fields": {"action_time": "2023-03-23T19:20:42.715Z", "user": 3, "content_type": 12, "object_id": "16", "object_repr": "Inventory object (16)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 36, "fields": {"action_time": "2023-03-23T19:20:55.715Z", "user": 3, "content_type": 12, "object_id": "17", "object_repr": "Inventory object (17)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 37, "fields": {"action_time": "2023-03-23T19:21:24.041Z", "user": 3, "content_type": 12, "object_id": "18", "object_repr": "Inventory object (18)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 38, "fields": {"action_time": "2023-03-23T19:21:50.838Z", "user": 3, "content_type": 12, "object_id": "19", "object_repr": "Inventory object (19)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 39, "fields": {"action_time": "2023-03-23T19:22:04.379Z", "user": 3, "content_type": 12, "object_id": "20", "object_repr": "Inventory object (20)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 40, "fields": {"action_time": "2023-03-23T19:22:12.434Z", "user": 3, "content_type": 12, "object_id": "21", "object_repr": "Inventory object (21)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 41, "fields": {"action_time": "2023-03-23T19:22:20.125Z", "user": 3, "content_type": 12, "object_id": "22", "object_repr": "Inventory object (22)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": 1, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": 1, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view log entry", "content_type": 1, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add permission", "content_type": 2, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change permission", "content_type": 2, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete permission", "content_type": 2, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view permission", "content_type": 2, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add group", "content_type": 3, "codename": "add_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change group", "content_type": 3, "codename": "change_group"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete group", "content_type": 3, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view group", "content_type": 3, "codename": "view_group"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add user", "content_type": 4, "codename": "add_user"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change user", "content_type": 4, "codename": "change_user"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete user", "content_type": 4, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view user", "content_type": 4, "codename": "view_user"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add content type", "content_type": 5, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change content type", "content_type": 5, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete content type", "content_type": 5, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view content type", "content_type": 5, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add session", "content_type": 6, "codename": "add_session"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change session", "content_type": 6, "codename": "change_session"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete session", "content_type": 6, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view session", "content_type": 6, "codename": "view_session"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add blacklisted token", "content_type": 7, "codename": "add_blacklistedtoken"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change blacklisted token", "content_type": 7, "codename": "change_blacklistedtoken"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete blacklisted token", "content_type": 7, "codename": "delete_blacklistedtoken"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view blacklisted token", "content_type": 7, "codename": "view_blacklistedtoken"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add outstanding token", "content_type": 8, "codename": "add_outstandingtoken"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change outstanding token", "content_type": 8, "codename": "change_outstandingtoken"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete outstanding token", "content_type": 8, "codename": "delete_outstandingtoken"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view outstanding token", "content_type": 8, "codename": "view_outstandingtoken"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add orders", "content_type": 9, "codename": "add_orders"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change orders", "content_type": 9, "codename": "change_orders"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete orders", "content_type": 9, "codename": "delete_orders"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view orders", "content_type": 9, "codename": "view_orders"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add products", "content_type": 10, "codename": "add_products"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change products", "content_type": 10, "codename": "change_products"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete products", "content_type": 10, "codename": "delete_products"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view products", "content_type": 10, "codename": "view_products"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add profile", "content_type": 11, "codename": "add_profile"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change profile", "content_type": 11, "codename": "change_profile"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete profile", "content_type": 11, "codename": "delete_profile"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view profile", "content_type": 11, "codename": "view_profile"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can add inventory", "content_type": 12, "codename": "add_inventory"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change inventory", "content_type": 12, "codename": "change_inventory"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete inventory", "content_type": 12, "codename": "delete_inventory"}}, {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view inventory", "content_type": 12, "codename": "view_inventory"}}, {"model": "auth.permission", "pk": 49, "fields": {"name": "Can add medicine", "content_type": 13, "codename": "add_medicine"}}, {"model": "auth.permission", "pk": 50, "fields": {"name": "Can change medicine", "content_type": 13, "codename": "change_medicine"}}, {"model": "auth.permission", "pk": 51, "fields": {"name": "Can delete medicine", "content_type": 13, "codename": "delete_medicine"}}, {"model": "auth.permission", "pk": 52, "fields": {"name": "Can view medicine", "content_type": 13, "codename": "view_medicine"}}, {"model": "auth.permission", "pk": 53, "fields": {"name": "Can add vending_machines", "content_type": 14, "codename": "add_vending_machines"}}, {"model": "auth.permission", "pk": 54, "fields": {"name": "Can change vending_machines", "content_type": 14, "codename": "change_vending_machines"}}, {"model": "auth.permission", "pk": 55, "fields": {"name": "Can delete vending_machines", "content_type": 14, "codename": "delete_vending_machines"}}, {"model": "auth.permission", "pk": 56, "fields": {"name": "Can view vending_machines", "content_type": 14, "codename": "view_vending_machines"}}, {"model": "auth.permission", "pk": 57, "fields": {"name": "Can add order_status", "content_type": 15, "codename": "add_order_status"}}, {"model": "auth.permission", "pk": 58, "fields": {"name": "Can change order_status", "content_type": 15, "codename": "change_order_status"}}, {"model": "auth.permission", "pk": 59, "fields": {"name": "Can delete order_status", "content_type": 15, "codename": "delete_order_status"}}, {"model": "auth.permission", "pk": 60, "fields": {"name": "Can view order_status", "content_type": 15, "codename": "view_order_status"}}, {"model": "auth.user", "pk": 2, "fields": {"password": "pbkdf2_sha256$390000$1g9Dn1eG8BL9sGmADv8qHp$Rsv6uV90sT8gmbsw9j+92FsDVgzh3adPZcRks6aSYa4=", "last_login": "2023-03-17T15:38:04.764Z", "is_superuser": true, "username": "pillcenteradmin", "first_name": "", "last_name": "", "email": "pilladmin@pillc.com", "is_staff": true, "is_active": true, "date_joined": "2023-03-17T15:37:20.106Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 3, "fields": {"password": "pbkdf2_sha256$390000$BpO2lnUUVZd1mcuv52SeV4$bOt6Gh0JTq2rBG5GEo2rJ6G2GlnK5Eaoui9oTzJIXKA=", "last_login": "2023-04-08T19:47:36.281Z", "is_superuser": true, "username": "admin", "first_name": "", "last_name": "", "email": "admin@admin.com", "is_staff": true, "is_active": true, "date_joined": "2023-03-17T16:52:53.479Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 21, "fields": {"password": "pbkdf2_sha256$390000$UPVHACQUN2qKCu0GJaMvgX$S74wzq9EFWRVWL05e8ttsr7bsI94aiDG0JrojoRAUwk=", "last_login": null, "is_superuser": false, "username": "yaroni", "first_name": "ירון", "last_name": "בן שלום", "email": "yaroni@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2023-03-22T12:09:21.931Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 22, "fields": {"password": "pbkdf2_sha256$390000$S8qCUtBOsC1RL9lJu8eMNH$3bVZytDjEmWs74ZppBAew99Jff20E5K52oWCMCM12GA=", "last_login": null, "is_superuser": false, "username": "noaKilla", "first_name": "נועה", "last_name": "קילה", "email": "noaKilla@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2023-03-22T12:09:53.441Z", "groups": [], "user_permissions": []}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "token_blacklist", "model": "blacklistedtoken"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "token_blacklist", "model": "outstandingtoken"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "polls", "model": "orders"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "polls", "model": "products"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "polls", "model": "profile"}}, {"model": "contenttypes.contenttype", "pk": 12, "fields": {"app_label": "polls", "model": "inventory"}}, {"model": "contenttypes.contenttype", "pk": 13, "fields": {"app_label": "polls", "model": "medicine"}}, {"model": "contenttypes.contenttype", "pk": 14, "fields": {"app_label": "polls", "model": "vending_machines"}}, {"model": "contenttypes.contenttype", "pk": 15, "fields": {"app_label": "polls", "model": "order_status"}}, {"model": "sessions.session", "pk": "041oaqr2ufudtyzo63xjqnwu3d8jqe5o", "fields": {"session_data": ".eJxVjDsOwjAQBe_iGln-fyjpcwZrvV5wANlSnFSIu0OkFNC-mXkvlmBba9oGLWku7Mw0O_1uGfBBbQflDu3WOfa2LnPmu8IPOvjUCz0vh_t3UGHUbx0iKEGGvFIxZgIZpAQbpXXoXPba-xjRWo1XI1xRLoMgDIYgB4XFevb-AMdtN4I:1pfPQh:9YdDuT_naVJMkN89TnG_8P22xAY_7HjRcY7TGj0pfOg", "expire_date": "2023-04-06T18:12:51.597Z"}}, {"model": "sessions.session", "pk": "3b8q6lzkgi5nakxsnatpcp1xgwdyayp2", "fields": {"session_data": ".eJxVjDsOwjAQBe_iGln-fyjpcwZrvV5wANlSnFSIu0OkFNC-mXkvlmBba9oGLWku7Mw0O_1uGfBBbQflDu3WOfa2LnPmu8IPOvjUCz0vh_t3UGHUbx0iKEGGvFIxZgIZpAQbpXXoXPba-xjRWo1XI1xRLoMgDIYgB4XFevb-AMdtN4I:1plEXA:775NCrcorYwpwp-2LzMF6y_5vuCmjBMOkyJkNqqZoKk", "expire_date": "2023-04-22T19:47:36.290Z"}}, {"model": "polls.medicine", "pk": 1, "fields": {"prescription": "לקחת פעם ביום בשעות הערב", "image_URL": "https://superpharmstorage.blob.core.windows.net/hybris/products/mobile/medium/7290106064577.jpg", "price": 10.0, "brand": "טבע", "description": "אופטלגין-כאבי ראש", "medicine_name": "אופטלגין"}}, {"model": "polls.medicine", "pk": 2, "fields": {"prescription": "לקחת פעם ביום בשעות הבוקר", "image_URL": "https://cdn.shopify.com/s/files/1/1085/0276/products/6385939-5171_360x.jpg?v=1575795302", "price": 12.0, "brand": "פארם איי אל", "description": "סירופ לשיעול", "medicine_name": "סירופרפן"}}, {"model": "polls.medicine", "pk": 3, "fields": {"prescription": "לקחת פעמיים ביום בשעות הבוקר", "image_URL": "https://www.biogaya.co.il/media/catalog/product/cache/cd836a4499ae9487d98da081443bcceb/c/a/calbaten_syrop.jpg", "price": 15.0, "brand": "טבע", "description": "כדורים להקלה ברגישות וכאבי בטן", "medicine_name": "קל-בטן"}}, {"model": "polls.medicine", "pk": 4, "fields": {"prescription": "לקחת פעמיים ביום בשעות הבוקר", "image_URL": "https://www.biogaya.co.il/media/catalog/product/cache/cd836a4499ae9487d98da081443bcceb/c/a/calbaten_syrop.jpg", "price": 15.0, "brand": "טבע", "description": "כדורים להקלה ברגישות וכאבי בטן", "medicine_name": "קל-בטן"}}, {"model": "polls.medicine", "pk": 5, "fields": {"prescription": "לקחת פעם אחת בבוקר ופעם אחת בערב", "image_URL": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxMTExYTEREYERYYFhYWFhgWFhYWFhYWFhYZGRYYGRYaICsiGhwoIRYWJDQjKCwwMjExGSE3PDcvOyswMS4BCwsLDw4PGhERHTEoIikwMC4uMDA7MDAwMC4uMTAwMDAwMDAyMDIwMDkwMDAwMDAwLi4wMDAwMDAwMDAwMDAwMP/AABEIALEBHQMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAgMEBQYBBwj/xABJEAACAQIDBAUKBAIHBwQDAAABAgMAEQQSIQUTMUEGByJRYRQyQnFygZGhsbIzUoLCI8EVQ1ODkrPRCDVEYnPw8SSi0uEWJTT/xAAaA", "price": 13.0, "brand": "פארם איי אל", "description": "כדורים להקלה בכאבי בטן קשים", "medicine_name": "סטופיט"}}, {"model": "polls.products", "pk": 1, "fields": {"medicine_id": 1, "expired_date": "2026-03-13"}}, {"model": "polls.products", "pk": 2, "fields": {"medicine_id": 2, "expired_date": "2027-05-23"}}, {"model": "polls.products", "pk": 3, "fields": {"medicine_id": 3, "expired_date": "2028-07-20"}}, {"model": "polls.products", "pk": 4, "fields": {"medicine_id": 4, "expired_date": "2027-12-25"}}, {"model": "polls.products", "pk": 5, "fields": {"medicine_id": 5, "expired_date": "2028-04-13"}}, {"model": "polls.order_status", "pk": 1, "fields": {"status": "בהמתנה"}}, {"model": "polls.order_status", "pk": 2, "fields": {"status": "הושלם"}}, {"model": "polls.orders", "pk": 1, "fields": {"user_id": 22, "product_id": 1, "order_status": 1, "order_date": "2023-03-26", "pharmacist_instruction": "המלצה: מאשר לקיחת תרופה"}}, {"model": "polls.orders", "pk": 2, "fields": {"user_id": 2, "product_id": 2, "order_status": 2, "order_date": "2023-03-30", "pharmacist_instruction": "המלצה: מאשר לקיחת תרופה"}}, {"model": "polls.orders", "pk": 3, "fields": {"user_id": 21, "product_id": 4, "order_status": 1, "order_date": "2023-03-12", "pharmacist_instruction": "לא קיימת עדיין המלצה"}}, {"model": "polls.orders", "pk": 4, "fields": {"user_id": 21, "product_id": 5, "order_status": 1, "order_date": "2023-03-22", "pharmacist_instruction": "המלצה: לא מאשר לקיחת תרופה"}}, {"model": "polls.vending_machines", "pk": 1, "fields": {"address": "יהודה הלוי 36", "city": "באר שבע"}}, {"model": "polls.vending_machines", "pk": 2, "fields": {"address": "סמטת יהונתן 1", "city": "באר שבע"}}, {"model": "polls.vending_machines", "pk": 3, "fields": {"address": "הרמה 53", "city": "דימונה"}}, {"model": "polls.vending_machines", "pk": 4, "fields": {"address": "יוסף הצדיק 18", "city": "אופקים"}}, {"model": "polls.vending_machines", "pk": 5, "fields": {"address": "הפיסגה 29", "city": "דימונה"}}, {"model": "polls.vending_machines", "pk": 6, "fields": {"address": "זבוטינסקי 45", "city": "נתיבות"}}, {"model": "polls.inventory", "pk": 1, "fields": {"machine_id": 1, "product_id": 1}}, {"model": "polls.inventory", "pk": 2, "fields": {"machine_id": 2, "product_id": 2}}, {"model": "polls.inventory", "pk": 3, "fields": {"machine_id": 3, "product_id": 3}}, {"model": "polls.inventory", "pk": 4, "fields": {"machine_id": 4, "product_id": 4}}, {"model": "polls.inventory", "pk": 5, "fields": {"machine_id": 6, "product_id": 5}}, {"model": "polls.inventory", "pk": 6, "fields": {"machine_id": 2, "product_id": 4}}, {"model": "polls.inventory", "pk": 7, "fields": {"machine_id": 4, "product_id": 1}}, {"model": "polls.inventory", "pk": 8, "fields": {"machine_id": 4, "product_id": 2}}, {"model": "polls.inventory", "pk": 9, "fields": {"machine_id": 5, "product_id": 3}}]
+[
+  {
+    "model": "polls.medicine",
+    "pk": 1,
+    "fields": {
+      "prescription": "לקחת פעם ביום בשעות הערב",
+      "image_URL": "https://superpharmstorage.blob.core.windows.net/hybris/products/mobile/medium/7290106064577.jpg",
+      "price": 10.0,
+      "brand": "טבע",
+      "description": "אופטלגין-כאבי ראש",
+      "medicine_name": "אופטלגין"
+    }
+  },
+  {
+    "model": "polls.medicine",
+    "pk": 2,
+    "fields": {
+      "prescription": "לקחת פעם ביום בשעות הבוקר",
+      "image_URL": "https://cdn.shopify.com/s/files/1/1085/0276/products/6385939-5171_360x.jpg?v=1575795302",
+      "price": 12.0,
+      "brand": "פארם איי אל",
+      "description": "סירופ לשיעול",
+      "medicine_name": "סירופרפן"
+    }
+  },
+  {
+    "model": "polls.medicine",
+    "pk": 3,
+    "fields": {
+      "prescription": "לקחת פעמיים ביום בשעות הבוקר",
+      "image_URL": "https://www.biogaya.co.il/media/catalog/product/cache/cd836a4499ae9487d98da081443bcceb/c/a/calbaten_syrop.jpg",
+      "price": 15.0,
+      "brand": "טבע",
+      "description": "כדורים להקלה ברגישות וכאבי בטן",
+      "medicine_name": "קל-בטן"
+    }
+  },
+  {
+    "model": "polls.medicine",
+    "pk": 4,
+    "fields": {
+      "prescription": "לקחת פעמיים ביום בשעות הבוקר",
+      "image_URL": "https://www.biogaya.co.il/media/catalog/product/cache/cd836a4499ae9487d98da081443bcceb/c/a/calbaten_syrop.jpg",
+      "price": 15.0,
+      "brand": "טבע",
+      "description": "כדורים להקלה ברגישות וכאבי בטן",
+      "medicine_name": "קל-בטן"
+    }
+  },
+  {
+    "model": "polls.medicine",
+    "pk": 5,
+    "fields": {
+      "prescription": "לקחת פעם אחת בבוקר ופעם אחת בערב",
+      "image_URL": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxMTExYTEREYERYYFhYWFhgWFhYWFhYWFhYZGRYYGRYaICsiGhwoIRYWJDQjKCwwMjExGSE3PDcvOyswMS4BCwsLDw4PGhERHTEoIikwMC4uMDA7MDAwMC4uMTAwMDAwMDAyMDIwMDkwMDAwMDAwLi4wMDAwMDAwMDAwMDAwMP/AABEIALEBHQMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAgMEBQYBBwj/xABJEAACAQIDBAUKBAIHBwQDAAABAgMAEQQSIQUTMUEGByJRYRQyQnFygZGhsbIzUoLCI8EVQ1ODkrPRCDVEYnPw8SSi0uEWJTT/xAAaA",
+      "price": 13.0,
+      "brand": "פארם איי אל",
+      "description": "כדורים להקלה בכאבי בטן קשים",
+      "medicine_name": "סטופיט"
+    }
+  },
+  {
+    "model": "polls.products",
+    "pk": 1,
+    "fields": { "medicine_id": 1, "expired_date": "2026-03-13" }
+  },
+  {
+    "model": "polls.products",
+    "pk": 2,
+    "fields": { "medicine_id": 2, "expired_date": "2027-05-23" }
+  },
+  {
+    "model": "polls.products",
+    "pk": 3,
+    "fields": { "medicine_id": 3, "expired_date": "2028-07-20" }
+  },
+  {
+    "model": "polls.products",
+    "pk": 4,
+    "fields": { "medicine_id": 4, "expired_date": "2027-12-25" }
+  },
+  {
+    "model": "polls.products",
+    "pk": 5,
+    "fields": { "medicine_id": 5, "expired_date": "2028-04-13" }
+  },
+  { "model": "polls.order_status", "pk": 1, "fields": { "status": "בהמתנה" } },
+  { "model": "polls.order_status", "pk": 2, "fields": { "status": "הושלם" } },
+  {
+    "model": "polls.orders",
+    "pk": 1,
+    "fields": {
+      "user_id": 22,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-03-26",
+      "pharmacist_instruction": "המלצה: מאשר לקיחת תרופה"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 2,
+    "fields": {
+      "user_id": 2,
+      "product_id": 2,
+      "order_status": 2,
+      "order_date": "2023-03-30",
+      "pharmacist_instruction": "המלצה: מאשר לקיחת תרופה"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 3,
+    "fields": {
+      "user_id": 21,
+      "product_id": 4,
+      "order_status": 1,
+      "order_date": "2023-03-12",
+      "pharmacist_instruction": "לא קיימת עדיין המלצה"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 4,
+    "fields": {
+      "user_id": 21,
+      "product_id": 5,
+      "order_status": 1,
+      "order_date": "2023-03-22",
+      "pharmacist_instruction": "המלצה: לא מאשר לקיחת תרופה"
+    }
+  },
+  {
+    "model": "polls.vending_machines",
+    "pk": 1,
+    "fields": { "address": "יהודה הלוי 36", "city": "באר שבע" }
+  },
+  {
+    "model": "polls.vending_machines",
+    "pk": 2,
+    "fields": { "address": "סמטת יהונתן 1", "city": "באר שבע" }
+  },
+  {
+    "model": "polls.vending_machines",
+    "pk": 3,
+    "fields": { "address": "הרמה 53", "city": "דימונה" }
+  },
+  {
+    "model": "polls.vending_machines",
+    "pk": 4,
+    "fields": { "address": "יוסף הצדיק 18", "city": "אופקים" }
+  },
+  {
+    "model": "polls.vending_machines",
+    "pk": 5,
+    "fields": { "address": "הפיסגה 29", "city": "דימונה" }
+  },
+  {
+    "model": "polls.vending_machines",
+    "pk": 6,
+    "fields": { "address": "זבוטינסקי 45", "city": "נתיבות" }
+  },
+  {
+    "model": "polls.inventory",
+    "pk": 1,
+    "fields": { "machine_id": 1, "product_id": 1 }
+  },
+  {
+    "model": "polls.inventory",
+    "pk": 2,
+    "fields": { "machine_id": 2, "product_id": 2 }
+  },
+  {
+    "model": "polls.inventory",
+    "pk": 3,
+    "fields": { "machine_id": 3, "product_id": 3 }
+  },
+  {
+    "model": "polls.inventory",
+    "pk": 4,
+    "fields": { "machine_id": 4, "product_id": 4 }
+  },
+  {
+    "model": "polls.inventory",
+    "pk": 5,
+    "fields": { "machine_id": 6, "product_id": 5 }
+  },
+  {
+    "model": "polls.inventory",
+    "pk": 6,
+    "fields": { "machine_id": 2, "product_id": 4 }
+  },
+  {
+    "model": "polls.inventory",
+    "pk": 7,
+    "fields": { "machine_id": 4, "product_id": 1 }
+  },
+  {
+    "model": "polls.inventory",
+    "pk": 8,
+    "fields": { "machine_id": 4, "product_id": 2 }
+  },
+  {
+    "model": "polls.inventory",
+    "pk": 9,
+    "fields": { "machine_id": 5, "product_id": 3 }
+  }
+]
