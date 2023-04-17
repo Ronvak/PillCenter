@@ -9,6 +9,8 @@ import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { styled } from "@mui/material/styles";
 import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -27,7 +29,15 @@ const MyIconButton = styled(Button)(({ theme }) => ({
   },
 }));
 export default function Navbar() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   let { logoutUser } = useContext(AuthContext);
+
+  function handleBack() {
+    if (location.pathname !== "/") navigate(-1);
+    else logoutUser();
+  }
   return (
     <Box sx={{ flexGrow: 1 }}>
       <ThemeProvider theme={theme}>
@@ -49,7 +59,7 @@ export default function Navbar() {
               size="large"
               color="inherit"
               sx={{ mr: -2 }}
-              onClick={logoutUser}
+              onClick={() => handleBack()}
             >
               <KeyboardBackspaceIcon />
             </MyIconButton>

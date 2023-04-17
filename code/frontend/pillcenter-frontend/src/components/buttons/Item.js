@@ -12,10 +12,10 @@ const Item = styled(Card)(({ theme }) => ({
   borderColor: "#00000",
   borderWidth: "50px",
   height: "150px",
-  fontSize: 18,
+  fontSize: 17,
 
   "&:hover": {
-    backgroundColor: "#646464",
+    backgroundColor: "#C0C0C0",
   },
 }));
 
