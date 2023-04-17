@@ -15,7 +15,7 @@ const Item = styled(Card)(({ theme }) => ({
   fontSize: 17,
 
   "&:hover": {
-    backgroundColor: "#646464",
+    backgroundColor: "#C0C0C0",
   },
 }));
 
