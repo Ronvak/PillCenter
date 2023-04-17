@@ -1,12 +1,12 @@
-import { useLocation, Navigate, Outlet } from "react-router-dom";
-import { useContext } from "react";
+import { useLocation, Navigate } from "react-router-dom";
+import PatientLayout from "../layouts/PatientLayout";
 import useAuth from "../hooks/useAuth";
 
-const PrivateRoute = ({ allowedRoles, children, ...rest }) => {
-  const { auth, user } = useAuth();
+const PrivateRoute = ({ allowedRoles }) => {
+  const { auth } = useAuth();
   const location = useLocation();
   return auth?.groups?.find((role) => allowedRoles?.includes(role)) ? (
-    children
+    <PatientLayout />
   ) : (
     <Navigate to="/unauthorized" state={{ from: location }} replace />
   );

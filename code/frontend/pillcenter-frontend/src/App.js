@@ -11,6 +11,8 @@ import SignUp from "./pages/Signup";
 import PrivateRoute from "./utils/PrivateRoute";
 import PatientLandingPage from "./pages/PatientLandingPage";
 import UnauthorizedPage from "./pages/UnauthorizedPage";
+import MakeOrderPage from "./pages/MakeOrderPage";
+import React from "react";
 
 const cacheRtl = createCache({
   key: "muirtl",
@@ -30,15 +32,10 @@ function App() {
             <Router>
               <AuthProvider>
                 <Routes>
-                  <Route
-                    path="/"
-                    element={
-                      <PrivateRoute allowedRoles={["patient"]}>
-                        <Navbar />
-                        <PatientLandingPage />
-                      </PrivateRoute>
-                    }
-                  />
+                  <Route element={<PrivateRoute allowedRoles={["patient"]} />}>
+                    <Route path="/" element={<PatientLandingPage />} exact />
+                    <Route path="/order" element={<MakeOrderPage />} exact />
+                  </Route>
                   <Route path="/unauthorized" element={<UnauthorizedPage />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<SignUp />} />
