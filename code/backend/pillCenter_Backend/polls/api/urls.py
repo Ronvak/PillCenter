@@ -9,6 +9,6 @@ urlpatterns = [
     path('profile/', views.get_profile),
     path('register/', RegisterApi.as_view()),
     path('medicines/' ,views.getMedicines),
-  
+    path('medicineinstock/',views.medicineInStock),
 
 ]

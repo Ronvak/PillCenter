@@ -6,7 +6,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from polls.serializers import UserSerializer , RegisterSerializer ,ProfileSerializer
 from rest_framework import generics
-from polls.models import Medicine
+from polls.models import Medicine ,Inventory ,Products
 from django.contrib.auth import  get_user_model
 
 User = get_user_model()
@@ -82,3 +82,12 @@ def getMedicines(request):
     return Response(prescription)
 
 
+@api_view(['GET'])
+def medicineInStock(request):
+    queryset = Inventory.objects.all().values()
+    products = Products.objects.all().values()
+    medicine = request.GET.get('q',None)
+    if medicine is not None:
+        products = products.filter(medicine_id = medicine)
+        queryset = queryset.filter(product_id__in = products.values_list('id'))
+    return Response(queryset)
