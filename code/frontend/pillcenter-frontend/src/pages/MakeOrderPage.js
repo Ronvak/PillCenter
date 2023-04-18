@@ -6,6 +6,7 @@ import useAuth from "../hooks/useAuth";
 import Grid from "@mui/material/Unstable_Grid2";
 import Item from "../components/buttons/Item";
 import Box from "@mui/material/Box";
+import ProcessBar from "../components/processBar/ProcessBar";
 
 const MakeOrderPage = () => {
   const [medicines, setMedicines] = useState([]);
@@ -15,18 +16,19 @@ const MakeOrderPage = () => {
       .get("http://127.0.0.1:8000/api/medicines/")
       .then((response) => {
         setMedicines(response.data);
-        console.log(response.data);
       })
       .catch((err) => console.log(err));
   }, []);
 
   return (
     <div>
+      <br></br>
+      <br></br>
+      <ProcessBar />
       <center>
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
+
         <Typography variant="h5"> אנא בחר מרשם אותו </Typography>
         <Typography variant="h5"> אתה רוצה לאסוף </Typography>
         <br></br>
@@ -38,7 +40,7 @@ const MakeOrderPage = () => {
           >
             {medicines.map((medicine) => {
               return (
-                <Grid xs={12}>
+                <Grid xs={12} key={medicine.id}>
                   <Item
                     sx={{
                       border: 1,
