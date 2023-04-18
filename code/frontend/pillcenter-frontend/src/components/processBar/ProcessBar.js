@@ -5,8 +5,9 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import MedicineChoose from "../orderFlow/MedicineChoose";
 
-const steps = ["בחירת מרשם", "סוג איסוף", "מיקום איסוף", "שאלון", "תשלום"];
+const steps = ["בחירת מרשם", "מיקום איסוף", "שאלון", "תשלום ואישור"];
 
 export default function ProcessBar() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -20,8 +21,9 @@ export default function ProcessBar() {
     return skipped.has(step);
   };
 
-  const handleNext = () => {
+  const handleNext = (input) => {
     let newSkipped = skipped;
+    console.log(input);
     if (isStepSkipped(activeStep)) {
       newSkipped = new Set(newSkipped.values());
       newSkipped.delete(activeStep);
@@ -53,12 +55,12 @@ export default function ProcessBar() {
   const handleReset = () => {
     setActiveStep(0);
   };
-
+  const componentsList = [<MedicineChoose handleNext={handleNext} />, 1];
   return (
-    <Box sx={{ maxWidth: "90%" }}>
+    <Box sx={{ maxWidth: "100%" }}>
       <Stepper
         sx={{
-          width: "80px",
+          width: "370px",
         }}
         activeStep={activeStep}
       >
@@ -89,7 +91,7 @@ export default function ProcessBar() {
                 "& .MuiStepLabel-root .Mui-active .MuiStepIcon-text": {
                   fill: "white", // circle's number (ACTIVE)
                 },
-                maxWidth: "70%",
+                maxWidth: "90%",
               }}
               key={label}
               {...stepProps}
@@ -111,7 +113,7 @@ export default function ProcessBar() {
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+          {componentsList[activeStep]}
           <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
             <Button
               color="inherit"
