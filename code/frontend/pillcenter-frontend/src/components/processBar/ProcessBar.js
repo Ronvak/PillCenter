@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -6,13 +7,13 @@ import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import MedicineChoose from "../orderFlow/MedicineChoose";
-
+import MachinesList from "../orderFlow/MachinesList";
 const steps = ["בחירת מרשם", "מיקום איסוף", "שאלון", "תשלום ואישור"];
 
 export default function ProcessBar() {
-  const [activeStep, setActiveStep] = React.useState(0);
-  const [skipped, setSkipped] = React.useState(new Set());
-
+  const [activeStep, setActiveStep] = useState(0);
+  const [skipped, setSkipped] = useState(new Set());
+  const [medicineChoise, setMedicineChoise] = useState();
   const isStepOptional = (step) => {
     return step === 1;
   };
@@ -22,13 +23,15 @@ export default function ProcessBar() {
   };
 
   const handleNext = (input) => {
+    if (isNaN(input) === false) {
+      setMedicineChoise(input);
+    }
     let newSkipped = skipped;
-    console.log(input);
+
     if (isStepSkipped(activeStep)) {
       newSkipped = new Set(newSkipped.values());
       newSkipped.delete(activeStep);
     }
-
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
     setSkipped(newSkipped);
   };
@@ -55,7 +58,10 @@ export default function ProcessBar() {
   const handleReset = () => {
     setActiveStep(0);
   };
-  const componentsList = [<MedicineChoose handleNext={handleNext} />, 1];
+  const componentsList = [
+    <MedicineChoose handleNext={handleNext} />,
+    <MachinesList medicineChoise={medicineChoise} handleNext={handleNext} />,
+  ];
   return (
     <Box sx={{ maxWidth: "100%" }}>
       <Stepper
