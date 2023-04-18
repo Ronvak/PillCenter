@@ -5,8 +5,6 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { grey } from "@mui/material/colors";
-import MyStep from "./Step";
 
 const steps = ["בחירת מרשם", "סוג איסוף", "מיקום איסוף", "שאלון", "תשלום"];
 
