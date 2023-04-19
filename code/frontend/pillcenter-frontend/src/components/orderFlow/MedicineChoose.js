@@ -6,8 +6,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Typography } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
+import Autocomplete from "@mui/material/Autocomplete";
+import TextField from "@mui/material/TextField";
 
 export default function MedicineChoose(props) {
+  const [medicineInit, setMedicinesInit] = useState([]);
   const [medicines, setMedicines] = useState([]);
   const { handleNext } = props;
   useEffect(() => {
@@ -15,10 +18,18 @@ export default function MedicineChoose(props) {
       .get("http://127.0.0.1:8000/api/medicines/")
       .then((response) => {
         setMedicines(response.data);
+        setMedicinesInit(response.data);
       })
       .catch((err) => console.log(err));
   }, []);
 
+  const handleSearch = (input) => {
+    let newMedicines = medicineInit.filter((medicine) => {
+      return medicine.medicine_name.includes(input);
+      console.log(input);
+    });
+    setMedicines(newMedicines);
+  };
   return (
     <center>
       <br></br>
@@ -28,6 +39,31 @@ export default function MedicineChoose(props) {
       <br></br>
       <Box sx={{ width: "100%" }}>
         <Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>
+          <Grid item={true} xs={12}>
+            <Autocomplete
+              onChange={(e, value) => {
+                handleSearch(value);
+              }}
+              freeSolo
+              id="free-solo-2-demo"
+              disableClearable
+              options={medicines.map((option) => option.medicine_name)}
+              renderInput={(params) => (
+                <TextField
+                  onChange={(e) => {
+                    handleSearch(e.target.value);
+                  }}
+                  sx={{ borderRadius: 3 }}
+                  {...params}
+                  label="חיפוש"
+                  InputProps={{
+                    ...params.InputProps,
+                    type: "search",
+                  }}
+                />
+              )}
+            />
+          </Grid>
           {medicines.map((medicine) => {
             return (
               <Grid item={true} xs={6} key={medicine.id}>
