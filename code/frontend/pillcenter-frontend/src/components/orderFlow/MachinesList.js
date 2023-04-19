@@ -29,7 +29,7 @@ export default function MachinesList(props) {
       {machines.length > 0 ? (
         <React.Fragment>
           <Typography variant="h5"> התרופה שבחרת נמצאת במלאי</Typography>
-          <Typography variant="h5"> מאיפה תרצה לאסוף את התרופות ?</Typography>
+          <Typography variant="h5"> מאיפה תרצה לאסוף את התרופה ?</Typography>
           <br></br>
           <Box sx={{ width: "70%" }}>
             <Grid
