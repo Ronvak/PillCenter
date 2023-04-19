@@ -39,7 +39,7 @@ export default function MachinesList(props) {
             >
               {machines.map((machine) => {
                 return (
-                  <Grid xs={12} key={machine.id}>
+                  <Grid item={true} xs={12} key={machine.id}>
                     <Item
                       sx={{
                         border: 1,

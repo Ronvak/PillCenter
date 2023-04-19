@@ -41,7 +41,7 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <ThemeProvider theme={theme}>
-        <AppBar position="static">
+        <AppBar position="fixed">
           <Toolbar>
             <Typography
               variant="h6"
@@ -66,6 +66,8 @@ export default function Navbar() {
           </Toolbar>
         </AppBar>
       </ThemeProvider>
+      <br></br>
+      <br></br>
     </Box>
   );
 }
