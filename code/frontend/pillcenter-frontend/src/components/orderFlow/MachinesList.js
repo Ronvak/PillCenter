@@ -8,7 +8,7 @@ import { Typography } from "@mui/material";
 export default function MachinesList(props) {
   const [machines, setMachines] = useState([]);
 
-  const { medicineChoise, handleNext } = props;
+  const { medicineChoise, handleMachineChoose } = props;
 
   const getMachines = async () => {
     const res = await axios
@@ -48,7 +48,7 @@ export default function MachinesList(props) {
                         height: 75,
                         lineHeight: "75px",
                       }}
-                      onClick={() => handleNext()}
+                      onClick={() => handleMachineChoose(machine)}
                     >
                       {machine.address} , {machine.city}
                     </Item>

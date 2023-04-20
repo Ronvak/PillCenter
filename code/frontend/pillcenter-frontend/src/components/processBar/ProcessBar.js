@@ -8,12 +8,14 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import MedicineChoose from "../orderFlow/MedicineChoose";
 import MachinesList from "../orderFlow/MachinesList";
+import PaymentNConfirm from "../orderFlow/PaymentNConfirm";
 const steps = ["בחירת מרשם", "מיקום איסוף", "שאלון", "תשלום ואישור"];
 
 export default function ProcessBar() {
   const [activeStep, setActiveStep] = useState(0);
   const [skipped, setSkipped] = useState(new Set());
   const [medicineChoise, setMedicineChoise] = useState();
+  const [machineChoice, setMachineChoise] = useState({});
   const isStepOptional = (step) => {
     return step === 1;
   };
@@ -21,11 +23,19 @@ export default function ProcessBar() {
   const isStepSkipped = (step) => {
     return skipped.has(step);
   };
-
-  const handleNext = (input) => {
+  const handleMedicineChoose = (input) => {
     if (isNaN(input) === false) {
       setMedicineChoise(input);
     }
+    handleNext();
+  };
+
+  const handleMachineChoose = (input) => {
+    setMachineChoise(input);
+    console.log(input);
+    handleNext();
+  };
+  const handleNext = (input) => {
     let newSkipped = skipped;
 
     if (isStepSkipped(activeStep)) {
@@ -59,8 +69,13 @@ export default function ProcessBar() {
     setActiveStep(0);
   };
   const componentsList = [
-    <MedicineChoose handleNext={handleNext} />,
-    <MachinesList medicineChoise={medicineChoise} handleNext={handleNext} />,
+    <MedicineChoose handleMedicineChoose={handleMedicineChoose} />,
+    <MachinesList
+      medicineChoise={medicineChoise}
+      handleMachineChoose={handleMachineChoose}
+    />,
+    1,
+    <PaymentNConfirm machineChoice={machineChoice} />,
   ];
   return (
     <Box sx={{ maxWidth: "100%" }}>

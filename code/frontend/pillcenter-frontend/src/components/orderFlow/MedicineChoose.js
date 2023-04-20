@@ -12,7 +12,7 @@ import TextField from "@mui/material/TextField";
 export default function MedicineChoose(props) {
   const [medicineInit, setMedicinesInit] = useState([]);
   const [medicines, setMedicines] = useState([]);
-  const { handleNext } = props;
+  const { handleMedicineChoose } = props;
   useEffect(() => {
     const res = axios
       .get("http://127.0.0.1:8000/api/medicines/")
@@ -26,7 +26,6 @@ export default function MedicineChoose(props) {
   const handleSearch = (input) => {
     let newMedicines = medicineInit.filter((medicine) => {
       return medicine.medicine_name.includes(input);
-      console.log(input);
     });
     setMedicines(newMedicines);
   };
@@ -76,7 +75,7 @@ export default function MedicineChoose(props) {
                       backgroundColor: "#C0C0C0",
                     },
                   }}
-                  onClick={() => handleNext(medicine.id)}
+                  onClick={() => handleMedicineChoose(medicine.id)}
                 >
                   <Paper
                     elevation={0}
