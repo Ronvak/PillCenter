@@ -30,9 +30,8 @@ export default function ProcessBar() {
     handleNext();
   };
 
-  const handleMachineChoose = (input) => {
-    setMachineChoise(input);
-    console.log(input);
+  const handleMachineChoose = (machine) => {
+    setMachineChoise(machine);
     handleNext();
   };
   const handleNext = (input) => {
@@ -75,7 +74,10 @@ export default function ProcessBar() {
       handleMachineChoose={handleMachineChoose}
     />,
     1,
-    <PaymentNConfirm machineChoice={machineChoice} />,
+    <PaymentNConfirm
+      machineChoice={machineChoice}
+      medicineChoise={medicineChoise}
+    />,
   ];
   return (
     <Box sx={{ maxWidth: "100%" }}>
