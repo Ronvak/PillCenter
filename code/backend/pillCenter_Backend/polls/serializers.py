@@ -3,7 +3,8 @@ from polls.models import *
 from rest_framework import  serializers
 from django.contrib.auth.models import User ,Group
 from django_email_verification import send_email
-
+from .models import Orders
+import datetime
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
@@ -41,3 +42,15 @@ class RegisterSerializer(serializers.ModelSerializer):
         group.user_set.add(user)
         send_email(user)
         return user
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Orders
+        fields = ['user_id' ,'product_id' , 'pharmacist_instruction']
+
+    def create(self,validated_data):
+        order = Orders.objects.create(user_id =validated_data['user_id'] ,product_id = validated_data['product_id'],pharmacist_instruction= validated_data['pharmacist_instruction'] , order_status_id = 1 ,
+        order_date = datetime.datetime.now())
+      
+        return order
