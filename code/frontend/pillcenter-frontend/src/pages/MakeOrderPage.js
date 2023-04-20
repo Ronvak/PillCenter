@@ -1,31 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
-import AuthContext from "../context/AuthContext";
-import axios from "axios";
-import { Typography } from "@mui/material";
-import useAuth from "../hooks/useAuth";
-import Grid from "@mui/material/Unstable_Grid2";
-import Item from "../components/buttons/Item";
-import Box from "@mui/material/Box";
+
 import ProcessBar from "../components/processBar/ProcessBar";
-import Questionnaire from "../components/questionnaire/Questionnaire";
 
 const MakeOrderPage = () => {
-  const [medicines, setMedicines] = useState([]);
-
-  useEffect(() => {
-    const res = axios
-      .get("http://127.0.0.1:8000/api/medicines/")
-      .then((response) => {
-        setMedicines(response.data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
   return (
     <div>
       <br></br>
       <br></br>
       <ProcessBar />
+<<<<<<< code/frontend/pillcenter-frontend/src/pages/MakeOrderPage.js
       <center>
         <br></br>
 
@@ -60,6 +43,8 @@ const MakeOrderPage = () => {
           </Grid>
         </Box>
       </center>
+=======
+>>>>>>> code/frontend/pillcenter-frontend/src/pages/MakeOrderPage.js
     </div>
   );
 };
