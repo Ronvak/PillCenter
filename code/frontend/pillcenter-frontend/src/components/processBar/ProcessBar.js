@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import MedicineChoose from "../orderFlow/MedicineChoose";
 import MachinesList from "../orderFlow/MachinesList";
 import PaymentNConfirm from "../orderFlow/PaymentNConfirm";
+import Questionnaire from "../questionnaire/Questionnaire";
 const steps = ["בחירת מרשם", "מיקום איסוף", "שאלון", "תשלום ואישור"];
 
 export default function ProcessBar() {
@@ -16,6 +17,7 @@ export default function ProcessBar() {
   const [skipped, setSkipped] = useState(new Set());
   const [medicineChoise, setMedicineChoise] = useState();
   const [machineChoice, setMachineChoise] = useState({});
+  const [questionnaire, setQuestionnaire] = useState({});
   const isStepOptional = (step) => {
     return step === 1;
   };
@@ -29,7 +31,10 @@ export default function ProcessBar() {
     }
     handleNext();
   };
-
+  const handleQuestionnaire = (input) => {
+    setQuestionnaire(input);
+    handleNext();
+  };
   const handleMachineChoose = (machine) => {
     setMachineChoise(machine);
     handleNext();
@@ -73,7 +78,10 @@ export default function ProcessBar() {
       medicineChoise={medicineChoise}
       handleMachineChoose={handleMachineChoose}
     />,
-    1,
+    <Questionnaire
+      questionnaire={questionnaire}
+      handleQuestionnaire={handleQuestionnaire}
+    />,
     <PaymentNConfirm
       machineChoice={machineChoice}
       medicineChoise={medicineChoise}
