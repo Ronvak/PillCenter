@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import MedicineChoose from "../orderFlow/MedicineChoose";
 import MachinesList from "../orderFlow/MachinesList";
 import PaymentNConfirm from "../orderFlow/PaymentNConfirm";
+import Questionnaire from "../questionnaire/Questionnaire";
 const steps = ["בחירת מרשם", "מיקום איסוף", "שאלון", "תשלום ואישור"];
 
 export default function ProcessBar() {
@@ -73,7 +74,7 @@ export default function ProcessBar() {
       medicineChoise={medicineChoise}
       handleMachineChoose={handleMachineChoose}
     />,
-    1,
+    <Questionnaire />,
     <PaymentNConfirm
       machineChoice={machineChoice}
       medicineChoise={medicineChoise}
