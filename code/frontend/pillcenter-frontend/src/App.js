@@ -5,7 +5,6 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import { prefixer } from "stylis";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Navbar from "./components/navs/Navbar";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import PrivateRoute from "./utils/PrivateRoute";
