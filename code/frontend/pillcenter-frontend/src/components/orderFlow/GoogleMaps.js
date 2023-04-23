@@ -58,7 +58,6 @@ export default function GoogleMaps(props) {
         },
         (response, status) => {
           handleDistance(response.rows[0]?.elements[0]?.distance?.text);
-          console.log(response);
         }
       );
     }
@@ -78,6 +77,12 @@ export default function GoogleMaps(props) {
           borderColor: "#C0C0C0",
         }}
       >
+        <MarkerF
+          visible={true}
+          key={currLocation}
+          position={currLocation}
+          label="אני"
+        />
         <MarkerF
           visible={true}
           key={machineChoice.id}

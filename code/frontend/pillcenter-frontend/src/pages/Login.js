@@ -67,7 +67,6 @@ export default function Login() {
             component="form"
             onSubmit={handleSubmit}
             noValidate
-            error
             sx={{ mt: 1 }}
           >
             {valid ? (
