@@ -57,6 +57,7 @@ export default function Navigation(props) {
             <a
               href={`${wazelink}${number}%20${city}%20${address}&navigate=yes`}
               target="_blank"
+              rel="noreferrer"
             >
               <IconButton
                 sx={{
@@ -69,8 +70,9 @@ export default function Navigation(props) {
               </IconButton>
             </a>
             <a
-              href={`${googlemapLink}${address}%20${number}%2C${city}`}
+              href={`${googlemapLink}${address}%20${number}%2C%20${city}`}
               target="_blank"
+              rel="noreferrer"
             >
               <IconButton aria-label="Google">
                 <SiGooglemaps color="#F4B400" size={32} />
