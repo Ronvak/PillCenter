@@ -18,7 +18,11 @@ export const AuthProvider = ({ children }) => {
       : null
   );
   let [loading, setLoading] = useState(true);
-
+  let [auth, setAuth] = useState(() =>
+    localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user"))
+      : null
+  );
   const navigate = useNavigate();
 
   let signUp = async (e) => {
@@ -59,6 +63,8 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("authTokens", JSON.stringify(data));
       setAuthTokens(data);
       setUser(jwtDecode(data.access));
+      localStorage.setItem("user", JSON.stringify(data.user));
+      setAuth(data.user);
       navigate("/");
     } else {
       alert("Something went wrong while logging in the user!");
@@ -68,31 +74,34 @@ export const AuthProvider = ({ children }) => {
   let logoutUser = (e) => {
     // e.preventDefault();
     localStorage.removeItem("authTokens");
+    localStorage.removeItem("user");
     setAuthTokens(null);
     setUser(null);
     navigate("/login");
   };
 
   const updateToken = async () => {
-    const response = await fetch("http://127.0.0.1:8000/api/token/refresh/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ refresh: authTokens?.refresh }),
-    });
+    if (auth) {
+      const response = await fetch("http://127.0.0.1:8000/api/token/refresh/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ refresh: authTokens?.refresh }),
+      });
 
-    const data = await response.json();
-    if (response.status === 200) {
-      setAuthTokens(data);
-      setUser(jwtDecode(data.access));
-      localStorage.setItem("authTokens", JSON.stringify(data));
-    } else {
-      logoutUser();
-    }
+      const data = await response.json();
+      if (response.status === 200) {
+        setAuthTokens(data);
+        setUser(jwtDecode(data.access));
+        localStorage.setItem("authTokens", JSON.stringify(data));
+      } else {
+        logoutUser();
+      }
 
-    if (loading) {
-      setLoading(false);
+      if (loading) {
+        setLoading(false);
+      }
     }
   };
 
@@ -102,6 +111,8 @@ export const AuthProvider = ({ children }) => {
     loginUser: loginUser,
     logoutUser: logoutUser,
     signUp: signUp,
+    auth: auth,
+    setAuth: setAuth,
   };
 
   useEffect(() => {

@@ -44,7 +44,7 @@ class Vending_machines(models.Model):
 
 class Inventory(models.Model):
     machine_id = models.ForeignKey(Vending_machines, on_delete=models.CASCADE)
-    product_id = models.ForeignKey(Products, on_delete=models.CASCADE)
+    product_id = models.OneToOneField(Products, on_delete=models.CASCADE)
 
 
 def __str__(self):

@@ -4,10 +4,11 @@ from rest_framework import status
 from rest_framework.decorators import api_view ,  permission_classes
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
-from polls.serializers import UserSerializer , RegisterSerializer ,ProfileSerializer
+from polls.serializers import UserSerializer , RegisterSerializer ,OrderSerializer
 from rest_framework import generics
+from polls.models import Medicine ,Inventory ,Products , Vending_machines
 from django.contrib.auth import  get_user_model
-from verify_email.email_handler import send_verification_email
+
 
 User = get_user_model()
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -20,13 +21,18 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
             user_obj = User.objects.filter(email=attrs.get("username")).first() or User.objects.filter(username=attrs.get("username")).first()
             if user_obj:
                 credentials['username'] = user_obj.username
+            data = super().validate(credentials)
+            data['user'] = {
+            'id': self.user.id,
+            "first_name": self.user.first_name,
+            "last_name": self.user.last_name,
+            "email": self.user.email,
+            "phone": str(self.user.profile.phone),
+            "groups" : self.user.groups.values_list('name' , flat=True) }
+            
 
-            return super().validate(credentials)
-#    @classmethod
- #   def get_token(cls, user):
-  #      token = super().get_token(user)
-   #     token['username'] = user.username
-    #    return token
+            return data
+
 
 
 class RegisterApi(generics.GenericAPIView):
@@ -69,4 +75,37 @@ def userCreate(request ):
         user = userSerializer.save()
         return Response(status=status.HTTP_200_OK)
     return Response(status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['POST'])
+def completeOrder(request):
+    machine = request.data['machine_id']
+    medicine = request.data['medicine_id']
+    product = Products.objects.all().values().filter(medicine_id = medicine)
+    inventory = Inventory.objects.all().values()
+    product = inventory.filter(machine_id = machine , product_id__in = product.values_list('id'))[0]
+    request.data['product_id'] = product['id']
+    orderSerializer = OrderSerializer(data = request.data)
+    orderSerializer.is_valid(raise_exception=True)
+    orderSerializer.save()
+    return Response(status=status.HTTP_200_OK)
+        
+
+
+@api_view(['GET'])
+def getMedicines(request):
+    prescription = Medicine.objects.all().values()
+    return Response(prescription)
+
+
+@api_view(['GET'])
+def medicineInStock(request):
+    machines = Vending_machines.objects.all().values()
+    inventory = Inventory.objects.all().values()
+    products = Products.objects.all().values()
+    medicine = request.GET.get('q',None)
+    if medicine is not None:
+        products = products.filter(medicine_id = medicine)
+        inventory = inventory.filter(product_id__in = products.values_list('id'))
+        machines = machines.filter(id__in = inventory.values_list('machine_id'))
+    return Response(machines)
 

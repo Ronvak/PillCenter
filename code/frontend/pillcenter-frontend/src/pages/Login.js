@@ -1,22 +1,20 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import AuthContext from "../context/AuthContext";
-import { useContext } from "react";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Alert } from "@mui/material";
 import { Link as RouterLink, MemoryRouter } from "react-router-dom";
 import logo from "./logo.png";
+import useAuth from "../hooks/useAuth";
 import ButtonTemplate from "../components/buttons/ButtonTemplate";
+
 function Copyright(props) {
   return (
     <Typography
@@ -35,17 +33,22 @@ function Copyright(props) {
   );
 }
 
-const theme = createTheme();
-
 export default function Login() {
-  let { loginUser } = useContext(AuthContext);
+  let { loginUser, auth, user } = useAuth();
   const [valid, setValid] = useState(false);
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    if (user) navigate("/");
+  }, []);
+
+  const theme = createTheme();
   async function handleSubmit(e) {
     loginUser(e).catch((error) => {
       setValid(true);
     });
   }
+
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -64,7 +67,6 @@ export default function Login() {
             component="form"
             onSubmit={handleSubmit}
             noValidate
-            error
             sx={{ mt: 1 }}
           >
             {valid ? (
