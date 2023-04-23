@@ -17,6 +17,7 @@ export default function ProcessBar() {
   const [skipped, setSkipped] = useState(new Set());
   const [medicineChoise, setMedicineChoise] = useState();
   const [machineChoice, setMachineChoise] = useState({});
+  const [questionnaire, setQuestionnaire] = useState({});
   const isStepOptional = (step) => {
     return step === 1;
   };
@@ -30,7 +31,10 @@ export default function ProcessBar() {
     }
     handleNext();
   };
-
+  const handleQuestionnaire = (input) => {
+    setQuestionnaire(input);
+    handleNext();
+  };
   const handleMachineChoose = (machine) => {
     setMachineChoise(machine);
     handleNext();
@@ -74,7 +78,10 @@ export default function ProcessBar() {
       medicineChoise={medicineChoise}
       handleMachineChoose={handleMachineChoose}
     />,
-    <Questionnaire />,
+    <Questionnaire
+      questionnaire={questionnaire}
+      handleQuestionnaire={handleQuestionnaire}
+    />,
     <PaymentNConfirm
       machineChoice={machineChoice}
       medicineChoise={medicineChoise}
