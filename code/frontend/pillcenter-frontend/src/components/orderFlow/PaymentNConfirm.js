@@ -25,7 +25,7 @@ export default function PaymentNConfirm(props) {
       pharmacist_instruction: "מאושר",
     };
     const res = await axios
-      .post("http://127.0.0.1:8000/api/completeorder/", orderDetails)
+      .post("/api/completeorder/", orderDetails)
       .then((response) => {
         return response;
       })

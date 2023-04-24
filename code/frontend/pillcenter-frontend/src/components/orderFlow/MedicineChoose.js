@@ -15,7 +15,7 @@ export default function MedicineChoose(props) {
   const { handleMedicineChoose } = props;
   useEffect(() => {
     const res = axios
-      .get("http://127.0.0.1:8000/api/medicines/")
+      .get("/api/medicines/")
       .then((response) => {
         setMedicines(response.data);
         setMedicinesInit(response.data);

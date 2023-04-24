@@ -8,6 +8,7 @@ export default function GoogleMaps(props) {
   const { machineChoice, handleDistance } = props;
   const [location, setLocation] = useState({ lat: 3, lng: 3 });
   const [currLocation, setCurrLocation] = useState({ lat: 3, lng: 3 });
+
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyCyF66ttzw2cSYnzbKY5Wyeuuiqdsl4oZ8",
   });
@@ -47,9 +48,11 @@ export default function GoogleMaps(props) {
 
   useEffect(() => {
     function getDistance() {
-      const google = window.google;
-      var service = new google.maps.DistanceMatrixService();
-      origin = new google.maps.LatLng(currLocation.lat, currLocation.lng);
+      var service = new window.google.maps.DistanceMatrixService();
+      origin = new window.google.maps.LatLng(
+        currLocation.lat,
+        currLocation.lng
+      );
       service.getDistanceMatrix(
         {
           origins: [origin],
