@@ -105,10 +105,7 @@ export default function Login() {
             </ButtonTemplate>
             <Grid container>
               <Grid item xs>
-                <Link
-                  href="http://localhost:8000/accounts/password_reset/"
-                  variant="body2"
-                >
+                <Link href="/accounts/password_reset/" variant="body2">
                   שכחת סיסמא ?
                 </Link>
               </Grid>
