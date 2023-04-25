@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
 
   let signUp = async (e) => {
     let res;
-    const response = await fetch("http://127.0.0.1:8000/api/register/", {
+    const response = await fetch("/api/register/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
 
   let loginUser = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://127.0.0.1:8000/api/token/", {
+    const response = await fetch("/api/token/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -81,25 +81,27 @@ export const AuthProvider = ({ children }) => {
   };
 
   const updateToken = async () => {
-    const response = await fetch("http://127.0.0.1:8000/api/token/refresh/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ refresh: authTokens?.refresh }),
-    });
+    if (auth) {
+      const response = await fetch("/api/token/refresh/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ refresh: authTokens?.refresh }),
+      });
 
-    const data = await response.json();
-    if (response.status === 200) {
-      setAuthTokens(data);
-      setUser(jwtDecode(data.access));
-      localStorage.setItem("authTokens", JSON.stringify(data));
-    } else {
-      logoutUser();
-    }
+      const data = await response.json();
+      if (response.status === 200) {
+        setAuthTokens(data);
+        setUser(jwtDecode(data.access));
+        localStorage.setItem("authTokens", JSON.stringify(data));
+      } else {
+        logoutUser();
+      }
 
-    if (loading) {
-      setLoading(false);
+      if (loading) {
+        setLoading(false);
+      }
     }
   };
 

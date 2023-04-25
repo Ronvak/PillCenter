@@ -11,7 +11,7 @@ export default function PatientOpt() {
     navigate("/order");
   }
   return (
-    <Box sx={{ width: "70%" }}>
+    <Box sx={{ width: "75%" }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid xs={6}>
           <Item
