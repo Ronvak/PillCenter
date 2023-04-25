@@ -49,11 +49,9 @@ export default function GoogleMaps(props) {
   useEffect(() => {
     function getDistance() {
       if (isLoaded) {
-        var service = new window.google.maps.DistanceMatrixService();
-        origin = new window.google.maps.LatLng(
-          currLocation.lat,
-          currLocation.lng
-        );
+        const google = window.google;
+        var service = new google.maps.DistanceMatrixService();
+        origin = new google.maps.LatLng(currLocation.lat, currLocation.lng);
       }
 
       service.getDistanceMatrix(
