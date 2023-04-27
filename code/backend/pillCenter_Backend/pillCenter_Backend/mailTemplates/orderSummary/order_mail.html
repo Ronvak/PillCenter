@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <html dir="rtl">
+      <center>
+        <h2>אישור הזמנה</h2>
+        <h1>שלום {{ user.first_name }}!</h1>
+        <br />
+        <h2>הזמנתך התקבלה בהצלחה!</h2>
+        <h3>תודה שבחרת Pillcenter</h3>
+
+        <h5>להלן פרטי הזמנתך:</h5>
+        <h5>מוצר : {{order.product_id.medicine_id.medicine_name }}</h5>
+
+        <button onclick="window.location.href='http://localhost:3000/login';">
+          לחץ כאן לצפייה בעמוד ההזמנה עם הברקוד לאיסוף
+        </button>
+      </center>
+    </html>
+  </body>
+</html>
