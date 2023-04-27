@@ -4,7 +4,10 @@ from rest_framework import  serializers
 from django.contrib.auth.models import User ,Group
 from django_email_verification import send_email
 from .models import Orders
+from django.core.files import File
+from io import BytesIO
 import datetime
+import qrcode
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
@@ -50,7 +53,16 @@ class OrderSerializer(serializers.ModelSerializer):
         fields = ['user_id' ,'product_id' , 'pharmacist_instruction']
 
     def create(self,validated_data):
+
         order = Orders.objects.create(user_id =validated_data['user_id'] ,product_id = validated_data['product_id'],pharmacist_instruction= validated_data['pharmacist_instruction'] , order_status_id = 1 ,
         order_date = datetime.datetime.now())
-      
-        return order
+        qr = qrcode.QRCode(version=None, error_correction=qrcode.constants.ERROR_CORRECT_L, box_size=10, border=4)
+        qr.add_data("OR" + str(order.id))
+        qr.add_data("PR" + str(order.product_id.id))
+        qr.add_data("CL" + str(order.user_id.id))
+        qr.make(fit=True)
+        img = qr.make_image(fill_color="black", back_color="white")
+        blob = BytesIO()
+        img.save(blob, 'JPEG')  
+        order.qr_code = order.qr_code.save('qr.jpg', File(blob), save=True)
+        return order 
