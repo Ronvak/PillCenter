@@ -11,6 +11,7 @@ export default function OrderSummary(props) {
 
   async function handleDistance(dis) {
     setDistance(dis.replace("km", 'ק"מ'));
+    setDistance(dis.replace("m", "מטרים"));
   }
   return (
     <center>

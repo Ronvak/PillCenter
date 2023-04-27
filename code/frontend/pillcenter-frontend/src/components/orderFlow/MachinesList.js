@@ -12,7 +12,7 @@ export default function MachinesList(props) {
 
   const getMachines = async () => {
     const res = await axios
-      .get(`http://127.0.0.1:8000/api/medicineinstock/?q=${medicineChoise}`)
+      .get(`/api/medicineinstock/?q=${medicineChoise}`)
       .then((response) => {
         setMachines(response.data);
       })
