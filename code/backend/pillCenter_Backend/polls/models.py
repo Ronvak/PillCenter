@@ -35,7 +35,7 @@ class Orders(models.Model):
     order_status = models.ForeignKey(Order_status, on_delete=models.CASCADE)
     order_date = models.DateField()
     pharmacist_instruction = models.CharField(max_length=300)
-    qr_code = models.ImageField(upload_to="qr_codes" , default=None)
+    qr_code = models.ImageField(upload_to="qr_codes/" , blank=True, null=True)
 
 
 class Vending_machines(models.Model):

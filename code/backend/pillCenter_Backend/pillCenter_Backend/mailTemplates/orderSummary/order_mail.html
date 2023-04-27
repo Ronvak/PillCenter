@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="he">
   <head>
@@ -15,8 +16,9 @@
         <h3>תודה שבחרת Pillcenter</h3>
 
         <h5>להלן פרטי הזמנתך:</h5>
+        <h5>מספר הזמנה : {{ order.id }}</h5>
         <h5>מוצר : {{order.product_id.medicine_id.medicine_name }}</h5>
-
+        <h5>מחיר : {{order.product_id.medicine_id.price}} ₪</h5>
         <button onclick="window.location.href='http://localhost:3000/login';">
           לחץ כאן לצפייה בעמוד ההזמנה עם הברקוד לאיסוף
         </button>

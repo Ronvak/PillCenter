@@ -65,7 +65,7 @@ class OrderSerializer(serializers.ModelSerializer):
         img = qr.make_image(fill_color="black", back_color="white")
         blob = BytesIO()
         img.save(blob, 'JPEG')  
-        order.qr_code = order.qr_code.save('qr.jpg', File(blob), save=True)
+        order.qr_code.save('qr.jpg', File(blob), save=True)
         user =validated_data['user_id']
         
         send_mail_order(order=order,user=user)
