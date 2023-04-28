@@ -101,7 +101,7 @@ export default function Login() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              התחבר
+              התחבררר
             </ButtonTemplate>
             <Grid container>
               <Grid item xs>

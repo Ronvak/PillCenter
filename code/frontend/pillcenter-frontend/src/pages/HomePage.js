@@ -10,7 +10,7 @@ const HomePage = () => {
   }, []);
 
   const getProfile = async () => {
-    let response = await fetch("http://localhost:8000/api/profile/", {
+    let response = await fetch("/api/profile/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
