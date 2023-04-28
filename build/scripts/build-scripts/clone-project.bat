@@ -2,7 +2,7 @@
 
 echo.
 echo Cloning GIT repositories...
-git clone --quiet --single-branch --branch 51-build-for-production git@gitlab.com:pillcenter-dev/%PROJECT_NAME%.git
+git clone --quiet --single-branch --branch main git@gitlab.com:pillcenter-dev/%PROJECT_NAME%.git
 echo.
 echo Cleaning up development code from server...
 pushd %PROJECT_NAME%
