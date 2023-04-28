@@ -182,7 +182,7 @@ def verified_callback(user):
 
 EMAIL_VERIFIED_CALLBACK = verified_callback
 
-EMAIL_FROM_ADDRESS = 'ronvak1@gmail.com'
+EMAIL_FROM_ADDRESS = 'pillcenterdev@gmail.com'
 EMAIL_MAIL_SUBJECT = 'אימות הדואר אלקטרוני שלך'
 EMAIL_MAIL_HTML = 'mail.html'
 EMAIL_MAIL_PLAIN = 'plainmail.txt'
@@ -196,8 +196,8 @@ MAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'ronvak1@gmail.com'
-EMAIL_HOST_PASSWORD ="xzwg qijv hhmv oomn"
+EMAIL_HOST_USER = 'pillcenterdev@gmail.com'
+EMAIL_HOST_PASSWORD ="wlop nymn bxzd totq"
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SERVER_EMAIL =EMAIL_HOST_USER
