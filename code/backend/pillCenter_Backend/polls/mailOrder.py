@@ -1,6 +1,5 @@
-from django.core.mail import send_mail
+from django.core.mail import send_mail 
 from django.template.loader import render_to_string
-from django.conf import settings
 
 
 def send_mail_order(user , order):
@@ -16,3 +15,4 @@ def send_mail_order(user , order):
         [user.email],
         html_message=msg_html,
     )
+    
