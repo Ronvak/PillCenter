@@ -52,18 +52,17 @@ export default function GoogleMaps(props) {
         const google = window.google;
         var service = new google.maps.DistanceMatrixService();
         origin = new google.maps.LatLng(currLocation.lat, currLocation.lng);
+        service.getDistanceMatrix(
+          {
+            origins: [origin],
+            destinations: [location],
+            travelMode: "DRIVING",
+          },
+          (response, status) => {
+            handleDistance(response.rows[0]?.elements[0]?.distance?.text);
+          }
+        );
       }
-
-      service.getDistanceMatrix(
-        {
-          origins: [origin],
-          destinations: [location],
-          travelMode: "DRIVING",
-        },
-        (response, status) => {
-          handleDistance(response.rows[0]?.elements[0]?.distance?.text);
-        }
-      );
     }
     if (currLocation.lat !== 3 && location.lat !== 3) getDistance();
   }, [currLocation, location]);
