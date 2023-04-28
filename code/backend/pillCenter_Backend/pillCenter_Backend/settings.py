@@ -9,12 +9,18 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
-from pathlib import Path
+import os
 from datetime import timedelta
+from os.path import dirname, abspath
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+ENV_FILE_DIR = dirname(dirname(abspath(__file__)))
+load_dotenv(os.path.join(ENV_FILE_DIR, '.env'))
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-import os
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -25,8 +31,7 @@ SECRET_KEY = 'django-insecure-n=&*upr9t_86romk(fs^1#*hbq_g(8b#dzxchg0zhwi&$qnm7+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -41,8 +46,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'polls',
-     'django_dump_load_utf8',
-     'django_email_verification',
+    'django_dump_load_utf8',
+    'django_email_verification',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
 MIDDLEWARE = [
@@ -53,14 +58,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-       "corsheaders.middleware.CorsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-       
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
@@ -117,21 +120,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pillCenter_Backend.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-  'default': {
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pillcenter_db',
         'USER': 'pillcenter_db_root',
         'PASSWORD': '318180700',
         'HOST': 'localhost',
         'PORT': '3306',
-  }
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -151,7 +152,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -163,16 +163,17 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 def verified_callback(user):
     user.is_active = True
@@ -195,7 +196,9 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'ronvak1@gmail.com'
-EMAIL_HOST_PASSWORD ="xzwg qijv hhmv oomn"
+EMAIL_HOST_PASSWORD = "xzwg qijv hhmv oomn"
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-SERVER_EMAIL =EMAIL_HOST_USER
+SERVER_EMAIL = EMAIL_HOST_USER
+
+API_PREFIX = os.environ.get('API_PREFIX', default='')

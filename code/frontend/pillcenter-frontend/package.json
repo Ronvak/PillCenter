@@ -8,6 +8,7 @@
     "@emotion/styled": "^11.10.6",
     "@fontsource/roboto": "^4.5.8",
     "@hookform/resolvers": "^3.0.0",
+    "@iconify/react": "^4.1.0",
     "@mdi/js": "^7.2.96",
     "@mdi/react": "^1.6.1",
     "@mui/icons-material": "^5.11.11",
@@ -53,8 +54,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@iconify/react": "^4.1.0"
   }
 }
