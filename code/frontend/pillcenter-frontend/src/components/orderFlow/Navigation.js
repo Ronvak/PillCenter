@@ -20,8 +20,9 @@ const style = {
   p: 4,
 };
 
-const wazelink = "https://waze.com/ul?q=";
-const googlemapLink = "https://www.google.com/maps/dir/?api=1&destination=";
+export const wazelink = "https://waze.com/ul?q=";
+export const googlemapLink =
+  "https://www.google.com/maps/dir/?api=1&destination=";
 
 export default function Navigation(props) {
   const [open, setOpen] = React.useState(false);
