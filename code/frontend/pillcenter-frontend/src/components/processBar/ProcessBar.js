@@ -10,6 +10,7 @@ import MedicineChoose from "../orderFlow/MedicineChoose";
 import MachinesList from "../orderFlow/MachinesList";
 import PaymentNConfirm from "../orderFlow/PaymentNConfirm";
 import Questionnaire from "../questionnaire/Questionnaire";
+import CancelOrder from "../orderFlow/CancelOrder";
 
 const steps = ["בחירת מרשם", "מיקום איסוף", "שאלון", "תשלום ואישור"];
 
@@ -59,6 +60,7 @@ export default function ProcessBar() {
       questionnaire={questionnaire}
       handleQuestionnaire={handleQuestionnaire}
     />,
+
     <PaymentNConfirm
       machineChoice={machineChoice}
       medicineChoise={medicineChoise}

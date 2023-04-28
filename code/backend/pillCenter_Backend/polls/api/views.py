@@ -2,45 +2,44 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from django.http import HttpResponse
-from rest_framework.decorators import api_view ,  permission_classes
+from rest_framework.decorators import api_view,  permission_classes
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
-from polls.serializers import UserSerializer , RegisterSerializer ,OrderSerializer
+from polls.serializers import UserSerializer, RegisterSerializer, OrderSerializer
 from rest_framework import generics
-from polls.models import Medicine ,Inventory ,Products , Vending_machines ,Orders
-from django.contrib.auth import  get_user_model
-
-
-
+from polls.models import Medicine, Inventory, Products, Vending_machines, Orders
+from django.contrib.auth import get_user_model
 
 
 User = get_user_model()
-class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
-        def validate(self, attrs):
-            credentials = {
-                'username': '',
-                'password': attrs.get("password")
-            }
 
-            user_obj = User.objects.filter(email=attrs.get("username")).first() or User.objects.filter(username=attrs.get("username")).first()
-            if user_obj:
-                credentials['username'] = user_obj.username
-            data = super().validate(credentials)
-            data['user'] = {
+
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        credentials = {
+            'username': '',
+            'password': attrs.get("password")
+        }
+
+        user_obj = User.objects.filter(email=attrs.get("username")).first(
+        ) or User.objects.filter(username=attrs.get("username")).first()
+        if user_obj:
+            credentials['username'] = user_obj.username
+        data = super().validate(credentials)
+        data['user'] = {
             'id': self.user.id,
             "first_name": self.user.first_name,
             "last_name": self.user.last_name,
             "email": self.user.email,
             "phone": str(self.user.profile.phone),
-            "groups" : self.user.groups.values_list('name' , flat=True) }
-            
+            "groups": self.user.groups.values_list('name', flat=True)}
 
-            return data
-
+        return data
 
 
 class RegisterApi(generics.GenericAPIView):
     serializer_class = RegisterSerializer
+
     def post(self, request, *args,  **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -50,8 +49,10 @@ class RegisterApi(generics.GenericAPIView):
             "message": "User Created Successfully.  Now perform Login to get your token",
         })
 
+
 class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = MyTokenObtainPairSerializer
+
 
 @api_view(['GET'])
 def get_routes(request):
@@ -63,6 +64,7 @@ def get_routes(request):
 
     return Response(routes)
 
+
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_profile(request):
@@ -72,7 +74,7 @@ def get_profile(request):
 
 
 @api_view(['POST'])
-def userCreate(request ):
+def userCreate(request):
 
     userSerializer = UserSerializer(data=request.data)
     if userSerializer.is_valid():
@@ -80,21 +82,22 @@ def userCreate(request ):
         return Response(status=status.HTTP_200_OK)
     return Response(status=status.HTTP_400_BAD_REQUEST)
 
+
 @api_view(['POST'])
 def completeOrder(request):
     machine = request.data['machine_id']
     medicine = request.data['medicine_id']
-    product = Products.objects.all().values().filter(medicine_id = medicine)
+    product = Products.objects.all().values().filter(medicine_id=medicine)
     inventory = Inventory.objects.all().values()
-    product = inventory.filter(machine_id = machine , product_id__in = product.values_list('id'))[0]
+    product = inventory.filter(
+        machine_id=machine, product_id__in=product.values_list('id'))[0]
     request.data['product_id'] = product['id']
-    orderSerializer = OrderSerializer(data = request.data)
+    orderSerializer = OrderSerializer(data=request.data)
     orderSerializer.is_valid(raise_exception=True)
-   
+
     order = orderSerializer.save()
     data = order.id
-    return Response(data= data)
-        
+    return Response(data=data)
 
 
 @api_view(['GET'])
@@ -102,12 +105,13 @@ def getMedicines(request):
     prescription = Medicine.objects.all().values()
     return Response(prescription)
 
+
 @api_view(['GET'])
 def getOrder(request):
     orders = Orders.objects.all().values()
-    order = request.GET.get('q',None)
+    order = request.GET.get('q', None)
     if order is not None:
-        orders = orders.filter(id = order)[0]
+        orders = orders.filter(id=order)[0]
     return Response(orders)
 
 
@@ -116,10 +120,21 @@ def medicineInStock(request):
     machines = Vending_machines.objects.all().values()
     inventory = Inventory.objects.all().values()
     products = Products.objects.all().values()
-    medicine = request.GET.get('q',None)
+    medicine = request.GET.get('q', None)
     if medicine is not None:
-        products = products.filter(medicine_id = medicine)
-        inventory = inventory.filter(product_id__in = products.values_list('id'))
-        machines = machines.filter(id__in = inventory.values_list('machine_id'))
+        products = products.filter(medicine_id=medicine)
+        inventory = inventory.filter(product_id__in=products.values_list('id'))
+        machines = machines.filter(id__in=inventory.values_list('machine_id'))
     return Response(machines)
 
+
+@api_view(['POST'])
+def cancelOrder(request):
+    orders = Orders.objects.all().values()
+    order = request.data['order_id']
+    if order is not None:
+        orders = Orders.objects.get(id=order)
+        orders.order_status_id = 3
+        orders.save()
+        return Response(status=status.HTTP_200_OK)
+    return Response(status=status.HTTP_400_BAD_REQUEST)
