@@ -1,5 +1,252 @@
 [
   {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "pharmacist",
+      "permissions": [60, 44, 40, 56, 52, 36, 48]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": { "name": "patient", "permissions": [16, 20, 60, 40, 56, 36, 48] }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$1g9Dn1eG8BL9sGmADv8qHp$Rsv6uV90sT8gmbsw9j+92FsDVgzh3adPZcRks6aSYa4=",
+      "last_login": "2023-03-17T15:38:04.764Z",
+      "is_superuser": true,
+      "username": "pillcenteradmin",
+      "first_name": "",
+      "last_name": "",
+      "email": "pilladmin@pillc.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-03-17T15:37:20.106Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$BpO2lnUUVZd1mcuv52SeV4$bOt6Gh0JTq2rBG5GEo2rJ6G2GlnK5Eaoui9oTzJIXKA=",
+      "last_login": "2023-04-14T15:42:09.825Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@admin.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-03-17T16:52:53.479Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 21,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$UPVHACQUN2qKCu0GJaMvgX$S74wzq9EFWRVWL05e8ttsr7bsI94aiDG0JrojoRAUwk=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "yaroni",
+      "first_name": "ירון",
+      "last_name": "בן שלום",
+      "email": "yaroni@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-22T12:09:21Z",
+      "groups": [2],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 22,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$S8qCUtBOsC1RL9lJu8eMNH$3bVZytDjEmWs74ZppBAew99Jff20E5K52oWCMCM12GA=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "noaKilla",
+      "first_name": "נועה",
+      "last_name": "קילה",
+      "email": "noaKilla@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-22T12:09:53Z",
+      "groups": [1],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 34,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$ulEMgIugp2NMbxojX2mCFq$mFHozz1GXbf5BVBAhMLdOxryg6I7N8MOpylRhO4RzRM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ronvak",
+      "first_name": "רון",
+      "last_name": "וקנין",
+      "email": "ronvak1@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-23T20:27:39Z",
+      "groups": [1],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 35,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$DnkoX7NjUWs4MFvCXRsceU$K/aXKKwTCvCxeG/GUWcFKpx+iKInaXelmu1SUwiu0JQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "noamez",
+      "first_name": "נועם",
+      "last_name": "עזרא",
+      "email": "noamezra@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-23T20:41:21Z",
+      "groups": [2],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 36,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$HaN0UrGKBzmkNTnM4dp1Li$na0p4d2Ws6OfW7tAElOqD64u21n14AYsPDPY9qNf5Ww=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "hj",
+      "first_name": "תום",
+      "last_name": "קונדט",
+      "email": "tom@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-23T23:05:34.350Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 52,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$Qksg0oI6G6cFZ7alpid4iZ$3oTF3xWn9kewPv9aHQiQfwMphsao9wP/W7HZmMGN39w=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tairmes",
+      "first_name": "תאיר",
+      "last_name": "מסיקה",
+      "email": "tairmes1@gmail.com",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2023-03-24T23:23:13Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 53,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$hPnQNyxY8wrPYuuyy7Qrbz$PcDrwOBBvPDL4867TRjxpbeljoE8FoJudQ7EhyCwV7Q=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "noami",
+      "first_name": "נועם",
+      "last_name": "עזרא",
+      "email": "noamezra97@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-24T23:28:10Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 67,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$wTsjws2FeclV1VutzXopVg$UZPJDQiIcME0MECCgEYM/BwzCCLowL+U6QbCOkekdzM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "dokosk",
+      "first_name": "שמעון",
+      "last_name": "אסולין",
+      "email": "ronvak@gmail.com",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2023-04-19T14:17:36.609Z",
+      "groups": [2],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 68,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$pcDRA7HfkCzI1tGFc557pG$hAHoIyBQEtKRn1yaAeNmB+O3GBpwvjYURKcHH0dQ2Yg=",
+      "last_login": "2023-04-21T18:44:38.889Z",
+      "is_superuser": false,
+      "username": "shimonvak",
+      "first_name": "שמעון",
+      "last_name": "וקנין",
+      "email": "ronvakps@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-04-21T18:44:27.623Z",
+      "groups": [2],
+      "user_permissions": []
+    }
+  },
+
+  {
+    "model": "polls.profile",
+    "pk": 14,
+    "fields": { "user": 34, "id_user": "318180700", "phone": "0524631505" }
+  },
+  {
+    "model": "polls.profile",
+    "pk": 15,
+    "fields": { "user": 35, "id_user": "123456789", "phone": "0524646489" }
+  },
+  {
+    "model": "polls.profile",
+    "pk": 16,
+    "fields": { "user": 36, "id_user": "154879985", "phone": "0522151468" }
+  },
+  {
+    "model": "polls.profile",
+    "pk": 32,
+    "fields": { "user": 52, "id_user": "222222222", "phone": "0525556484" }
+  },
+  {
+    "model": "polls.profile",
+    "pk": 33,
+    "fields": { "user": 53, "id_user": "222222223", "phone": "0545747271" }
+  },
+  {
+    "model": "polls.profile",
+    "pk": 47,
+    "fields": { "user": 67, "id_user": "201231651", "phone": "055565979" }
+  },
+  {
+    "model": "polls.profile",
+    "pk": 48,
+    "fields": { "user": 68, "id_user": "223126788", "phone": "0506239041" }
+  },
+  {
     "model": "polls.medicine",
     "pk": 1,
     "fields": {
@@ -7,56 +254,56 @@
       "image_URL": "https://superpharmstorage.blob.core.windows.net/hybris/products/mobile/medium/7290106064577.jpg",
       "price": 10.0,
       "brand": "טבע",
-      "description": "אופטלגין-כאבי ראש",
-      "medicine_name": "אופטלגין"
+      "description": "לשיכוך כאבים בינוניים עד חזקים",
+      "medicine_name": "אופטלגין קפליות 500 מ''ג"
     }
   },
   {
     "model": "polls.medicine",
     "pk": 2,
     "fields": {
-      "prescription": "לקחת פעם ביום בשעות הבוקר",
-      "image_URL": "https://cdn.shopify.com/s/files/1/1085/0276/products/6385939-5171_360x.jpg?v=1575795302",
-      "price": 12.0,
-      "brand": "פארם איי אל",
-      "description": "סירופ לשיעול",
-      "medicine_name": "סירופרפן"
+      "prescription": "יש לנער לפני השימוש. שימו לב, האריזה מכילה מזרק ג",
+      "image_URL": "https://superpharmstorage.blob.core.windows.net/hybris/products/desktop/medium/7290010038565.jpg",
+      "price": 59.9,
+      "brand": "כצט",
+      "description": "תרחיף מרוכז לבליעה בטעם תות, ללא סוכר",
+      "medicine_name": "טיפטיפות נובימול מוריד חום ומש"
     }
   },
   {
     "model": "polls.medicine",
     "pk": 3,
     "fields": {
-      "prescription": "לקחת פעמיים ביום בשעות הבוקר",
-      "image_URL": "https://www.biogaya.co.il/media/catalog/product/cache/cd836a4499ae9487d98da081443bcceb/c/a/calbaten_syrop.jpg",
-      "price": 15.0,
+      "prescription": "יש לאחסן בטמפר' בין 2°C ל- 25°C. אין להקפיא.",
+      "image_URL": "https://superpharmstorage.blob.core.windows.net/hybris/products/desktop/medium/7290017368412.jpg",
+      "price": 95.0,
       "brand": "טבע",
-      "description": "כדורים להקלה ברגישות וכאבי בטן",
-      "medicine_name": "קל-בטן"
+      "description": "ליפיטיר מולטי הינן טיפות לעיניים יבשות הנותנות פתר",
+      "medicine_name": "ליפיטיר מולטי - טיפות לעיניים"
     }
   },
   {
     "model": "polls.medicine",
     "pk": 4,
     "fields": {
-      "prescription": "לקחת פעמיים ביום בשעות הבוקר",
-      "image_URL": "https://www.biogaya.co.il/media/catalog/product/cache/cd836a4499ae9487d98da081443bcceb/c/a/calbaten_syrop.jpg",
+      "prescription": "45",
+      "image_URL": "https://superpharmstorage.blob.core.windows.net/hybris/products/desktop/medium/7290000802633.jpg",
       "price": 15.0,
       "brand": "טבע",
-      "description": "כדורים להקלה ברגישות וכאבי בטן",
-      "medicine_name": "קל-בטן"
+      "description": "20 טבליות להקלה בתופעות האלרגיה, יעיל ל- 24 שעות",
+      "medicine_name": "טבע אלרג'י X"
     }
   },
   {
     "model": "polls.medicine",
     "pk": 5,
     "fields": {
-      "prescription": "לקחת פעם אחת בבוקר ופעם אחת בערב",
-      "image_URL": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxMTExYTEREYERYYFhYWFhgWFhYWFhYWFhYZGRYYGRYaICsiGhwoIRYWJDQjKCwwMjExGSE3PDcvOyswMS4BCwsLDw4PGhERHTEoIikwMC4uMDA7MDAwMC4uMTAwMDAwMDAyMDIwMDkwMDAwMDAwLi4wMDAwMDAwMDAwMDAwMP/AABEIALEBHQMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAgMEBQYBBwj/xABJEAACAQIDBAUKBAIHBwQDAAABAgMAEQQSIQUTMUEGByJRYRQyQnFygZGhsbIzUoLCI8EVQ1ODkrPRCDVEYnPw8SSi0uEWJTT/xAAaA",
+      "prescription": "מריחה אחת פעמיים ביום - בבוקר ובערב.",
+      "image_URL": "https://superpharmstorage.blob.core.windows.net/hybris/products/desktop/medium/7290014547346.jpg",
       "price": 13.0,
       "brand": "פארם איי אל",
-      "description": "כדורים להקלה בכאבי בטן קשים",
-      "medicine_name": "סטופיט"
+      "description": "ג'ל לטיפול מקומי בכאב, דלקת ונפיחות במבוגרים ובמתב",
+      "medicine_name": "אמולג'ל פורטה 2% לטיפול מקומי"
     }
   },
   {
@@ -71,11 +318,6 @@
   },
   {
     "model": "polls.products",
-    "pk": 3,
-    "fields": { "medicine_id": 3, "expired_date": "2028-07-20" }
-  },
-  {
-    "model": "polls.products",
     "pk": 4,
     "fields": { "medicine_id": 4, "expired_date": "2027-12-25" }
   },
@@ -84,8 +326,34 @@
     "pk": 5,
     "fields": { "medicine_id": 5, "expired_date": "2028-04-13" }
   },
+  {
+    "model": "polls.products",
+    "pk": 6,
+    "fields": { "medicine_id": 2, "expired_date": "2024-05-09" }
+  },
+  {
+    "model": "polls.products",
+    "pk": 7,
+    "fields": { "medicine_id": 4, "expired_date": "2024-10-10" }
+  },
+  {
+    "model": "polls.products",
+    "pk": 8,
+    "fields": { "medicine_id": 5, "expired_date": "2024-07-04" }
+  },
+  {
+    "model": "polls.products",
+    "pk": 10,
+    "fields": { "medicine_id": 1, "expired_date": "2025-02-22" }
+  },
+  {
+    "model": "polls.products",
+    "pk": 11,
+    "fields": { "medicine_id": 2, "expired_date": "2025-10-11" }
+  },
   { "model": "polls.order_status", "pk": 1, "fields": { "status": "בהמתנה" } },
   { "model": "polls.order_status", "pk": 2, "fields": { "status": "הושלם" } },
+  { "model": "polls.order_status", "pk": 3, "fields": { "status": "בוטל" } },
   {
     "model": "polls.orders",
     "pk": 1,
@@ -131,6 +399,2481 @@
     }
   },
   {
+    "model": "polls.orders",
+    "pk": 9,
+    "fields": {
+      "user_id": 67,
+      "product_id": 5,
+      "order_status": 1,
+      "order_date": "2023-04-20",
+      "pharmacist_instruction": "המלצה: מאשר לקיחת תרופה"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 10,
+    "fields": {
+      "user_id": 21,
+      "product_id": 5,
+      "order_status": 1,
+      "order_date": "2023-04-20",
+      "pharmacist_instruction": "המלצה: לא מאשר לקיחת תרופה"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 11,
+    "fields": {
+      "user_id": 2,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-20",
+      "pharmacist_instruction": "המלצה: מאשר לקיחת תרופה"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 12,
+    "fields": {
+      "user_id": 2,
+      "product_id": 5,
+      "order_status": 1,
+      "order_date": "2023-04-20",
+      "pharmacist_instruction": "המלצה: מאשר לקיחת תרופה"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 13,
+    "fields": {
+      "user_id": 2,
+      "product_id": 4,
+      "order_status": 1,
+      "order_date": "2023-04-20",
+      "pharmacist_instruction": "המלצה: מאשר לקיחת תרופה"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 21,
+    "fields": {
+      "user_id": 2,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-20",
+      "pharmacist_instruction": "המלצה: מאשר לקיחת תרופה"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 22,
+    "fields": {
+      "user_id": 2,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-20",
+      "pharmacist_instruction": "המלצה: מאשר לקיחת תרופה"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 72,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-21",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 73,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-21",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 74,
+    "fields": {
+      "user_id": 68,
+      "product_id": 11,
+      "order_status": 1,
+      "order_date": "2023-04-21",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 75,
+    "fields": {
+      "user_id": 68,
+      "product_id": 11,
+      "order_status": 1,
+      "order_date": "2023-04-21",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 76,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-21",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 77,
+    "fields": {
+      "user_id": 68,
+      "product_id": 5,
+      "order_status": 1,
+      "order_date": "2023-04-21",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 78,
+    "fields": {
+      "user_id": 68,
+      "product_id": 4,
+      "order_status": 1,
+      "order_date": "2023-04-21",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 79,
+    "fields": {
+      "user_id": 68,
+      "product_id": 11,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 80,
+    "fields": {
+      "user_id": 68,
+      "product_id": 11,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 81,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 82,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 83,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 84,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 85,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 86,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 87,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 88,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 89,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 90,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 91,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 92,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 93,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 94,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 95,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 96,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 97,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 98,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 99,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 100,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 101,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 102,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 103,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 104,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 105,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 106,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 107,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 108,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 109,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 110,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 111,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 112,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 113,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 114,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 115,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 116,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 117,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 118,
+    "fields": {
+      "user_id": 68,
+      "product_id": 11,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 119,
+    "fields": {
+      "user_id": 68,
+      "product_id": 11,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 120,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 121,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 122,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 123,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-23",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 124,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 125,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 126,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 127,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 128,
+    "fields": {
+      "user_id": 68,
+      "product_id": 4,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 129,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 130,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 131,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 132,
+    "fields": {
+      "user_id": 68,
+      "product_id": 11,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 133,
+    "fields": {
+      "user_id": 68,
+      "product_id": 8,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 134,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 135,
+    "fields": {
+      "user_id": 68,
+      "product_id": 11,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 136,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 137,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 138,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 139,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 140,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 141,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 142,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 143,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 144,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 145,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 146,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 147,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 148,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 149,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 150,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 151,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 152,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 153,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-24",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 154,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 155,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 156,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 157,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 158,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 159,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 160,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 161,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 162,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 163,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 164,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 165,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 166,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 167,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 168,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 169,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 170,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 171,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 172,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 173,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 174,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 175,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 176,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 177,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 178,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 179,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 180,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 181,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 182,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 183,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 184,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 185,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 186,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 187,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 188,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 189,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 190,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 191,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 192,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 193,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 194,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 195,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 196,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 197,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 198,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 199,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 200,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 201,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 202,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 203,
+    "fields": {
+      "user_id": 68,
+      "product_id": 8,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 204,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 205,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 206,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 207,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 208,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 209,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 210,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 211,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 212,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 213,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 214,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 215,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 216,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 217,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 218,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-25",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 219,
+    "fields": {
+      "user_id": 68,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 220,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 221,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 222,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 223,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 224,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 225,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 226,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 227,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 228,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 229,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 230,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 231,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 232,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 233,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 234,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 235,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 236,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 237,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 238,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 239,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 240,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 241,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 242,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 243,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 244,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 245,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 246,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 247,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 248,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 249,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 250,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 251,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 252,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 253,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 254,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 255,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 256,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 257,
+    "fields": {
+      "user_id": 68,
+      "product_id": 11,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 258,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 259,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 260,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 261,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 262,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 263,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 264,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 265,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 266,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 267,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 268,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 269,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 270,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 271,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 272,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 273,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 274,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 275,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 276,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 277,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 278,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 279,
+    "fields": {
+      "user_id": 68,
+      "product_id": 11,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 280,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 281,
+    "fields": {
+      "user_id": 68,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 282,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 283,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 284,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 285,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 286,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 287,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 288,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 289,
+    "fields": {
+      "user_id": 68,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-04-27",
+      "pharmacist_instruction": "מאושר"
+    }
+  },
+  {
     "model": "polls.vending_machines",
     "pk": 1,
     "fields": { "address": "יהודה הלוי 36", "city": "באר שבע" }
@@ -148,7 +2891,7 @@
   {
     "model": "polls.vending_machines",
     "pk": 4,
-    "fields": { "address": "יוסף הצדיק 18", "city": "אופקים" }
+    "fields": { "address": "התאנה 3", "city": "אופקים" }
   },
   {
     "model": "polls.vending_machines",
@@ -172,11 +2915,6 @@
   },
   {
     "model": "polls.inventory",
-    "pk": 3,
-    "fields": { "machine_id": 3, "product_id": 3 }
-  },
-  {
-    "model": "polls.inventory",
     "pk": 4,
     "fields": { "machine_id": 4, "product_id": 4 }
   },
@@ -188,21 +2926,26 @@
   {
     "model": "polls.inventory",
     "pk": 6,
-    "fields": { "machine_id": 2, "product_id": 4 }
+    "fields": { "machine_id": 2, "product_id": 6 }
   },
   {
     "model": "polls.inventory",
     "pk": 7,
-    "fields": { "machine_id": 4, "product_id": 1 }
+    "fields": { "machine_id": 4, "product_id": 11 }
   },
   {
     "model": "polls.inventory",
     "pk": 8,
-    "fields": { "machine_id": 4, "product_id": 2 }
+    "fields": { "machine_id": 4, "product_id": 10 }
   },
   {
     "model": "polls.inventory",
     "pk": 9,
-    "fields": { "machine_id": 5, "product_id": 3 }
+    "fields": { "machine_id": 5, "product_id": 8 }
+  },
+  {
+    "model": "polls.inventory",
+    "pk": 11,
+    "fields": { "machine_id": 3, "product_id": 7 }
   }
 ]
