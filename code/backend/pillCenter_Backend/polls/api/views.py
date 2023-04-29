@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from rest_framework.decorators import api_view,  permission_classes
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
-from polls.serializers import UserSerializer, RegisterSerializer, OrderSerializer
+from polls.serializers import UserSerializer , RegisterSerializer ,OrderSerializer , OrdersSerializer
 from rest_framework import generics
 from polls.models import Medicine, Inventory, Products, Vending_machines, Orders
 from django.contrib.auth import get_user_model
@@ -87,12 +87,11 @@ def userCreate(request):
 def completeOrder(request):
     machine = request.data['machine_id']
     medicine = request.data['medicine_id']
-    product = Products.objects.all().values().filter(medicine_id=medicine)
+    product = Products.objects.all().values().filter(medicine_id = medicine)  
     inventory = Inventory.objects.all().values()
-    product = inventory.filter(
-        machine_id=machine, product_id__in=product.values_list('id'))[0]
-    request.data['product_id'] = product['id']
-    orderSerializer = OrderSerializer(data=request.data)
+    product = inventory.filter(machine_id = machine , product_id__in = product.values_list('id'))[0]
+    request.data['product_id'] = product['product_id_id']
+    orderSerializer = OrderSerializer(data = request.data)
     orderSerializer.is_valid(raise_exception=True)
 
     order = orderSerializer.save()
@@ -108,11 +107,17 @@ def getMedicines(request):
 
 @api_view(['GET'])
 def getOrder(request):
-    orders = Orders.objects.all().values()
-    order = request.GET.get('q', None)
+    orders = Orders.objects.all()
+    order = request.GET.get('q',None)
+  
     if order is not None:
-        orders = orders.filter(id=order)[0]
-    return Response(orders)
+        orders = orders.filter(id = order)
+    serializer = OrdersSerializer(orders, many=True)
+    inventory  = Inventory.objects.all().values().filter(product_id = orders.first().product_id)[0]
+    
+    machine = Vending_machines.objects.all().values().filter(id = inventory['machine_id_id'])[0]
+    serializer.data[0]['machine'] =  machine
+    return Response(serializer.data[0])
 
 
 @api_view(['GET'])

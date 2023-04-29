@@ -11,6 +11,8 @@ import PrivateRoute from "./utils/PrivateRoute";
 import PatientLandingPage from "./pages/PatientLandingPage";
 import UnauthorizedPage from "./pages/UnauthorizedPage";
 import MakeOrderPage from "./pages/MakeOrderPage";
+import OrderLayout from "./layouts/OrderLayout";
+import OrderPage from "./pages/OrderPage";
 import React from "react";
 
 const cacheRtl = createCache({
@@ -33,7 +35,10 @@ function App() {
                 <Routes>
                   <Route element={<PrivateRoute allowedRoles={["patient"]} />}>
                     <Route path="/" element={<PatientLandingPage />} exact />
-                    <Route path="/order" element={<MakeOrderPage />} exact />
+                    <Route path="/order" element={<MakeOrderPage />} />
+                    <Route path="/ordersummary" element={<OrderLayout />}>
+                      <Route path=":orderId" element={<OrderPage />} />
+                    </Route>
                   </Route>
                   <Route path="/unauthorized" element={<UnauthorizedPage />} />
                   <Route path="/login" element={<Login />} />

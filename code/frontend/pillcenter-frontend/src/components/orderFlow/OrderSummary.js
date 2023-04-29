@@ -5,10 +5,11 @@ import MyButton from "../buttons/ButtonTemplate";
 import Typography from "@mui/material/Typography";
 import Navigation from "./Navigation";
 import GoogleMaps from "./GoogleMaps";
+import { useNavigate } from "react-router-dom";
 export default function OrderSummary(props) {
-  const { machineChoice } = props;
+  const { machineChoice, order } = props;
   const [distance, setDistance] = useState();
-
+  const navigate = useNavigate();
   async function handleDistance(dis) {
     setDistance(dis.replace("km", 'ק"מ'));
     setDistance(dis.replace("m", "מטרים"));
@@ -39,7 +40,12 @@ export default function OrderSummary(props) {
         <br></br>
         <Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>
           <Grid item xs={6} sm={6}>
-            <MyButton fullWidth>צפייה בהזמנה</MyButton>
+            <MyButton
+              onClick={() => navigate(`/ordersummary/${order}`)}
+              fullWidth
+            >
+              צפייה בהזמנה
+            </MyButton>
           </Grid>
           <Grid item xs={6} sm={6}>
             {" "}
