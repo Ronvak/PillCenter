@@ -14,6 +14,7 @@ import Icon from "@mdi/react";
 import IconButton from "@mui/material/IconButton";
 import { mdiWaze } from "@mdi/js";
 import { SiGooglemaps } from "react-icons/si";
+import CancelOrder from "../components/orderFlow/CancelOrder";
 
 export default function OrderPage() {
   const [expanded, setExpanded] = React.useState("panel4");
@@ -51,11 +52,7 @@ export default function OrderPage() {
 
   return (
     <div>
-      <br></br>
-      <br></br>
-      <br></br>
-
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%", marginTop: 7 }}>
         <center>
           <Typography variant="h5">סיכום הזמנה מס' {order?.id}</Typography>
 
@@ -208,6 +205,13 @@ export default function OrderPage() {
               </AccordionDetails>
             </Accordion>
           </Box>
+          {order?.order_status?.id === 1 ? (
+            <Box sx={{ marginTop: 5 }}>
+              <CancelOrder orderId={order?.id} />
+            </Box>
+          ) : (
+            " "
+          )}
         </center>
       </Box>
     </div>

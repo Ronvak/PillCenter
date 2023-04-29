@@ -21,9 +21,9 @@ function PaperComponent(props) {
   );
 }
 
-export default function CancelOrder() {
+export default function CancelOrder(props) {
   const [open, setOpen] = React.useState(false);
-  const orderId = 11;
+  const { orderId } = props;
 
   const handleClickOpen = () => {
     setOpen(true);
