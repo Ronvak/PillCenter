@@ -1,13 +1,17 @@
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
+from django.http import HttpResponse
 from rest_framework.decorators import api_view ,  permission_classes
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from polls.serializers import UserSerializer , RegisterSerializer ,OrderSerializer
 from rest_framework import generics
-from polls.models import Medicine ,Inventory ,Products , Vending_machines
+from polls.models import Medicine ,Inventory ,Products , Vending_machines ,Orders
 from django.contrib.auth import  get_user_model
+
+
+
 
 
 User = get_user_model()
@@ -86,8 +90,10 @@ def completeOrder(request):
     request.data['product_id'] = product['id']
     orderSerializer = OrderSerializer(data = request.data)
     orderSerializer.is_valid(raise_exception=True)
-    orderSerializer.save()
-    return Response(status=status.HTTP_200_OK)
+   
+    order = orderSerializer.save()
+    data = order.id
+    return Response(data= data)
         
 
 
@@ -95,6 +101,14 @@ def completeOrder(request):
 def getMedicines(request):
     prescription = Medicine.objects.all().values()
     return Response(prescription)
+
+@api_view(['GET'])
+def getOrder(request):
+    orders = Orders.objects.all().values()
+    order = request.GET.get('q',None)
+    if order is not None:
+        orders = orders.filter(id = order)[0]
+    return Response(orders)
 
 
 @api_view(['GET'])

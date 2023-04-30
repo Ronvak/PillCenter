@@ -10,6 +10,7 @@ urlpatterns = [
     path('register/', RegisterApi.as_view()),
     path('medicines/' ,views.getMedicines),
     path('medicineinstock/',views.medicineInStock),
-    path('completeorder/',views.completeOrder)
+    path('completeorder/',views.completeOrder),
+    path('getorder/',views.getOrder),
 
 ]
