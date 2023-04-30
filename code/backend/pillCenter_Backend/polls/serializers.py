@@ -5,9 +5,11 @@ from django.contrib.auth.models import User ,Group
 from django_email_verification import send_email
 from .models import Orders
 from django.core.files import File
+from .mailOrder import send_mail_order
 from io import BytesIO
 import datetime
 import qrcode
+import base64
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
@@ -63,6 +65,11 @@ class OrderSerializer(serializers.ModelSerializer):
         qr.make(fit=True)
         img = qr.make_image(fill_color="black", back_color="white")
         blob = BytesIO()
-        img.save(blob, 'JPEG')  
-        order.qr_code = order.qr_code.save('qr.jpg', File(blob), save=True)
+        img.save(blob, 'PNG') 
+        img_str = base64.b64encode(blob.getvalue())
+        img_str = img_str.decode("utf-8")  
+        order.qr_code = order.qr_code.save('qr.png', File(blob), save=True)
+        user =validated_data['user_id']
+
+        send_mail_order(order=order,user=user ,img =img_str)
         return order 
