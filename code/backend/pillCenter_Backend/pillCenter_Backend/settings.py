@@ -183,7 +183,7 @@ def verified_callback(user):
 
 EMAIL_VERIFIED_CALLBACK = verified_callback
 
-EMAIL_FROM_ADDRESS = 'pillcenterdev@gmail.com'
+EMAIL_FROM_ADDRESS = 'ronvak1@gmail.com'
 EMAIL_MAIL_SUBJECT = 'אימות הדואר אלקטרוני שלך'
 EMAIL_MAIL_HTML = 'mail.html'
 EMAIL_MAIL_PLAIN = 'plainmail.txt'

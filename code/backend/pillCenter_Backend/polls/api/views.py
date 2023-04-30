@@ -87,12 +87,11 @@ def userCreate(request):
 def completeOrder(request):
     machine = request.data['machine_id']
     medicine = request.data['medicine_id']
-    product = Products.objects.all().values().filter(medicine_id=medicine)
+    product = Products.objects.all().values().filter(medicine_id = medicine)  
     inventory = Inventory.objects.all().values()
-    product = inventory.filter(
-        machine_id=machine, product_id__in=product.values_list('id'))[0]
-    request.data['product_id'] = product['id']
-    orderSerializer = OrderSerializer(data=request.data)
+    product = inventory.filter(machine_id = machine , product_id__in = product.values_list('id'))[0]
+    request.data['product_id'] = product['product_id_id']
+    orderSerializer = OrderSerializer(data = request.data)
     orderSerializer.is_valid(raise_exception=True)
 
     order = orderSerializer.save()
