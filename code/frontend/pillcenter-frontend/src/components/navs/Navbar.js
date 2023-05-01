@@ -5,11 +5,11 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import { styled } from "@mui/material/styles";
+
 import AuthContext from "../../context/AuthContext";
 import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import LogoutMessage from "../modals/LogoutMessage";
 
 const theme = createTheme({
   palette: {
@@ -21,13 +21,6 @@ const theme = createTheme({
     },
   },
 });
-const MyIconButton = styled(Button)(({ theme }) => ({
-  borderRadius: "20px",
-
-  "&:hover": {
-    backgroundColor: "#646464",
-  },
-}));
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -55,14 +48,7 @@ export default function Navbar() {
             >
               PillCenter
             </Typography>
-            <MyIconButton
-              size="large"
-              color="inherit"
-              sx={{ mr: -2 }}
-              onClick={() => handleBack()}
-            >
-              <KeyboardBackspaceIcon />
-            </MyIconButton>
+            <LogoutMessage handleBack={handleBack} />
           </Toolbar>
         </AppBar>
       </ThemeProvider>
