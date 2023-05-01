@@ -23,7 +23,7 @@ function PaperComponent(props) {
 
 export default function CancelOrder(props) {
   const [open, setOpen] = React.useState(false);
-  const { orderId } = props;
+  const { orderid, handleCancelation } = props;
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -37,10 +37,9 @@ export default function CancelOrder(props) {
 
     // Send a POST request to the server
     axios
-      .post("/api/cancelorder/", { order_id: orderId })
+      .post("/api/cancelorder/", { order_id: orderid })
       .then((response) => {
-        // Handle the response if needed
-        console.log("Order cancelled successfully");
+        handleCancelation();
       })
       .catch((error) => {
         // Handle the error if needed
@@ -54,7 +53,7 @@ export default function CancelOrder(props) {
         variant="outlined"
         onClick={handleClickOpen}
         sx={{ width: "35%" }}
-        orderId={orderId}
+        orderid={orderid}
       >
         ביטול הזמנה
       </MyButton>

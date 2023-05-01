@@ -37,7 +37,7 @@ function App() {
                     <Route path="/" element={<PatientLandingPage />} exact />
                     <Route path="/order" element={<MakeOrderPage />} />
                     <Route path="/ordersummary" element={<OrderLayout />}>
-                      <Route path=":orderId" element={<OrderPage />} />
+                      <Route path=":orderid" element={<OrderPage />} />
                     </Route>
                   </Route>
                   <Route path="/unauthorized" element={<UnauthorizedPage />} />
