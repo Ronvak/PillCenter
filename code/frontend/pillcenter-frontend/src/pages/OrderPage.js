@@ -27,11 +27,16 @@ export default function OrderPage() {
   const [city, setCity] = useState();
   const [number, setNumber] = useState();
   const [order, setOrder] = useState();
+  const [canceled, setCanceled] = useState(false);
+
+  function handleCancelation() {
+    setCanceled(true);
+  }
+
   async function getOrder() {
     const res = await axios
-      .get(`/api/getorder/?q=${params.orderId}`)
+      .get(`/api/getorder/?q=${params.orderid}`)
       .then((response) => {
-        console.log(response.data);
         setOrder(response.data);
       })
       .catch((error) => console.log(error));
@@ -39,7 +44,7 @@ export default function OrderPage() {
 
   useEffect(() => {
     if (params) getOrder();
-  }, [params]);
+  }, [params, canceled]);
 
   useEffect(() => {
     if (order) {
@@ -207,7 +212,10 @@ export default function OrderPage() {
           </Box>
           {order?.order_status?.id === 1 ? (
             <Box sx={{ marginTop: 5 }}>
-              <CancelOrder orderId={order?.id} />
+              <CancelOrder
+                orderid={order?.id}
+                handleCancelation={handleCancelation}
+              />
             </Box>
           ) : (
             " "

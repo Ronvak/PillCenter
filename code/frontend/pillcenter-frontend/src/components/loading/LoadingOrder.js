@@ -3,7 +3,7 @@ import Box from "@mui/system/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 
-export default function CircularColor() {
+export default function LoadingOrder() {
   return (
     <Box sx={{ width: "80%" }}>
       <br></br>
