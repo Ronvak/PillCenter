@@ -105,13 +105,6 @@ def getMedicines(request):
     return Response(prescription)
 
 
-@api_view(['GET'])
-def getMyOrders(request):
-    user_id = request.GET.get('q',None)
-    orders = Orders.objects.all().values()
-    if user_id is not None:
-        orders = orders.filter() 
-    return Response(orders)
 
 @api_view(['GET'])
 def getOrder(request):
