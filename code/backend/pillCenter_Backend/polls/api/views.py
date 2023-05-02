@@ -105,6 +105,7 @@ def getMedicines(request):
     return Response(prescription)
 
 
+
 @api_view(['GET'])
 def getOrder(request):
     orders = Orders.objects.all()
