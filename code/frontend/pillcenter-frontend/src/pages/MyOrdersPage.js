@@ -14,11 +14,12 @@ import { useParams } from "react-router-dom";
 import VaccinesIcon from "@mui/icons-material/Vaccines";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ListItemSecondaryAction from "@mui/material/ListItemSecondaryAction";
-
+import LoadingOrder from "../components/loading/LoadingOrder";
 import { useNavigate } from "react-router-dom";
 export default function MyOrdersPage() {
   const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(true);
   let params = useParams();
   console.log(params);
   const getMyOrders = async () => {
@@ -26,6 +27,7 @@ export default function MyOrdersPage() {
       .get(`/api/getmyorders/?q=${params.userid}`)
       .then((response) => {
         setOrders(response.data);
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   };
@@ -35,8 +37,10 @@ export default function MyOrdersPage() {
   }, []);
   return (
     <center>
-      <Box sx={{ width: "100%", marginTop: 10 }}>
-        {orders.length > 0 ? (
+      <Box sx={{ width: "100%", marginTop: 5 }}>
+        {loading ? (
+          <LoadingOrder text="אנא המתן מחפש את ההזמנות שלך..." />
+        ) : orders.length > 0 ? (
           <React.Fragment>
             <Typography variant="h5">
               {" "}
