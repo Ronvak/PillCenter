@@ -13,6 +13,7 @@ import UnauthorizedPage from "./pages/UnauthorizedPage";
 import MakeOrderPage from "./pages/MakeOrderPage";
 import OrderLayout from "./layouts/OrderLayout";
 import OrderPage from "./pages/OrderPage";
+import MyOrdersPage from "./pages/MyOrdersPage";
 import React from "react";
 
 const cacheRtl = createCache({
@@ -38,6 +39,9 @@ function App() {
                     <Route path="/order" element={<MakeOrderPage />} />
                     <Route path="/ordersummary" element={<OrderLayout />}>
                       <Route path=":orderid" element={<OrderPage />} />
+                    </Route>
+                    <Route path="/myorders" element={<OrderLayout />}>
+                      <Route path=":userid" element={<MyOrdersPage />} />
                     </Route>
                   </Route>
                   <Route path="/unauthorized" element={<UnauthorizedPage />} />
