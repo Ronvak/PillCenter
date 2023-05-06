@@ -9,6 +9,7 @@ import ListItemText from "@mui/material/ListItemText";
 import React, { useState, useEffect } from "react";
 import IconButton from "@mui/material/IconButton";
 import axios from "axios";
+import Divider from "@mui/material/Divider";
 import { Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import VaccinesIcon from "@mui/icons-material/Vaccines";
@@ -24,7 +25,6 @@ export default function MyOrdersPage() {
   const { auth } = useAuth();
   let params = useParams();
 
-  console.log(params);
   const getMyOrders = async () => {
     const res = await axios
       .get(`/api/getmyorders/?q=${params.userid}`)
@@ -58,7 +58,7 @@ export default function MyOrdersPage() {
             <Grid>
               <List>
                 {orders.map((order) => {
-                  order.order_date = order.order_date
+                  var order_date = order.order_date
                     .split("-")
                     .reverse()
                     .join("-");
@@ -66,7 +66,7 @@ export default function MyOrdersPage() {
                     <Grid item={true} xs={22} key={order.id}>
                       <ListItem
                         dense={false}
-                        sx={{ height: "50px", width: "100%" }}
+                        sx={{ width: "100%", boxShadow: 6 }}
                         disablePadding
                       >
                         <ListItemButton>
@@ -75,7 +75,7 @@ export default function MyOrdersPage() {
                           </ListItemIcon>
                           <ListItemText
                             primary={"מס' הזמנה: " + order.id}
-                            secondary={"מתאריך : " + order.order_date}
+                            secondary={"מתאריך : " + order_date}
                           />
                         </ListItemButton>
                         <ListItemSecondaryAction
