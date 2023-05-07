@@ -144,3 +144,12 @@ def cancelOrder(request):
         orders.save()
         return Response(status=status.HTTP_200_OK)
     return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+def getMyOrders(request):
+    user = request.GET.get('q', None)
+    orders = Orders.objects.all().values()
+    if user is not None:
+        orders = orders.filter(user_id = user , order_status = 1)
+    return Response(orders)

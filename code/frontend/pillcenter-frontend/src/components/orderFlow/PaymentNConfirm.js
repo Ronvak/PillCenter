@@ -41,7 +41,7 @@ export default function PaymentNConfirm(props) {
         ) : order ? (
           <OrderSummary machineChoice={machineChoice} order={order} />
         ) : (
-          <LoadingOrder />
+          <LoadingOrder text="אנא המתן מעבד את הזמנתך..." />
         )}
       </Box>
     </center>

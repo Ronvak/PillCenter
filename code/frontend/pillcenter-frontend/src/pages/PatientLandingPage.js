@@ -13,8 +13,8 @@ const PatientLandingPage = () => {
       <br></br>
       <br></br>
       <center>
-        <Typography variant="h5"> {auth?.first_name} ברוכים הבאים </Typography>
-        <Typography variant="h5"> מה ברצונך לעשות? </Typography>
+        <Typography variant="h5"> שלום {auth?.first_name},</Typography>
+        <Typography variant="h5"> מה הפעולה שברצונך לבצע ? </Typography>
         <br></br>
         <br></br>
         <PatientOpt />
