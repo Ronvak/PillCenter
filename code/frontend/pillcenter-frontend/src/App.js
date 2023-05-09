@@ -13,6 +13,7 @@ import UnauthorizedPage from "./pages/UnauthorizedPage";
 import MakeOrderPage from "./pages/MakeOrderPage";
 import OrderLayout from "./layouts/OrderLayout";
 import OrderPage from "./pages/OrderPage";
+import VideoRoom from "./components/pharmacist/VideoRoom";
 import MyOrdersPage from "./pages/MyOrdersPage";
 import React from "react";
 
@@ -47,6 +48,7 @@ function App() {
                   <Route path="/unauthorized" element={<UnauthorizedPage />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<SignUp />} />
+                  <Route path="/video" element={<VideoRoom />} />
                 </Routes>
               </AuthProvider>
             </Router>
