@@ -14,6 +14,7 @@ import MakeOrderPage from "./pages/MakeOrderPage";
 import OrderLayout from "./layouts/OrderLayout";
 import OrderPage from "./pages/OrderPage";
 import MyOrdersPage from "./pages/MyOrdersPage";
+import PharmacistLandingPage from "./pages/PharmacistLandingPage";
 import React from "react";
 
 const cacheRtl = createCache({
@@ -43,6 +44,15 @@ function App() {
                     <Route path="/myorders" element={<OrderLayout />}>
                       <Route path=":userid" element={<MyOrdersPage />} />
                     </Route>
+                  </Route>
+                  <Route
+                    element={<PrivateRoute allowedRoles={["pharmacist"]} />}
+                  >
+                    <Route
+                      path="/pharmacist"
+                      element={<PharmacistLandingPage />}
+                      exact
+                    />
                   </Route>
                   <Route path="/unauthorized" element={<UnauthorizedPage />} />
                   <Route path="/login" element={<Login />} />
