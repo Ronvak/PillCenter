@@ -16,14 +16,6 @@ export default function Video(props) {
 
   return (
     <Grid container style={{ height: "calc(100% - 48px)" }}>
-      <Grid item xs={12} sm={6} style={{ height: "100%" }}>
-        <Paper elevation={8} style={{ height: "100%" }}>
-          <AgoraVideoPlayer
-            videoTrack={tracks[1]}
-            style={{ height: "100%", width: "100%" }}
-          />
-        </Paper>
-      </Grid>
       {users.length > 0 &&
         users.map((user) => {
           if (user.videoTrack) {
@@ -33,34 +25,46 @@ export default function Video(props) {
                   elevation={3}
                   style={{
                     height: "100%",
-                    borderTop: "solid",
-                    borderTopWidth: "14px",
-                    borderTopColor: "#C0C0C0",
                   }}
                 >
                   <AgoraVideoPlayer
                     videoTrack={user.videoTrack}
                     key={user.uid}
                     style={{ height: "100%", width: "100%" }}
-                  >
-                    <Paper
-                      elevation={13}
-                      sx={{
-                        backgroundColor: "#C0C0C0",
-                      }}
-                    >
-                      <Controls
-                        tracks={tracks}
-                        setStart={setStart}
-                        setInCall={setInCall}
-                      />
-                    </Paper>
-                  </AgoraVideoPlayer>
+                  ></AgoraVideoPlayer>
                 </Paper>
               </Grid>
             );
           } else return null;
         })}
+      <Grid item xs={12} sm={6} style={{ height: "100%" }}>
+        <Paper
+          elevation={3}
+          style={{
+            height: "100%",
+            borderTop: "solid",
+            borderTopWidth: "14px",
+            borderTopColor: "#C0C0C0",
+          }}
+        >
+          <AgoraVideoPlayer
+            videoTrack={tracks[1]}
+            style={{ height: "100%", width: "100%" }}
+          ></AgoraVideoPlayer>
+          <Paper
+            elevation={13}
+            sx={{
+              backgroundColor: "#C0C0C0",
+            }}
+          >
+            <Controls
+              tracks={tracks}
+              setStart={setStart}
+              setInCall={setInCall}
+            />
+          </Paper>
+        </Paper>
+      </Grid>
     </Grid>
   );
 }

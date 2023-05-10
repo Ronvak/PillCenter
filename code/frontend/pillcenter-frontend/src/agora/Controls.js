@@ -50,7 +50,7 @@ export default function Controls(props) {
       </Grid>
       <Grid item>
         <Button onClick={() => leaveChannel()}>
-          Leave
+          התנתקות
           <ExitToAppIcon />
         </Button>
       </Grid>
