@@ -63,18 +63,18 @@ export default function SignUp() {
   };
 
   function validId() {
-    if (id.length == 0) return true;
+    if (id.length === 0) return true;
 
-    return id.length == 9 && id.isNumber() == true;
+    return id.length === 9 && id.isNumber() == true;
   }
   function validPhone() {
-    if (phone.length == 0) return true;
+    if (phone.length === 0) return true;
 
     return /^([0]\d{1,3}[-])?\d{7,10}$/.test(phone);
   }
 
   function validUserName() {
-    if (username.length == 0) return true;
+    if (username.length === 0) return true;
     return /^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){2,18}[a-zA-Z0-9]$/.test(
       username
     );
