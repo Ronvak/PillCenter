@@ -7,7 +7,6 @@ import {
   channelName,
 } from "./settings";
 import Video from "./Video";
-import Controls from "./Controls";
 
 export default function VideoCall(props) {
   const { setInCall } = props;
