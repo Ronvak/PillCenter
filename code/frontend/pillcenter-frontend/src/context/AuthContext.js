@@ -65,7 +65,10 @@ export const AuthProvider = ({ children }) => {
       setUser(jwtDecode(data.access));
       localStorage.setItem("user", JSON.stringify(data.user));
       setAuth(data.user);
-      navigate("/");
+      if (data.user.groups?.find((role) => ["patient"].includes(role)))
+        navigate("/");
+      else if (data.user.groups?.find((role) => ["pharmacist"].includes(role)))
+        navigate("/pharmacist");
     } else {
       alert("Something went wrong while logging in the user!");
     }
