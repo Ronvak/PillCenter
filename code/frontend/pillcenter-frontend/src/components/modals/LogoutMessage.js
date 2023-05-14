@@ -6,8 +6,6 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Paper from "@mui/material/Paper";
 import Draggable from "react-draggable";
 import MyButton from "../buttons/ButtonTemplate";
-import Button from "@mui/material/Button";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 import * as React from "react";
 import IconButton from "@mui/material/IconButton";

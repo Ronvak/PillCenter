@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import MyButton from "../buttons/ButtonTemplate";
-
-const WaitingRoom = ({ videoCall = false, onJoinCall, onCancelCall }) => {
+import { useNavigate } from "react-router-dom";
+const WaitingRoom = ({ onJoinCall }) => {
   const [timer, setTimer] = useState(0);
   const [available, setAvailable] = useState(false);
   useEffect(() => {
@@ -12,13 +12,13 @@ const WaitingRoom = ({ videoCall = false, onJoinCall, onCancelCall }) => {
 
     return () => clearInterval(interval);
   }, []);
-
+  const navigate = useNavigate();
   const handleJoinCall = () => {
     onJoinCall();
   };
 
   const handleCancelCall = () => {
-    onCancelCall();
+    navigate("/");
   };
 
   return (
@@ -35,9 +35,7 @@ const WaitingRoom = ({ videoCall = false, onJoinCall, onCancelCall }) => {
             </Typography>
             <Typography variant="h5"> מיד הרוקח יכנס לשיחה ... </Typography>
             <Typography variant="h5"> הזמן שחלף: {timer} שניות </Typography>
-            <MyButton on Click={handleCancelCall}>
-              לביטול השיחה
-            </MyButton>
+            <MyButton onClick={handleCancelCall}>לביטול השיחה</MyButton>
 
             <br></br>
             <br></br>
@@ -55,9 +53,7 @@ const WaitingRoom = ({ videoCall = false, onJoinCall, onCancelCall }) => {
             </Typography>
             <Typography variant="h5"> הרוקח נכנס לשיחה תורך הגיע</Typography>
             <Typography variant="h5"> הזמן שחלף: {timer} שניות </Typography>
-            <MyButton on Click={handleJoinCall}>
-              הצטרף לשיחה
-            </MyButton>
+            <MyButton onClick={handleJoinCall}>הצטרף לשיחה</MyButton>
             <br></br>
             <br></br>
           </center>
