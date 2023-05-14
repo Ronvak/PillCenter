@@ -9,10 +9,7 @@ const PharmacistLandingPage = () => {
   return (
     <Box style={{ marginTop: 50 }}>
       <center>
-        <Typography variant="h5">
-          {" "}
-          שלום {auth?.first_name} הרוקח הטוב באזור
-        </Typography>
+        <Typography variant="h5"> שלום {auth?.first_name}</Typography>
         <Typography variant="h5"> מה הפעולה שברצונך לבצע ? </Typography>
         <PharmacistOpt />
       </center>
