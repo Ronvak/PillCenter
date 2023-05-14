@@ -11,7 +11,7 @@ export default function Video(props) {
 
   useEffect(() => {
     console.log(users);
-    console.log(Date.now());
+
     setGridSpacing(Math.max(Math.floor(12 / (users.length + 1)), 4));
   }, [users, tracks]);
 
