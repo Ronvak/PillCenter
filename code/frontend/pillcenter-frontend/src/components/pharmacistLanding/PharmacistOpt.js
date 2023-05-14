@@ -27,6 +27,7 @@ export default function PharmacistOpt() {
         </Grid>
         <Grid xs={12}>
           <Item
+            onClick={() => navigate("/consultant")}
             sx={{
               border: 1,
               borderWidth: 3,

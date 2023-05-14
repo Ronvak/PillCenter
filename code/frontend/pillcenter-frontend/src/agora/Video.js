@@ -42,6 +42,7 @@ export default function Video(props) {
           elevation={3}
           style={{
             height: "100%",
+            width: "80%",
             borderTop: "solid",
             borderTopWidth: "14px",
             borderTopColor: "#C0C0C0",
@@ -49,7 +50,7 @@ export default function Video(props) {
         >
           <AgoraVideoPlayer
             videoTrack={tracks[1]}
-            style={{ height: "100%", width: "100%" }}
+            style={{ height: "300px", width: "100%" }}
           ></AgoraVideoPlayer>
           <Paper
             elevation={13}

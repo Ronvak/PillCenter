@@ -15,6 +15,8 @@ import OrderLayout from "./layouts/OrderLayout";
 import OrderPage from "./pages/OrderPage";
 import MyOrdersPage from "./pages/MyOrdersPage";
 import PharmacistLandingPage from "./pages/PharmacistLandingPage";
+import Consultant from "./components/pharmacist/Consultant";
+import VideoRoom from "./components/pharmacist/VideoRoom";
 import React from "react";
 
 const cacheRtl = createCache({
@@ -51,6 +53,12 @@ function App() {
                     <Route
                       path="/pharmacist"
                       element={<PharmacistLandingPage />}
+                      exact
+                    />
+                    <Route path="/consultant" element={<Consultant />} exact />
+                    <Route
+                      path="/consultant/videoroom"
+                      element={<VideoRoom />}
                       exact
                     />
                   </Route>

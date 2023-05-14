@@ -9,7 +9,7 @@ import {
 import Video from "./Video";
 
 export default function VideoCall(props) {
-  const { setInCall } = props;
+  const { setInCall, token } = props;
   const [users, setUsers] = useState([]);
   const [start, setStart] = useState(false);
   const client = useClient();
