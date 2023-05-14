@@ -11,6 +11,7 @@ export default function Video(props) {
 
   useEffect(() => {
     console.log(users);
+    console.log(Date.now());
     setGridSpacing(Math.max(Math.floor(12 / (users.length + 1)), 4));
   }, [users, tracks]);
 
@@ -25,12 +26,13 @@ export default function Video(props) {
                   elevation={3}
                   style={{
                     height: "100%",
+                    width: "80%",
                   }}
                 >
                   <AgoraVideoPlayer
                     videoTrack={user.videoTrack}
                     key={user.uid}
-                    style={{ height: "100%", width: "100%" }}
+                    style={{ height: "300px", width: "100%" }}
                   ></AgoraVideoPlayer>
                 </Paper>
               </Grid>

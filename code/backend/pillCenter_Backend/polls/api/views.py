@@ -10,7 +10,7 @@ from rest_framework import generics
 from polls.models import Medicine, Inventory, Products, Vending_machines, Orders
 from django.contrib.auth import get_user_model
 from agora_token_builder import RtcTokenBuilder
-import datetime
+import time
 
 User = get_user_model()
 
@@ -165,6 +165,7 @@ def tokenGenerator(request):
     channelName = "main"
     uid = 0
     role = 1
-    privilegeExpiredTs =  1684084146
+    privilegeExpiredTs =  int(time.time()) + 3600
+    print(privilegeExpiredTs)
     token = RtcTokenBuilder.buildTokenWithUid(appId, appCertificate, channelName, uid, role, privilegeExpiredTs)
     return Response(token)
