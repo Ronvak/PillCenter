@@ -14,4 +14,5 @@ urlpatterns = [
     path('getorder/', views.getOrder),
     path('cancelorder/', views.cancelOrder),
     path('getmyorders/', views.getMyOrders),
+    path('generatetoken/', views.tokenGenerator)
 ]

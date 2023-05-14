@@ -37,7 +37,7 @@ export default function Controls(props) {
   };
 
   return (
-    <Grid container spacing={10} alignItems="center">
+    <Grid container spacing={4} alignItems="center">
       <Grid item>
         <Button onClick={() => mute("audio")}>
           {trackState.audio ? <MicIcon /> : <MicOffIcon />}

@@ -17,16 +17,17 @@ export default function PharmacistOpt() {
             id="order"
             sx={{ border: 1, borderWidth: 3, borderColor: "black" }}
           >
-            תיאור תיאור
+            רשימת בבקשות
           </Item>
         </Grid>
         <Grid xs={6}>
           <Item sx={{ border: 1, borderWidth: 3, borderColor: "black" }}>
-            תיאור
+            צפייה בעסקאות
           </Item>
         </Grid>
         <Grid xs={12}>
           <Item
+            onClick={() => navigate("/consultant")}
             sx={{
               border: 1,
               borderWidth: 3,
@@ -36,7 +37,7 @@ export default function PharmacistOpt() {
             }}
           >
             {" "}
-            תיאור תיאור תיאורר
+            ייעוץ והנפקת אישור מרשם
           </Item>
         </Grid>
       </Grid>

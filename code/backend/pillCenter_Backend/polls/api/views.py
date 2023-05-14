@@ -9,7 +9,8 @@ from polls.serializers import UserSerializer , RegisterSerializer ,OrderSerializ
 from rest_framework import generics
 from polls.models import Medicine, Inventory, Products, Vending_machines, Orders
 from django.contrib.auth import get_user_model
-
+from agora_token_builder import RtcTokenBuilder
+import time
 
 User = get_user_model()
 
@@ -153,3 +154,18 @@ def getMyOrders(request):
     if user is not None:
         orders = orders.filter(user_id = user , order_status = 1)
     return Response(orders)
+
+
+
+
+@api_view(['GET'])
+def tokenGenerator(request):
+    appId = "d3754641865b422f90f234d5766a4d8a"
+    appCertificate = "086e46eb10be41a5b00982c16279b6e6"
+    channelName = "main"
+    uid = 0
+    role = 1
+    privilegeExpiredTs =  int(time.time()) + 3600
+    print(privilegeExpiredTs)
+    token = RtcTokenBuilder.buildTokenWithUid(appId, appCertificate, channelName, uid, role, privilegeExpiredTs)
+    return Response(token)
