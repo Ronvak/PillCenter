@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import MyButton from "../buttons/ButtonTemplate";
 import { useNavigate } from "react-router-dom";
+
 const WaitingRoom = ({ onJoinCall }) => {
   const [timer, setTimer] = useState(0);
   const [available, setAvailable] = useState(false);

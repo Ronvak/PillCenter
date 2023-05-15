@@ -17,6 +17,7 @@ import MyOrdersPage from "./pages/MyOrdersPage";
 import PharmacistLandingPage from "./pages/PharmacistLandingPage";
 import React from "react";
 import WaitingRoom from "./components/pharamacist/WaitingRoom";
+import SessionSummary from "./components/sessionSummary/SessionSummary";
 
 const cacheRtl = createCache({
   key: "muirtl",
@@ -39,6 +40,10 @@ function App() {
                   <Route element={<PrivateRoute allowedRoles={["patient"]} />}>
                     <Route path="/" element={<PatientLandingPage />} exact />
                     <Route path="/order" element={<MakeOrderPage />} />
+                    <Route
+                      path="/sessionsummary"
+                      element={<SessionSummary />}
+                    />
                     <Route path="/waitingroom" element={<WaitingRoom />} />
                     <Route path="/ordersummary" element={<OrderLayout />}>
                       <Route path=":orderid" element={<OrderPage />} />
