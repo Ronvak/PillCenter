@@ -102,8 +102,13 @@ def completeOrder(request):
 
 @api_view(['GET'])
 def getMedicines(request):
-    prescription = Medicine.objects.all().values()
-    return Response(prescription)
+    medicines = Medicine.objects.all().values()
+    prescription_required = request.GET.get('q',None)
+    print(prescription_required)
+    if prescription_required is not None:
+        medicines = medicines.filter(is_prescription = prescription_required)
+
+    return Response(medicines)
 
 
 
