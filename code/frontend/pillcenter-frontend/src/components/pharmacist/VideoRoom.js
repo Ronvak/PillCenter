@@ -1,23 +1,34 @@
 import { useState } from "react";
+import axios from "axios";
 import MyButton from "../buttons/ButtonTemplate";
 import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import VideoCall from "../../agora/VideoCall";
-// import { generateRtcToken } from "../../agora/tokenGenerator";
 import TextField from "@mui/material/TextField";
+import useAuth from "../../hooks/useAuth";
 import EndSession from "../modals/EndSession";
 export default function VideoRoom() {
   const [inCall, setInCall] = useState(false);
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState();
 
+  const { auth } = useAuth();
+  async function createChannel() {
+    let data = {
+      pharmacist: auth?.id,
+    };
+    await axios
+      .post("/api/generatetoken/", data)
+      .then((response) => {
+        console.log(response.data?.token);
+        setToken(response.data?.token);
+        return response;
+      })
+      .catch((e) => console.log(e));
+  }
   function handleVideoSession() {
-    let genToken =
-      "006d3754641865b422f90f234d5766a4d8aIACXTENvEx1KLqqHSvN8j3YXwcwKNtWMWr6YUXsZxAF042TNKL8AAAAAIgBX54kDNVdiZAQAAQAQDgAAAgAQDgAAAwAQDgAABAAQDgAA";
-    setToken(
-      "006d3754641865b422f90f234d5766a4d8aIACXTENvEx1KLqqHSvN8j3YXwcwKNtWMWr6YUXsZxAF042TNKL8AAAAAIgBX54kDNVdiZAQAAQAQDgAAAgAQDgAAAwAQDgAABAAQDgAA"
-    );
+    createChannel();
+    console.log(token);
 
-    console.log(genToken);
     setInCall(true);
   }
 
@@ -33,10 +44,6 @@ export default function VideoRoom() {
           <>
             <VideoCall setInCall={setInCall} token={token} />
             <Box sx={{ marginTop: 3, width: "85%" }}>
-              {/* <Typography variant="h6" textAlign="start">
-                {" "}
-                סיכום מפגש
-              </Typography> */}
               <TextField
                 id="outlined-multiline-static"
                 label="סיכום מפגש"

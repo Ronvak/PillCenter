@@ -44,11 +44,6 @@ export default function Login() {
 
   const theme = createTheme();
   async function handleSubmit(e) {
-    try {
-      loginUser(e);
-    } catch (err) {
-      setValid(true);
-    }
     loginUser(e).catch((error) => {
       setValid(true);
     });
