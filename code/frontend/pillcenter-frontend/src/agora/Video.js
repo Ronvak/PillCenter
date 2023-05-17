@@ -52,7 +52,7 @@ export default function Video(props) {
         >
           <AgoraVideoPlayer
             videoTrack={tracks[1]}
-            style={{ height: "300px", width: "100%" }}
+            style={{ height: "200px", width: "100%" }}
           ></AgoraVideoPlayer>
           <Paper
             elevation={13}

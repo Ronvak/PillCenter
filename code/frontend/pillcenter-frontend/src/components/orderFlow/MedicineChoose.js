@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import { Grid } from "@mui/material";
+import { CardActions, Grid } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Card from "@mui/material/Card";
 import { useState, useEffect } from "react";
@@ -15,7 +15,7 @@ export default function MedicineChoose(props) {
   const { handleMedicineChoose } = props;
   useEffect(() => {
     const res = axios
-      .get("/api/medicines/")
+      .get(`/api/medicines/?q=False`)
       .then((response) => {
         setMedicines(response.data);
         setMedicinesInit(response.data);
@@ -36,7 +36,7 @@ export default function MedicineChoose(props) {
       <Typography variant="h5"> אנא בחר מרשם אותו </Typography>
       <Typography variant="h5"> אתה רוצה לאסוף </Typography>
       <br></br>
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%", marginBottom: 8 }}>
         <Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>
           <Grid item={true} xs={12}>
             <Autocomplete
@@ -69,6 +69,9 @@ export default function MedicineChoose(props) {
                 <Card
                   sx={{
                     height: 280,
+                    overflow: "auto",
+                    display: "flex",
+                    flexDirection: "column",
                     maxWidth: 345,
                     borderRadius: 3,
                     "&:hover": {
@@ -81,7 +84,7 @@ export default function MedicineChoose(props) {
                     elevation={0}
                     sx={{
                       objectFit: "contain",
-                      height: 120,
+                      height: 140,
                     }}
                   >
                     <img src={medicine.image_URL} height="80%" width="90%" />
@@ -90,10 +93,26 @@ export default function MedicineChoose(props) {
                     <Typography gutterBottom variant="h6" component="div">
                       {medicine.medicine_name}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body1" color="text.secondary">
+                      {" "}
                       {medicine.description}
                     </Typography>
+                    <Typography variant="body1" color="text.primary">
+                      <strong>
+                        {medicine.is_prescription
+                          ? "תרופה במרשם"
+                          : "תרופה ללא מרשם"}
+                      </strong>
+                    </Typography>
                   </CardContent>
+                  <CardActions
+                    disableSpacing
+                    sx={{ justifyContent: "center", marginTop: "auto" }}
+                  >
+                    <Typography variant="h6">
+                      <strong> מחיר : {medicine.price} ₪</strong>
+                    </Typography>
+                  </CardActions>
                 </Card>
               </Grid>
             );
