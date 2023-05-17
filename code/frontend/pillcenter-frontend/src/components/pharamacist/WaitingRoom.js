@@ -20,7 +20,7 @@ const WaitingRoom = ({ onJoinCall }) => {
   var base64Credentials = btoa(plainCredentials);
   var config = {
     method: "get",
-    url: `http://api.agora.io/dev/v1/channel/${appId}/`,
+    url: `https://api.agora.io/dev/v1/channel/${appId}/`,
     headers: {
       "Content-Type": "application/json",
       Authorization: "Basic" + base64Credentials,
