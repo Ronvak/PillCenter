@@ -19,7 +19,7 @@ import Consultant from "./components/pharmacist/Consultant";
 import VideoRoom from "./components/pharmacist/VideoRoom";
 import React from "react";
 import WaitingRoom from "./components/pharamacist/WaitingRoom";
-
+import PatientVideoRoom from "./components/pharamacist/PatientVideoRoom";
 const cacheRtl = createCache({
   key: "muirtl",
   stylisPlugins: [prefixer, rtlPlugin],
@@ -42,6 +42,7 @@ function App() {
                     <Route path="/" element={<PatientLandingPage />} exact />
                     <Route path="/order" element={<MakeOrderPage />} />
                     <Route path="/waitingroom" element={<WaitingRoom />} />
+                    <Route path="/videoroom" element={<PatientVideoRoom />} />
                     <Route path="/ordersummary" element={<OrderLayout />}>
                       <Route path=":orderid" element={<OrderPage />} />
                     </Route>
