@@ -16,4 +16,5 @@ urlpatterns = [
     path('getmyorders/', views.getMyOrders),
     path('generatetoken/', views.tokenGenerator),
     path('getchannel/', views.getToken),
+    path('endsession/', views.endSession),
 ]

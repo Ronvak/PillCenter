@@ -11,8 +11,7 @@ import useAuth from "../../hooks/useAuth";
 
 import { Paper } from "@mui/material";
 
-export default function VideoCallMessage({ open, handleClose }) {
-  const navigate = useNavigate();
+export default function VideoCallMessage({ open, handleClose, handleNext }) {
   const { auth } = useAuth();
 
   function PaperComponent(props) {
@@ -47,7 +46,10 @@ export default function VideoCallMessage({ open, handleClose }) {
             fullWidth
             sx={{ marginRight: "auto" }}
             autoFocus
-            onClick={() => navigate(`/waitingroom/`)}
+            onClick={() => {
+              handleNext();
+              handleClose();
+            }}
           >
             כן
           </MyButton>

@@ -76,15 +76,7 @@ export default function VideoCall(props) {
         )}
       </Grid>
       <Grid item xs={12} md={6} sx={{ height: "100%", display: "flex" }}>
-        <Grid item sx={{ flexGrow: 1 }}>
-          {/* {ready && tracks && (
-            <Controls
-              tracks={tracks}
-              setStart={setStart}
-              setInCall={setInCall}
-            />
-          )} */}
-        </Grid>
+        <Grid item sx={{ flexGrow: 1 }}></Grid>
       </Grid>
     </Grid>
   );

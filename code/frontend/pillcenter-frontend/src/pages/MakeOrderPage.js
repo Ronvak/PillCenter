@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useContext } from "react";
-
+import React from "react";
+import { Box } from "@mui/system";
 import ProcessBar from "../components/processBar/ProcessBar";
 
-const MakeOrderPage = () => {
+const MakeOrderPage = (props) => {
+  let { prescriptioned } = props;
   return (
     <div>
-      <br></br>
-      <br></br>
-      <ProcessBar />
+      <Box sx={{ width: "100%" }}>
+        <ProcessBar prescriptioned={prescriptioned} />
+      </Box>
     </div>
   );
 };

@@ -5,9 +5,9 @@ from django.http import HttpResponse
 from rest_framework.decorators import api_view,  permission_classes
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
-from polls.serializers import UserSerializer , RegisterSerializer ,OrderSerializer , OrdersSerializer , Video_ChannelsSerializers
+from polls.serializers import UserSerializer , RegisterSerializer ,OrderSerializer , OrdersSerializer , Pharmacist_Call_Serializer ,Pharmacist_Call_BasicSerializers
 from rest_framework import generics
-from polls.models import Medicine, Inventory, Products, Vending_machines, Orders , Video_Channels
+from polls.models import Medicine, Inventory, Products, Vending_machines, Orders , Pharmacist_Call
 from django.contrib.auth import get_user_model
 from agora_token_builder import RtcTokenBuilder
 import time
@@ -162,10 +162,14 @@ def getMyOrders(request):
 
 @api_view(['GET'])
 def getToken(request):
-    channel  = Video_Channels.objects.all().values().last()
-    # serializer = Video_ChannelsSerializers(data = channel)
-    # serializer.is_valid(raise_exception = True)
-    return Response(channel)
+    patient = request.GET.get('q',None)
+    channel  = Pharmacist_Call.objects.all().last()
+    if patient is not None:
+       channel.patient_id = int(patient)
+       channel.save()
+    serializer = Pharmacist_Call_BasicSerializers(channel)  
+    
+    return Response(serializer.data)
 
 
 @api_view(['POST'])
@@ -180,8 +184,23 @@ def tokenGenerator(request):
     
     token = RtcTokenBuilder.buildTokenWithUid(appId, appCertificate, channelName, uid, role, privilegeExpiredTs)
     request.data['token'] = token
-    serializer = Video_ChannelsSerializers(data=request.data)
+    serializer = Pharmacist_Call_Serializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     serializer.save()
 
     return Response(serializer.data)
+
+
+@api_view(['POST'])
+def endSession(request):
+    instructions = request.data['instructions']
+    anamnesis = request.data['anamnesis']
+    session_status = request.data['status']
+    session = request.data['session']
+    pharmacist_call = Pharmacist_Call.objects.get(id = session['id'])
+    pharmacist_call.instructions = instructions
+    pharmacist_call.anamnesis = anamnesis
+    pharmacist_call.status = session_status
+    pharmacist_call.save()
+
+    return Response(status=status.HTTP_200_OK)

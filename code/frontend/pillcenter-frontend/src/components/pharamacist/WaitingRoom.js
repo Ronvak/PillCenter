@@ -4,13 +4,15 @@ import MyButton from "../buttons/ButtonTemplate";
 import { useNavigate } from "react-router-dom";
 import { appId, CustomerId, secret } from "../../agora/settings";
 import PatientVideoRoom from "./PatientVideoRoom";
+import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 
-const WaitingRoom = ({ onJoinCall }) => {
+const WaitingRoom = () => {
   const [timer, setTimer] = useState(0);
   const [available, setAvailable] = useState(false);
   const [inSession, setInSession] = useState(false);
   const [token, setToken] = useState("");
+  const { auth } = useAuth();
 
   useEffect(() => {
     searchChannel();
@@ -27,39 +29,43 @@ const WaitingRoom = ({ onJoinCall }) => {
     },
   };
   async function searchChannel() {
-    await axios(config)
-      .then((response) => {
-        if (
-          response.data?.data?.channels.length > 0 &&
-          response.data?.data?.channels[0]?.user_count === 1
-        ) {
-          setAvailable(true);
-        }
-      })
-      .catch((e) => console.log(e));
+    if (!available) {
+      await axios(config)
+        .then((response) => {
+          if (
+            response.data?.data?.channels.length > 0 &&
+            response.data?.data?.channels[0]?.user_count === 1
+          ) {
+            setAvailable(true);
+          }
+        })
+        .catch((e) => console.log(e));
+    }
   }
 
   async function getChannel() {
     await axios
-      .get("/api/getchannel/")
+      .get(`/api/getchannel/?q=${auth.id}`)
       .then((response) => {
         setToken(response.data?.token);
       })
       .catch((e) => console.log(e));
   }
   useEffect(() => {
-    if (!available) {
-      const interval = setInterval(() => {
-        setTimer((timer) => timer + 1);
+    const interval = setInterval(() => {
+      setTimer((timer) => timer + 1);
+      if (available) {
+        clearInterval(interval); // Stop the interval if available
+      } else {
         searchChannel();
-      }, 1000);
+      }
+    }, 1000);
 
-      return () => clearInterval(interval);
-    }
-  }, []);
+    return () => clearInterval(interval);
+  }, [available]);
 
   useEffect(() => {
-    getChannel();
+    if (available) getChannel();
   }, [available]);
 
   const navigate = useNavigate();

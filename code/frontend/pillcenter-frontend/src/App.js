@@ -40,12 +40,19 @@ function App() {
                 <Routes>
                   <Route element={<PrivateRoute allowedRoles={["patient"]} />}>
                     <Route path="/" element={<PatientLandingPage />} exact />
-                    <Route path="/order" element={<MakeOrderPage />} />
+                    <Route
+                      path="/order"
+                      element={<MakeOrderPage prescriptioned={"False"} />}
+                    />
                     <Route path="/waitingroom" element={<WaitingRoom />} />
                     <Route path="/videoroom" element={<PatientVideoRoom />} />
                     <Route path="/ordersummary" element={<OrderLayout />}>
                       <Route path=":orderid" element={<OrderPage />} />
                     </Route>
+                    <Route
+                      path="/orderprescription"
+                      element={<MakeOrderPage prescriptioned={"True"} />}
+                    />
                     <Route path="/myorders" element={<OrderLayout />}>
                       <Route path=":userid" element={<MyOrdersPage />} />
                     </Route>
