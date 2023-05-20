@@ -21,7 +21,7 @@ export default function PatientOpt() {
 
   return (
     <>
-      <Box sx={{ width: "75%" }}>
+      <Box sx={{ width: "82%" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid xs={6}>
             <Item
@@ -29,7 +29,7 @@ export default function PatientOpt() {
               sx={{ border: 1, borderWidth: 3, borderColor: "black" }}
               onClick={() => navigate("/order")}
             >
-              הזמנה
+              תרופות ללא מרשם
             </Item>
           </Grid>
           <Grid xs={6}>

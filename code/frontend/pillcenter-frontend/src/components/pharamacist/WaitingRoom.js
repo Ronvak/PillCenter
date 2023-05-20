@@ -2,9 +2,6 @@ import { Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import MyButton from "../buttons/ButtonTemplate";
 import { useNavigate } from "react-router-dom";
-import { appId, CustomerId, secret } from "../../agora/settings";
-import PatientVideoRoom from "./PatientVideoRoom";
-import axios from "axios";
 
 const WaitingRoom = ({ onJoinCall }) => {
   const [timer, setTimer] = useState(0);
