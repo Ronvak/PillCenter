@@ -3,7 +3,7 @@ from polls.models import *
 from rest_framework import  serializers
 from django.contrib.auth.models import User ,Group 
 from django_email_verification import send_email
-from .models import Orders , Order_status, Video_Channels
+from .models import Orders , Order_status , Pharmacist_Call
 from django.core.files import File
 from .mailOrder import send_mail_order
 from io import BytesIO
@@ -102,11 +102,16 @@ class OrderSerializer(serializers.ModelSerializer):
         send_mail_order(order=order,user=user)
         return order 
 
-class Video_ChannelsSerializers(serializers.ModelSerializer):
+class Pharmacist_Call_Serializer(serializers.ModelSerializer):
     class Meta:
-        model = Video_Channels
-        fields = '__all__'
+        model = Pharmacist_Call
+        fields = [ "id",'token' , 'pharmacist']
     def create(self, validated_data):
-        obj = Video_Channels.objects.create(**validated_data)
+        obj = Pharmacist_Call.objects.create(**validated_data)
 
         return obj
+
+class Pharmacist_Call_BasicSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Pharmacist_Call
+        fields = '__all__'

@@ -53,6 +53,17 @@ def __str__(self):
     return self.user.username
 
 
-class Video_Channels(models.Model):
-    token = models.CharField(max_length=200 )
-    pharmacist = models.ForeignKey(User , on_delete=models.CASCADE)
+class Pharmacist_Call(models.Model):
+    STATUS_CHOICES = (
+        ('pending', 'Pending'),
+        ('approved', 'Approved'),
+        ('disapproved', 'Disapproved'),
+    )
+
+    token = models.CharField(max_length=200)
+    pharmacist = models.ForeignKey(User, on_delete=models.CASCADE , related_name="pharmacist" )
+    patient = models.ForeignKey(User , on_delete=models.CASCADE   , default= 3)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    instructions = models.CharField(max_length=500 , default="None")
+    anamnesis = models.CharField(max_length=500 , default="None")
+    

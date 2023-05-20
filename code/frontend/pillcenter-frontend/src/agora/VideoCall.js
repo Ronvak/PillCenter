@@ -9,7 +9,7 @@ import {
 import Video from "./Video";
 
 export default function VideoCall(props) {
-  const { setInCall, token } = props;
+  const { setInCall, token, finish } = props;
   const [users, setUsers] = useState([]);
   const [start, setStart] = useState(false);
   const client = useClient();
@@ -72,19 +72,12 @@ export default function VideoCall(props) {
             users={users}
             setStart={setStart}
             setInCall={setInCall}
+            finish={finish}
           />
         )}
       </Grid>
       <Grid item xs={12} md={6} sx={{ height: "100%", display: "flex" }}>
-        <Grid item sx={{ flexGrow: 1 }}>
-          {/* {ready && tracks && (
-            <Controls
-              tracks={tracks}
-              setStart={setStart}
-              setInCall={setInCall}
-            />
-          )} */}
-        </Grid>
+        <Grid item sx={{ flexGrow: 1 }}></Grid>
       </Grid>
     </Grid>
   );

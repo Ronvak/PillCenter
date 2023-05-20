@@ -8,11 +8,11 @@ import { Typography } from "@mui/material";
 export default function MachinesList(props) {
   const [machines, setMachines] = useState([]);
 
-  const { medicineChoise, handleMachineChoose } = props;
+  const { medicineChoice, handleMachineChoose } = props;
 
   const getMachines = async () => {
     const res = await axios
-      .get(`/api/medicineinstock/?q=${medicineChoise}`)
+      .get(`/api/medicineinstock/?q=${medicineChoice}`)
       .then((response) => {
         setMachines(response.data);
       })
@@ -21,7 +21,7 @@ export default function MachinesList(props) {
 
   useEffect(() => {
     getMachines();
-  }, []);
+  }, [medicineChoice]);
   return (
     <center>
       <br></br>

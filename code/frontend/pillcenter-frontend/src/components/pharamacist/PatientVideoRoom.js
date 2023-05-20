@@ -8,10 +8,11 @@ import useAuth from "../../hooks/useAuth";
 
 export default function PatientVideoRoom(props) {
   const [inCall, setInCall] = useState(false);
-  const { token } = props;
-  const [activeChannel, setActiveChannel] = useState(false);
+  const { token, inSession, finish } = props;
 
-  const { auth } = useAuth();
+  useEffect(() => {
+    if (inSession === true) setInCall(true);
+  }, []);
 
   return (
     <center>
@@ -22,7 +23,7 @@ export default function PatientVideoRoom(props) {
       >
         {inCall ? (
           <>
-            <VideoCall setInCall={setInCall} token={token} />
+            <VideoCall setInCall={setInCall} token={token} finish={finish} />
             <Box sx={{ marginTop: 3, width: "85%" }}></Box>
           </>
         ) : (

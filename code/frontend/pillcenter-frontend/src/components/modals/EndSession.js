@@ -9,6 +9,7 @@ import MyButton from "../buttons/ButtonTemplate";
 import * as React from "react";
 export default function EndSession(props) {
   const [open, setOpen] = React.useState(false);
+  const { handleEndSession } = props;
   function PaperComponent(props) {
     return (
       <Draggable
@@ -54,14 +55,22 @@ export default function EndSession(props) {
         <DialogActions>
           <MyButton
             fullWidth
+            type="submit"
             sx={{ marginRight: "auto" }}
             onClick={() => {
+              handleEndSession(true);
               handleClose();
             }}
           >
             כן
           </MyButton>
-          <MyButton fullWidth onClick={() => setOpen(false)}>
+          <MyButton
+            fullWidth
+            onClick={(e) => {
+              handleEndSession(false);
+              handleClose();
+            }}
+          >
             לא
           </MyButton>
         </DialogActions>

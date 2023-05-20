@@ -79,7 +79,7 @@ export default function MyOrdersPage() {
                           />
                         </ListItemButton>
                         <ListItemSecondaryAction
-                          onClick={() => navigate(`/ordersummary/${order.id}`)}
+                          onClick={() => navigate("/ordersummary/" + order.id)}
                         >
                           לצפייה
                           <IconButton

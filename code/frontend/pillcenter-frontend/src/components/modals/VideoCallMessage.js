@@ -3,18 +3,14 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { useNavigate } from "react-router-dom";
+
 import MyButton from "../buttons/ButtonTemplate";
 import Draggable from "react-draggable";
 import * as React from "react";
-import useAuth from "../../hooks/useAuth";
 
 import { Paper } from "@mui/material";
 
-export default function VideoCallMessage({ open, handleClose }) {
-  const navigate = useNavigate();
-  const { auth } = useAuth();
-
+export default function VideoCallMessage({ open, handleClose, handleNext }) {
   function PaperComponent(props) {
     return (
       <Draggable
@@ -47,7 +43,10 @@ export default function VideoCallMessage({ open, handleClose }) {
             fullWidth
             sx={{ marginRight: "auto" }}
             autoFocus
-            onClick={() => navigate(`/waitingroom/`)}
+            onClick={() => {
+              handleNext();
+              handleClose();
+            }}
           >
             כן
           </MyButton>

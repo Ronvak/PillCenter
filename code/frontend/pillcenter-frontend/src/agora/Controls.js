@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useClient } from "./settings";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
@@ -10,7 +10,7 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
 export default function Controls(props) {
   const client = useClient();
-  const { tracks, setStart, setInCall } = props;
+  const { tracks, setStart, setInCall, finish } = props;
   const [trackState, setTrackState] = useState({ video: true, audio: true });
 
   const mute = async (type) => {
@@ -35,7 +35,9 @@ export default function Controls(props) {
     setStart(false);
     setInCall(false);
   };
-
+  useEffect(() => {
+    if (finish) leaveChannel();
+  }, [finish]);
   return (
     <Grid container spacing={4} alignItems="center">
       <Grid item>
