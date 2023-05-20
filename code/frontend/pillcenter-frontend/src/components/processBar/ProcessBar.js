@@ -10,7 +10,6 @@ import MachinesList from "../orderFlow/MachinesList";
 import PaymentNConfirm from "../orderFlow/PaymentNConfirm";
 import Questionnaire from "../questionnaire/Questionnaire";
 import VideoCallMessage from "../modals/VideoCallMessage";
-import CancelOrder from "../orderFlow/CancelOrder";
 import WaitingRoom from "../pharamacist/WaitingRoom";
 
 export default function ProcessBar(props) {
@@ -23,7 +22,9 @@ export default function ProcessBar(props) {
   const { prescriptioned } = props;
   const [activeStep, setActiveStep] = useState(0);
   const [skipped, setSkipped] = useState(new Set());
-  const [medicineChoise, setMedicineChoise] = useState();
+  const [medicineChoice, setMedicineChoice] = useState();
+  const [pharmacistInstruction, setPharmacistInstructions] =
+    useState("ללא מרשם");
   const [machineChoice, setMachineChoise] = useState({});
   const [questionnaire, setQuestionnaire] = useState({});
   const [oneTime, setOneTime] = useState(0);
@@ -34,9 +35,6 @@ export default function ProcessBar(props) {
       let newSteps = [...steps];
       newSteps.splice(1, 0, "שיחת רוקח");
       setSteps(newSteps);
-      let newComponentList = [...componentsList];
-      newComponentList.splice(1, 0, <WaitingRoom />);
-      setComponentList(newComponentList);
       setOneTime(1);
     }
   }, [prescriptioned]);
@@ -48,11 +46,22 @@ export default function ProcessBar(props) {
   const isStepSkipped = (step) => {
     return skipped.has(step);
   };
+
+  const handleFinishVideoSession = (input) => {
+    setPharmacistInstructions(input);
+    handleNext();
+  };
+  const handlePrescriptionChoose = (input) => {
+    if (isNaN(input) === false) {
+      setMedicineChoice(input);
+    }
+    setOpenVideoCallMessage(true);
+  };
   const handleMedicineChoose = (input) => {
     if (isNaN(input) === false) {
-      setMedicineChoise(input);
+      setMedicineChoice(input);
+      handleNext();
     }
-    handleNext();
   };
   const handleQuestionnaire = (input) => {
     setQuestionnaire(input);
@@ -73,26 +82,54 @@ export default function ProcessBar(props) {
     if (step < activeStep && activeStep !== steps.length - 1)
       setActiveStep(step);
   };
-  const [componentsList, setComponentList] = useState([
-    <MedicineChoose
-      handleMedicineChoose={handleMedicineChoose}
-      prescriptioned={prescriptioned}
-      setOpenVideoCallMessage={setOpenVideoCallMessage}
-    />,
-    <MachinesList
-      medicineChoise={medicineChoise}
-      handleMachineChoose={handleMachineChoose}
-    />,
-    <Questionnaire
-      questionnaire={questionnaire}
-      handleQuestionnaire={handleQuestionnaire}
-    />,
+  let componentsList = [];
+  if (prescriptioned === "False") {
+    componentsList = [
+      <MedicineChoose
+        handleMedicineChoose={handleMedicineChoose}
+        prescriptioned={prescriptioned}
+        handlePrescriptionChoose={handlePrescriptionChoose}
+      />,
+      <MachinesList
+        medicineChoice={medicineChoice}
+        handleMachineChoose={handleMachineChoose}
+      />,
+      <Questionnaire
+        questionnaire={questionnaire}
+        handleQuestionnaire={handleQuestionnaire}
+      />,
 
-    <PaymentNConfirm
-      machineChoice={machineChoice}
-      medicineChoise={medicineChoise}
-    />,
-  ]);
+      <PaymentNConfirm
+        machineChoice={machineChoice}
+        medicineChoice={medicineChoice}
+        pharmacistInstruction={pharmacistInstruction}
+      />,
+    ];
+  } else {
+    componentsList = [
+      <MedicineChoose
+        handleMedicineChoose={handleMedicineChoose}
+        prescriptioned={prescriptioned}
+        handlePrescriptionChoose={handlePrescriptionChoose}
+      />,
+      <WaitingRoom handleFinishVideoSession={handleFinishVideoSession} />,
+      <MachinesList
+        medicineChoice={medicineChoice}
+        handleMachineChoose={handleMachineChoose}
+      />,
+      <Questionnaire
+        questionnaire={questionnaire}
+        handleQuestionnaire={handleQuestionnaire}
+      />,
+
+      <PaymentNConfirm
+        machineChoice={machineChoice}
+        medicineChoice={medicineChoice}
+        pharmacistInstruction={pharmacistInstruction}
+      />,
+    ];
+  }
+
   return (
     <Box sx={{ maxWidth: "100%" }}>
       <Stepper

@@ -7,12 +7,16 @@ import PatientVideoRoom from "./PatientVideoRoom";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 
-const WaitingRoom = () => {
+const WaitingRoom = (props) => {
   const [timer, setTimer] = useState(0);
   const [available, setAvailable] = useState(false);
   const [inSession, setInSession] = useState(false);
+  const [finish, setFinish] = useState(false);
+  const [session, setSession] = useState();
   const [token, setToken] = useState("");
+  const [instructions, setInstructions] = useState("");
   const { auth } = useAuth();
+  const { handleFinishVideoSession } = props;
 
   useEffect(() => {
     searchChannel();
@@ -45,9 +49,11 @@ const WaitingRoom = () => {
 
   async function getChannel() {
     await axios
-      .get(`/api/getchannel/?q=${auth.id}`)
+      .get(`/api/joinchannel/?q=${auth.id}`)
       .then((response) => {
         setToken(response.data?.token);
+        setSession(response.data);
+        setAvailable(true);
       })
       .catch((e) => console.log(e));
   }
@@ -68,10 +74,36 @@ const WaitingRoom = () => {
     if (available) getChannel();
   }, [available]);
 
+  async function checkEnd() {
+    await axios
+      .get(`/api/getchannel/?q=${session.id}`)
+      .then((response) => {
+        let status = response.data?.status;
+        if (status !== "pending") {
+          setInstructions(response.data?.instructions);
+          setFinish(true);
+        }
+      })
+      .catch((e) => console.log(e));
+  }
+  useEffect(() => {
+    let intervalId = null;
+    if (available && inSession) {
+      intervalId = setInterval(() => {
+        if (finish) {
+          clearInterval(intervalId); // Stop the interval if available
+          handleFinishVideoSession(instructions);
+        } else {
+          checkEnd();
+        }
+      }, 2000);
+    }
+    return () => {
+      clearInterval(intervalId); // Clear the interval when the component unmounts
+    };
+  }, [available, inSession, finish]);
+
   const navigate = useNavigate();
-  const handleJoinCall = () => {
-    navigate("/videoroom");
-  };
 
   const handleCancelCall = () => {
     navigate("/");
@@ -98,12 +130,24 @@ const WaitingRoom = () => {
             </Typography>
             <Typography variant="h5"> הרוקח נכנס לשיחה תורך הגיע</Typography>
             <Typography variant="h5"> הזמן שחלף: {timer} שניות </Typography>
-            <PatientVideoRoom token={token} setInSession={setInSession} />
+            <MyButton
+              sx={{ marginTop: 3 }}
+              fullWidth
+              onClick={() => setInSession(true)}
+            >
+              התחל שיחה{" "}
+            </MyButton>
+
             <br></br>
             <br></br>
           </div>
         ) : (
-          ""
+          <PatientVideoRoom
+            token={token}
+            setInSession={setInSession}
+            inSession={inSession}
+            finish={finish}
+          />
         )}
       </center>
     </div>

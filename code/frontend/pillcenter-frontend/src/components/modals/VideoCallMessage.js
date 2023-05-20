@@ -3,17 +3,14 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { useNavigate } from "react-router-dom";
+
 import MyButton from "../buttons/ButtonTemplate";
 import Draggable from "react-draggable";
 import * as React from "react";
-import useAuth from "../../hooks/useAuth";
 
 import { Paper } from "@mui/material";
 
 export default function VideoCallMessage({ open, handleClose, handleNext }) {
-  const { auth } = useAuth();
-
   function PaperComponent(props) {
     return (
       <Draggable

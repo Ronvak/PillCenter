@@ -1,6 +1,4 @@
 import { Box } from "@mui/system";
-import { Grid } from "@mui/material";
-import Item from "../buttons/Item";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
@@ -10,7 +8,7 @@ import LoadingOrder from "../loading/LoadingOrder";
 export default function PaymentNConfirm(props) {
   const [completed, setCompleted] = useState(false);
   const { auth } = useAuth();
-  const { machineChoice, medicineChoise } = props;
+  const { machineChoice, medicineChoice, pharmacistInstruction } = props;
   const [order, setOrder] = useState();
 
   function handleComplete() {
@@ -21,9 +19,9 @@ export default function PaymentNConfirm(props) {
   async function completeOrder() {
     const orderDetails = {
       user_id: auth?.id,
-      medicine_id: medicineChoise,
+      medicine_id: medicineChoice,
       machine_id: machineChoice?.id,
-      pharmacist_instruction: "מאושר",
+      pharmacist_instruction: pharmacistInstruction,
     };
     const res = await axios
       .post("/api/completeorder/", orderDetails)

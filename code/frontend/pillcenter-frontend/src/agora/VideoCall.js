@@ -9,7 +9,7 @@ import {
 import Video from "./Video";
 
 export default function VideoCall(props) {
-  const { setInCall, token } = props;
+  const { setInCall, token, finish } = props;
   const [users, setUsers] = useState([]);
   const [start, setStart] = useState(false);
   const client = useClient();
@@ -72,6 +72,7 @@ export default function VideoCall(props) {
             users={users}
             setStart={setStart}
             setInCall={setInCall}
+            finish={finish}
           />
         )}
       </Grid>

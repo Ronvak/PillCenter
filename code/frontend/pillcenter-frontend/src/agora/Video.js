@@ -6,7 +6,7 @@ import Box from "@mui/system/Box";
 import { useState, useEffect } from "react";
 
 export default function Video(props) {
-  const { users, tracks, setStart, setInCall } = props;
+  const { users, tracks, setStart, setInCall, finish } = props;
   const [gridSpacing, setGridSpacing] = useState(12);
 
   useEffect(() => {
@@ -21,7 +21,13 @@ export default function Video(props) {
         users.map((user) => {
           if (user.videoTrack) {
             return (
-              <Grid item xs={12} sm={6} style={{ height: "100%" }}>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                style={{ height: "100%" }}
+                key={user.uid}
+              >
                 <Paper
                   elevation={3}
                   style={{
@@ -64,6 +70,7 @@ export default function Video(props) {
               tracks={tracks}
               setStart={setStart}
               setInCall={setInCall}
+              finish={finish}
             />
           </Paper>
         </Paper>

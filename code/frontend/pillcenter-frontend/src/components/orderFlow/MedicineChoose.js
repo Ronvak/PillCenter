@@ -12,7 +12,7 @@ import TextField from "@mui/material/TextField";
 export default function MedicineChoose(props) {
   const [medicineInit, setMedicinesInit] = useState([]);
   const [medicines, setMedicines] = useState([]);
-  const { handleMedicineChoose, prescriptioned, setOpenVideoCallMessage } =
+  const { handleMedicineChoose, prescriptioned, handlePrescriptionChoose } =
     props;
 
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function MedicineChoose(props) {
                   onClick={() => {
                     prescriptioned === "False"
                       ? handleMedicineChoose(medicine.id)
-                      : setOpenVideoCallMessage(true);
+                      : handlePrescriptionChoose(medicine.id);
                   }}
                 >
                   <Paper

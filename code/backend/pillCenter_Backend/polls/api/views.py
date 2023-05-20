@@ -104,7 +104,6 @@ def completeOrder(request):
 def getMedicines(request):
     medicines = Medicine.objects.all().values()
     prescription_required = request.GET.get('q',None)
-    print(prescription_required)
     if prescription_required is not None:
         medicines = medicines.filter(is_prescription = prescription_required)
 
@@ -161,7 +160,7 @@ def getMyOrders(request):
     return Response(orders)
 
 @api_view(['GET'])
-def getToken(request):
+def joinChannel(request):
     patient = request.GET.get('q',None)
     channel  = Pharmacist_Call.objects.all().last()
     if patient is not None:
@@ -171,6 +170,17 @@ def getToken(request):
     
     return Response(serializer.data)
 
+@api_view(['GET'])
+def getChannel(request):
+    channel_id = request.GET.get('q',None)
+    channel = Pharmacist_Call.objects
+    if channel_id is  not None :
+        channel  = channel.get(id = channel_id)
+    serializer = Pharmacist_Call_BasicSerializers(channel)
+    return Response(serializer.data)
+
+
+    
 
 @api_view(['POST'])
 def tokenGenerator(request):
