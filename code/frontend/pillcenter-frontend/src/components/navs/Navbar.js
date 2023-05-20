@@ -28,7 +28,8 @@ export default function Navbar() {
   let { logoutUser } = useContext(AuthContext);
 
   function handleBack() {
-    if (location.pathname !== "/") navigate(-1);
+    if (location.pathname !== "/" && location.pathname !== "/pharmacist")
+      navigate(-1);
     else logoutUser();
   }
   return (

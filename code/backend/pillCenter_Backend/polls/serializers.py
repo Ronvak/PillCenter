@@ -1,9 +1,9 @@
 from rest_framework import serializers
 from polls.models import *
 from rest_framework import  serializers
-from django.contrib.auth.models import User ,Group
+from django.contrib.auth.models import User ,Group 
 from django_email_verification import send_email
-from .models import Orders , Order_status
+from .models import Orders , Order_status, Video_Channels
 from django.core.files import File
 from .mailOrder import send_mail_order
 from io import BytesIO
@@ -101,3 +101,12 @@ class OrderSerializer(serializers.ModelSerializer):
         
         send_mail_order(order=order,user=user)
         return order 
+
+class Video_ChannelsSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Video_Channels
+        fields = '__all__'
+    def create(self, validated_data):
+        obj = Video_Channels.objects.create(**validated_data)
+
+        return obj

@@ -12,12 +12,13 @@ class Profile(models.Model):
 
 
 class Medicine(models.Model):
-    prescription = models.CharField(max_length=50)
+    prescription = models.CharField(max_length=400)
     image_URL = models.CharField(max_length=400)
     price = models.FloatField(default=0)
     brand = models.CharField(max_length=30)
-    description = models.CharField(max_length=50)
-    medicine_name = models.CharField(default="", max_length=30)
+    description = models.CharField(max_length=400)
+    medicine_name = models.CharField(default="", max_length=80)
+    is_prescription = models.BooleanField(default=False)
 
 
 class Products(models.Model):
@@ -50,3 +51,8 @@ class Inventory(models.Model):
 
 def __str__(self):
     return self.user.username
+
+
+class Video_Channels(models.Model):
+    token = models.CharField(max_length=200 )
+    pharmacist = models.ForeignKey(User , on_delete=models.CASCADE)

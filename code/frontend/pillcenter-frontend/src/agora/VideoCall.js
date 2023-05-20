@@ -9,7 +9,7 @@ import {
 import Video from "./Video";
 
 export default function VideoCall(props) {
-  const { setInCall } = props;
+  const { setInCall, token } = props;
   const [users, setUsers] = useState([]);
   const [start, setStart] = useState(false);
   const client = useClient();
@@ -45,7 +45,7 @@ export default function VideoCall(props) {
       });
 
       try {
-        await client.join(config.appId, name, config.token, null);
+        await client.join(config.appId, name, token, null);
       } catch (error) {
         console.log("error");
       }

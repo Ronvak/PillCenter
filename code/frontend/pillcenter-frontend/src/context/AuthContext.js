@@ -59,7 +59,7 @@ export const AuthProvider = ({ children }) => {
     });
     let data = await response.json();
 
-    if (data) {
+    if (response.ok) {
       localStorage.setItem("authTokens", JSON.stringify(data));
       setAuthTokens(data);
       setUser(jwtDecode(data.access));
@@ -70,7 +70,7 @@ export const AuthProvider = ({ children }) => {
       else if (data.user.groups?.find((role) => ["pharmacist"].includes(role)))
         navigate("/pharmacist");
     } else {
-      alert("Something went wrong while logging in the user!");
+      throw response.status;
     }
   };
 
