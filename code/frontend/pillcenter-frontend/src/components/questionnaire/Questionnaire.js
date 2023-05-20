@@ -76,6 +76,7 @@ export default function Questionnaire(props) {
                   >
                     האם יש לך מצב רפואי קיים?&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                     &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                     <FormControlLabel
                       value="כן"
                       control={<Radio />}
@@ -450,11 +451,14 @@ export default function Questionnaire(props) {
                 </FormControl>
               </Grid>
             </Grid>
-            <center>
-              <MyButton onClick={handleQuestionnaire} sx={{ width: "60%" }}>
-                סיום מילוי שאלון
-              </MyButton>
-            </center>
+
+            <MyButton
+              onClick={handleQuestionnaire}
+              sx={{ marginTop: 2 }}
+              fullWidth
+            >
+              סיום מילוי שאלון
+            </MyButton>
           </FormGroup>
         </FormControl>
       </Box>
