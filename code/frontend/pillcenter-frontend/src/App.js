@@ -14,7 +14,13 @@ import MakeOrderPage from "./pages/MakeOrderPage";
 import OrderLayout from "./layouts/OrderLayout";
 import OrderPage from "./pages/OrderPage";
 import MyOrdersPage from "./pages/MyOrdersPage";
+import PharmacistLandingPage from "./pages/PharmacistLandingPage";
+import Consultant from "./components/pharmacist/Consultant";
+import VideoRoom from "./components/pharmacist/VideoRoom";
 import React from "react";
+import WaitingRoom from "./components/pharamacist/WaitingRoom";
+import SessionSummary from "./components/sessionSummary/SessionSummary";
+import PatientVideoRoom from "./components/pharamacist/PatientVideoRoom";
 
 const cacheRtl = createCache({
   key: "muirtl",
@@ -37,12 +43,33 @@ function App() {
                   <Route element={<PrivateRoute allowedRoles={["patient"]} />}>
                     <Route path="/" element={<PatientLandingPage />} exact />
                     <Route path="/order" element={<MakeOrderPage />} />
+                    <Route
+                      path="/sessionsummary"
+                      element={<SessionSummary />}
+                    />
+                    <Route path="/waitingroom" element={<WaitingRoom />} />
+                    <Route path="/videoroom" element={<PatientVideoRoom />} />
                     <Route path="/ordersummary" element={<OrderLayout />}>
                       <Route path=":orderid" element={<OrderPage />} />
                     </Route>
                     <Route path="/myorders" element={<OrderLayout />}>
                       <Route path=":userid" element={<MyOrdersPage />} />
                     </Route>
+                  </Route>
+                  <Route
+                    element={<PrivateRoute allowedRoles={["pharmacist"]} />}
+                  >
+                    <Route
+                      path="/pharmacist"
+                      element={<PharmacistLandingPage />}
+                      exact
+                    />
+                    <Route path="/consultant" element={<Consultant />} exact />
+                    <Route
+                      path="/consultant/videoroom"
+                      element={<VideoRoom />}
+                      exact
+                    />
                   </Route>
                   <Route path="/unauthorized" element={<UnauthorizedPage />} />
                   <Route path="/login" element={<Login />} />

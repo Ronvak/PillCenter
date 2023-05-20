@@ -5,11 +5,12 @@ from django.http import HttpResponse
 from rest_framework.decorators import api_view,  permission_classes
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
-from polls.serializers import UserSerializer , RegisterSerializer ,OrderSerializer , OrdersSerializer
+from polls.serializers import UserSerializer , RegisterSerializer ,OrderSerializer , OrdersSerializer , Video_ChannelsSerializers
 from rest_framework import generics
-from polls.models import Medicine, Inventory, Products, Vending_machines, Orders
+from polls.models import Medicine, Inventory, Products, Vending_machines, Orders , Video_Channels
 from django.contrib.auth import get_user_model
-
+from agora_token_builder import RtcTokenBuilder
+import time
 
 User = get_user_model()
 
@@ -101,8 +102,13 @@ def completeOrder(request):
 
 @api_view(['GET'])
 def getMedicines(request):
-    prescription = Medicine.objects.all().values()
-    return Response(prescription)
+    medicines = Medicine.objects.all().values()
+    prescription_required = request.GET.get('q',None)
+    print(prescription_required)
+    if prescription_required is not None:
+        medicines = medicines.filter(is_prescription = prescription_required)
+
+    return Response(medicines)
 
 
 
@@ -153,3 +159,29 @@ def getMyOrders(request):
     if user is not None:
         orders = orders.filter(user_id = user , order_status = 1)
     return Response(orders)
+
+@api_view(['GET'])
+def getToken(request):
+    channel  = Video_Channels.objects.all().values().last()
+    # serializer = Video_ChannelsSerializers(data = channel)
+    # serializer.is_valid(raise_exception = True)
+    return Response(channel)
+
+
+@api_view(['POST'])
+def tokenGenerator(request):
+    
+    appId = "d3754641865b422f90f234d5766a4d8a"
+    appCertificate = "086e46eb10be41a5b00982c16279b6e6"
+    channelName = "main"
+    uid = 0
+    role = 1
+    privilegeExpiredTs =  int(time.time()) + 3600
+    
+    token = RtcTokenBuilder.buildTokenWithUid(appId, appCertificate, channelName, uid, role, privilegeExpiredTs)
+    request.data['token'] = token
+    serializer = Video_ChannelsSerializers(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    serializer.save()
+
+    return Response(serializer.data)

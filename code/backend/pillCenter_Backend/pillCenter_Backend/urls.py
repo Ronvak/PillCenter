@@ -8,6 +8,6 @@ from . import settings as setting
 api_prefix = setting.API_PREFIX
 urlpatterns = [
    path('admin/', admin.site.urls),
-   path('email/', include(email_urls)),
+   path(f'{api_prefix}''email/', include(email_urls)),
    path(f'{api_prefix}', include('polls.api.urls')),
    path('accounts/', include('django.contrib.auth.urls')), ] + static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)
