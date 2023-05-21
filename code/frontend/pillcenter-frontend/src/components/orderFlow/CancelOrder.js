@@ -72,10 +72,12 @@ export default function CancelOrder(props) {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleCancel}>
+          <MyButton fullWidth onClick={handleCancel}>
             כן אני בטוח
-          </Button>
-          <Button onClick={handleClose}>לא</Button>
+          </MyButton>
+          <MyButton fullWidth onClick={handleClose}>
+            לא
+          </MyButton>
         </DialogActions>
       </Dialog>
     </div>
