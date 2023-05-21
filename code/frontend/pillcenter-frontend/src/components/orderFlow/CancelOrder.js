@@ -52,7 +52,7 @@ export default function CancelOrder(props) {
       <MyButton
         variant="outlined"
         onClick={handleClickOpen}
-        sx={{ width: "50%", marginBottom: 3 }}
+        sx={{ width: "51%", marginBottom: 3 }}
         orderid={orderid}
       >
         ביטול הזמנה
