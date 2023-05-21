@@ -9,7 +9,6 @@ import MyButton from "../buttons/ButtonTemplate";
 import * as React from "react";
 export default function EndSession(props) {
   const [open, setOpen] = React.useState(false);
-
   function PaperComponent(props) {
     return (
       <Draggable
@@ -62,7 +61,6 @@ export default function EndSession(props) {
           >
             כן
           </MyButton>
-
           <MyButton fullWidth onClick={() => setOpen(false)}>
             לא
           </MyButton>
