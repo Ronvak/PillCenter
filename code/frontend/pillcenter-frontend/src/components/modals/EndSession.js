@@ -7,7 +7,6 @@ import Paper from "@mui/material/Paper";
 import Draggable from "react-draggable";
 import MyButton from "../buttons/ButtonTemplate";
 import * as React from "react";
-import EndVideoMessage from "./EndVideoMessage";
 export default function EndSession(props) {
   const [open, setOpen] = React.useState(false);
 
