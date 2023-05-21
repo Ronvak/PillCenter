@@ -10,15 +10,6 @@ export default function PatientOpt() {
   const navigate = useNavigate();
   const { auth } = useAuth();
 
-  const [openVideoCallMessage, setOpenVideoCallMessage] = React.useState(false);
-
-  function handleClick() {
-    navigate("/order");
-  }
-  function handleClose() {
-    setOpenVideoCallMessage(false);
-  }
-
   return (
     <>
       <Box sx={{ width: "82%" }}>
@@ -49,7 +40,10 @@ export default function PatientOpt() {
                 maxHeight: 70,
                 lineHeight: 4,
               }}
-              onClick={() => setOpenVideoCallMessage(true)}
+              onClick={() => {
+                navigate("/orderprescription");
+                //  setOpenVideoCallMessage(true)
+              }}
             >
               {" "}
               תרופות מרשם
@@ -57,7 +51,6 @@ export default function PatientOpt() {
           </Grid>
         </Grid>
       </Box>
-      <VideoCallMessage open={openVideoCallMessage} handleClose={handleClose} />
     </>
   );
 }

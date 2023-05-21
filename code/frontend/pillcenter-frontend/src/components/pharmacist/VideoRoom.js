@@ -7,9 +7,17 @@ import VideoCall from "../../agora/VideoCall";
 import TextField from "@mui/material/TextField";
 import useAuth from "../../hooks/useAuth";
 import EndSession from "../modals/EndSession";
+import { useNavigate } from "react-router-dom";
+import { useClient } from "../../agora/settings";
+
 export default function VideoRoom() {
   const [inCall, setInCall] = useState(false);
   const [token, setToken] = useState();
+  const [session, setSession] = useState();
+  const [instructions, setInstructions] = useState("");
+  const [anamnesis, setAnamnesis] = useState("");
+  const navigate = useNavigate();
+  const client = useClient();
 
   const { auth } = useAuth();
   async function createChannel() {
@@ -19,7 +27,7 @@ export default function VideoRoom() {
     await axios
       .post("/api/generatetoken/", data)
       .then((response) => {
-        console.log(response.data?.token);
+        setSession(response.data);
         setToken(response.data?.token);
         return response;
       })
@@ -27,11 +35,25 @@ export default function VideoRoom() {
   }
   function handleVideoSession() {
     createChannel();
-    console.log(token);
 
     setInCall(true);
   }
 
+  async function handleEndSession(decision) {
+    let data = {
+      status: decision === true ? "Approved" : "Disapproved",
+      instructions: instructions,
+      anamnesis: anamnesis,
+      session: session,
+    };
+    await axios.post("/api/endsession/", data).catch((e) => console.log(e));
+
+    await client.leave();
+    client.removeAllListeners();
+    setInCall(false);
+
+    navigate(0);
+  }
   return (
     <center>
       <Box
@@ -43,24 +65,30 @@ export default function VideoRoom() {
         {inCall ? (
           <>
             <VideoCall setInCall={setInCall} token={token} />
-            <Box sx={{ marginTop: 3, width: "85%" }}>
+            <Box
+              component="form"
+              onSubmit={handleEndSession}
+              sx={{ marginTop: 3, width: "85%" }}
+            >
               <TextField
                 id="outlined-multiline-static"
                 label="סיכום מפגש"
                 multiline
                 fullWidth
                 rows={4}
+                onChange={(e) => setAnamnesis(e.target.value)}
               />
               <TextField
                 id="outlined-multiline-static"
                 label="הוראות שימוש"
                 multiline
                 fullWidth
+                onChange={(e) => setInstructions(e.target.value)}
                 sx={{ marginTop: 3 }}
                 rows={2}
               />
 
-              <EndSession />
+              <EndSession handleEndSession={handleEndSession} />
             </Box>
           </>
         ) : (
