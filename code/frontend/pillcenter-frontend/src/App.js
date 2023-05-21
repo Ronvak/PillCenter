@@ -21,7 +21,6 @@ import React from "react";
 import WaitingRoom from "./components/pharamacist/WaitingRoom";
 import SessionSummary from "./components/sessionSummary/SessionSummary";
 import PatientVideoRoom from "./components/pharamacist/PatientVideoRoom";
-import EndVideoMessage from "./components/modals/EndVideoMessage";
 
 const cacheRtl = createCache({
   key: "muirtl",
@@ -44,10 +43,6 @@ function App() {
                   <Route element={<PrivateRoute allowedRoles={["patient"]} />}>
                     <Route path="/" element={<PatientLandingPage />} exact />
                     <Route path="/order" element={<MakeOrderPage />} />
-                    <Route
-                      path="/endvideomessage"
-                      element={<EndVideoMessage />}
-                    />
                     <Route
                       path="/sessionsummary"
                       element={<SessionSummary />}
