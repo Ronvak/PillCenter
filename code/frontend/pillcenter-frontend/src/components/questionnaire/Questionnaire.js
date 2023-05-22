@@ -75,8 +75,7 @@ export default function Questionnaire(props) {
                     onChange={handleQuestionChange}
                   >
                     האם יש לך מצב רפואי קיים?&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
                     <FormControlLabel
                       value="כן"
                       control={<Radio />}
