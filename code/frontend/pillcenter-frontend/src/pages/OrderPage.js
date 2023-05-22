@@ -206,7 +206,7 @@ export default function OrderPage() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <img src={`${order?.qr_code}`} />
+                <img src={`/api/${order?.qr_code}`} />
               </AccordionDetails>
             </Accordion>
           </Box>
