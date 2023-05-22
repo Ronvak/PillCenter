@@ -611,78 +611,7 @@
       "codename": "view_resetpasswordtoken"
     }
   },
-  {
-    "model": "auth.permission",
-    "pk": 69,
-    "fields": {
-      "name": "Can add video_ channels",
-      "content_type": 18,
-      "codename": "add_video_channels"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 70,
-    "fields": {
-      "name": "Can change video_ channels",
-      "content_type": 18,
-      "codename": "change_video_channels"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 71,
-    "fields": {
-      "name": "Can delete video_ channels",
-      "content_type": 18,
-      "codename": "delete_video_channels"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 72,
-    "fields": {
-      "name": "Can view video_ channels",
-      "content_type": 18,
-      "codename": "view_video_channels"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 73,
-    "fields": {
-      "name": "Can add pharmacist_ call",
-      "content_type": 19,
-      "codename": "add_pharmacist_call"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 74,
-    "fields": {
-      "name": "Can change pharmacist_ call",
-      "content_type": 19,
-      "codename": "change_pharmacist_call"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 75,
-    "fields": {
-      "name": "Can delete pharmacist_ call",
-      "content_type": 19,
-      "codename": "delete_pharmacist_call"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 76,
-    "fields": {
-      "name": "Can view pharmacist_ call",
-      "content_type": 19,
-      "codename": "view_pharmacist_call"
-    }
-  },
+
   {
     "model": "auth.group",
     "pk": 1,
