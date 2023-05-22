@@ -6,7 +6,7 @@ import { appId, CustomerId, secret } from "../../agora/settings";
 import PatientVideoRoom from "./PatientVideoRoom";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
-
+import SimpleDialogDemo from "../modals/EndVideoMessage";
 const WaitingRoom = (props) => {
   const [timer, setTimer] = useState(0);
   const [available, setAvailable] = useState(false);
@@ -17,6 +17,8 @@ const WaitingRoom = (props) => {
   const [instructions, setInstructions] = useState("");
   const { auth } = useAuth();
   const { handleFinishVideoSession } = props;
+  const [openDialog, setOpenDialog] = useState(true);
+  const [isApproved, setIsApproved] = useState(false);
 
   useEffect(() => {
     searchChannel();
@@ -81,6 +83,7 @@ const WaitingRoom = (props) => {
         let status = response.data?.status;
         if (status !== "pending") {
           setInstructions(response.data?.instructions);
+          if (status == "Approved") setIsApproved(true);
           setFinish(true);
         }
       })
@@ -91,15 +94,15 @@ const WaitingRoom = (props) => {
     if (available && inSession) {
       intervalId = setInterval(() => {
         if (finish) {
-          clearInterval(intervalId); // Stop the interval if available
-          handleFinishVideoSession(instructions);
+          clearInterval(intervalId);
+          handleFinishVideoSession(instructions, isApproved);
         } else {
           checkEnd();
         }
       }, 2000);
     }
     return () => {
-      clearInterval(intervalId); // Clear the interval when the component unmounts
+      clearInterval(intervalId);
     };
   }, [available, inSession, finish]);
 
@@ -147,6 +150,13 @@ const WaitingRoom = (props) => {
             setInSession={setInSession}
             inSession={inSession}
             finish={finish}
+          />
+        )}
+        {finish && (
+          <SimpleDialogDemo
+            isApproved={isApproved}
+            openDialog={openDialog}
+            setOpenDialog={setOpenDialog}
           />
         )}
       </center>

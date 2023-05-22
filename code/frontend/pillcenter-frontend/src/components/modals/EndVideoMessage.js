@@ -18,14 +18,27 @@ const messageDeny =
   "הרוקח לא אישר את לקיחת התרופה. לצערנו, לא תוכל להמשיך בתהליך";
 
 function SimpleDialog(props) {
-  const { onClose, selectedValue, open } = props;
-  const isApproved = true;
+  const { onClose, selectedValue, open, isApproved } = props;
+
   const handleClose = () => {
     onClose(selectedValue);
   };
 
   return (
-    <Dialog onClose={handleClose} open={open}>
+    <Dialog
+      onClose={handleClose}
+      open={open}
+      fullScreen
+      PaperProps={{
+        sx: {
+          position: "relative",
+          bottom: 160,
+
+          width: "100%",
+          height: 200,
+        },
+      }}
+    >
       <DialogTitle>שיחת הוידיאו הסתיימה</DialogTitle>
       <List sx={{ pt: 0 }}>
         <ListItem disableGutters>
@@ -49,12 +62,12 @@ SimpleDialog.propTypes = {
   selectedValue: PropTypes.string.isRequired,
 };
 
-export default function SimpleDialogDemo() {
-  const [open, setOpen] = React.useState(true); // Dialog opens by default
+export default function SimpleDialogDemo(props) {
+  const { openDialog, isApproved, setOpenDialog } = props;
   const [selectedValue, setSelectedValue] = React.useState(messageAccept[1]);
 
   const handleClose = (value) => {
-    setOpen(true);
+    setOpenDialog(true);
     setSelectedValue(value);
   };
 
@@ -71,8 +84,9 @@ export default function SimpleDialogDemo() {
   return (
     <div>
       <SimpleDialog
+        isApproved={isApproved}
         selectedValue={selectedValue}
-        open={open}
+        open={openDialog}
         onClose={handleClose}
       />
     </div>
