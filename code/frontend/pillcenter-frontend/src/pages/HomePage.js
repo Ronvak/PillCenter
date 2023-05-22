@@ -20,7 +20,6 @@ const HomePage = () => {
     let data = await response.json();
     if (response.status === 200) {
       setProfile(data);
-      console.log(data);
     } else if (response.statusText === "Unauthorized") {
       logoutUser();
     }
