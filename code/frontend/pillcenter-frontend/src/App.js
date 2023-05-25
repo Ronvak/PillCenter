@@ -19,7 +19,6 @@ import Consultant from "./components/pharmacist/Consultant";
 import VideoRoom from "./components/pharmacist/VideoRoom";
 import React from "react";
 import WaitingRoom from "./components/pharamacist/WaitingRoom";
-import SessionSummary from "./components/sessionSummary/SessionSummary";
 import PatientVideoRoom from "./components/pharamacist/PatientVideoRoom";
 
 const cacheRtl = createCache({
