@@ -14,7 +14,7 @@ import { Link as RouterLink, MemoryRouter } from "react-router-dom";
 import logo from "./logo.png";
 import useAuth from "../hooks/useAuth";
 import ButtonTemplate from "../components/buttons/ButtonTemplate";
-
+import LoginMessage from "../components/modals/LoginMessage";
 function Copyright(props) {
   return (
     <Typography
@@ -33,7 +33,8 @@ function Copyright(props) {
   );
 }
 
-export default function Login() {
+export default function Login(props) {
+  const { setHasLoggedIn } = props;
   let { loginUser, auth, user } = useAuth();
   const [valid, setValid] = useState(false);
   const navigate = useNavigate();
@@ -53,6 +54,7 @@ export default function Login() {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
+
         <Box
           sx={{
             marginTop: 8,

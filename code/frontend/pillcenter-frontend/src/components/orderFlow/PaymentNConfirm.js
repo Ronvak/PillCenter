@@ -35,7 +35,10 @@ export default function PaymentNConfirm(props) {
     <center>
       <Box sx={{ width: "80%", marginTop: 5 }}>
         {!completed ? (
-          <PaymentForm handleComplete={handleComplete} />
+          <PaymentForm
+            handleComplete={handleComplete}
+            medicineChoice={medicineChoice}
+          />
         ) : order ? (
           <OrderSummary machineChoice={machineChoice} order={order} />
         ) : (
