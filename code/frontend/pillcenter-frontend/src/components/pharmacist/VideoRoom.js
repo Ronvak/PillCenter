@@ -7,8 +7,6 @@ import VideoCall from "../../agora/VideoCall";
 import TextField from "@mui/material/TextField";
 import useAuth from "../../hooks/useAuth";
 import EndSession from "../modals/EndSession";
-import { useNavigate } from "react-router-dom";
-import { useClient } from "../../agora/settings";
 
 export default function VideoRoom() {
   const [inCall, setInCall] = useState(false);
@@ -16,8 +14,7 @@ export default function VideoRoom() {
   const [session, setSession] = useState();
   const [instructions, setInstructions] = useState("");
   const [anamnesis, setAnamnesis] = useState("");
-  const navigate = useNavigate();
-  const client = useClient();
+  const [finish, setFinish] = useState(false);
 
   const { auth } = useAuth();
   async function createChannel() {
@@ -47,12 +44,7 @@ export default function VideoRoom() {
       session: session,
     };
     await axios.post("/api/endsession/", data).catch((e) => console.log(e));
-
-    await client.leave();
-    client.removeAllListeners();
-    setInCall(false);
-
-    navigate(0);
+    setFinish(true);
   }
   return (
     <center>
@@ -64,7 +56,7 @@ export default function VideoRoom() {
         <Typography variant="h6"> מספר אנשים בתור: 3 </Typography>
         {inCall ? (
           <>
-            <VideoCall setInCall={setInCall} token={token} />
+            <VideoCall setInCall={setInCall} token={token} finish={finish} />
             <Box
               component="form"
               onSubmit={handleEndSession}
