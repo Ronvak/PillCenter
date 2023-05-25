@@ -4,10 +4,11 @@ import Item from "../buttons/Item";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Typography } from "@mui/material";
+import LoadingOrder from "../loading/LoadingOrder";
 
 export default function MachinesList(props) {
   const [machines, setMachines] = useState([]);
-
+  const [response, setResponse] = useState(false);
   const { medicineChoice, handleMachineChoose } = props;
 
   const getMachines = async () => {
@@ -15,6 +16,7 @@ export default function MachinesList(props) {
       .get(`/api/medicineinstock/?q=${medicineChoice}`)
       .then((response) => {
         setMachines(response.data);
+        setResponse(true);
       })
       .catch((err) => console.log(err));
   };
@@ -24,11 +26,14 @@ export default function MachinesList(props) {
   }, [medicineChoice]);
   return (
     <center>
-      <br></br>
-      <br></br>
-      {machines.length > 0 ? (
+      {!response ? (
+        <LoadingOrder text="אנא המתן מחפש מכונות באזורך" />
+      ) : machines.length > 0 ? (
         <React.Fragment>
-          <Typography variant="h5"> התרופה שבחרת נמצאת במלאי</Typography>
+          <Typography sx={{ marginTop: 5 }} variant="h5">
+            {" "}
+            התרופה שבחרת נמצאת במלאי
+          </Typography>
           <Typography variant="h5"> מאיפה תרצה לאסוף את התרופה ?</Typography>
           <br></br>
           <Box sx={{ width: "70%" }}>
@@ -60,11 +65,11 @@ export default function MachinesList(props) {
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Typography variant="h5">
+          <Typography sx={{ marginTop: 5 }} variant="h5">
             לצערנו התרופה שבחרת אינה נמצאת אצלנו במלאי המכונות
           </Typography>
         </React.Fragment>
-      )}
+      )}{" "}
     </center>
   );
 }

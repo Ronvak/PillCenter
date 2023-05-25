@@ -78,7 +78,7 @@ const WaitingRoom = (props) => {
 
   async function checkEnd() {
     await axios
-      .get(`/api/getchannel/?q=${session.id}`)
+      .get(`/api/getchannel/?q=${session?.id}`)
       .then((response) => {
         let status = response.data?.status;
         if (status !== "pending") {

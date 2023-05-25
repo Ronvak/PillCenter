@@ -15,7 +15,7 @@ export default function ProcessBar(props) {
   const [steps, setSteps] = useState([
     "בחירת מרשם",
     "מיקום איסוף",
-    "שאלון",
+    "שאלון רפואי",
     "תשלום ואישור",
   ]);
   const { prescriptioned } = props;
