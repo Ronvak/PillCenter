@@ -6,7 +6,7 @@ const AuthContext = createContext();
 
 export default AuthContext;
 
-export const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children, setHasLoggedIn }) => {
   let [user, setUser] = useState(() =>
     localStorage.getItem("authTokens")
       ? jwtDecode(localStorage.getItem("authTokens"))
@@ -65,6 +65,7 @@ export const AuthProvider = ({ children }) => {
       setUser(jwtDecode(data.access));
       localStorage.setItem("user", JSON.stringify(data.user));
       setAuth(data.user);
+      setHasLoggedIn(true);
       if (data.user.groups?.find((role) => ["patient"].includes(role)))
         navigate("/");
       else if (data.user.groups?.find((role) => ["pharmacist"].includes(role)))
@@ -80,6 +81,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem("user");
     setAuthTokens(null);
     setUser(null);
+    setHasLoggedIn(false);
     navigate("/login");
   };
 

@@ -1,653 +1,5 @@
 [
   {
-    "model": "auth.permission",
-    "pk": 1,
-    "fields": {
-      "name": "Can add log entry",
-      "content_type": 1,
-      "codename": "add_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 2,
-    "fields": {
-      "name": "Can change log entry",
-      "content_type": 1,
-      "codename": "change_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 3,
-    "fields": {
-      "name": "Can delete log entry",
-      "content_type": 1,
-      "codename": "delete_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 4,
-    "fields": {
-      "name": "Can view log entry",
-      "content_type": 1,
-      "codename": "view_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 5,
-    "fields": {
-      "name": "Can add permission",
-      "content_type": 2,
-      "codename": "add_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 6,
-    "fields": {
-      "name": "Can change permission",
-      "content_type": 2,
-      "codename": "change_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 7,
-    "fields": {
-      "name": "Can delete permission",
-      "content_type": 2,
-      "codename": "delete_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 8,
-    "fields": {
-      "name": "Can view permission",
-      "content_type": 2,
-      "codename": "view_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 9,
-    "fields": {
-      "name": "Can add group",
-      "content_type": 3,
-      "codename": "add_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 10,
-    "fields": {
-      "name": "Can change group",
-      "content_type": 3,
-      "codename": "change_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 11,
-    "fields": {
-      "name": "Can delete group",
-      "content_type": 3,
-      "codename": "delete_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 12,
-    "fields": {
-      "name": "Can view group",
-      "content_type": 3,
-      "codename": "view_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 13,
-    "fields": {
-      "name": "Can add user",
-      "content_type": 4,
-      "codename": "add_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 14,
-    "fields": {
-      "name": "Can change user",
-      "content_type": 4,
-      "codename": "change_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 15,
-    "fields": {
-      "name": "Can delete user",
-      "content_type": 4,
-      "codename": "delete_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 16,
-    "fields": {
-      "name": "Can view user",
-      "content_type": 4,
-      "codename": "view_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 17,
-    "fields": {
-      "name": "Can add content type",
-      "content_type": 5,
-      "codename": "add_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 18,
-    "fields": {
-      "name": "Can change content type",
-      "content_type": 5,
-      "codename": "change_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 19,
-    "fields": {
-      "name": "Can delete content type",
-      "content_type": 5,
-      "codename": "delete_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 20,
-    "fields": {
-      "name": "Can view content type",
-      "content_type": 5,
-      "codename": "view_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 21,
-    "fields": {
-      "name": "Can add session",
-      "content_type": 6,
-      "codename": "add_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 22,
-    "fields": {
-      "name": "Can change session",
-      "content_type": 6,
-      "codename": "change_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 23,
-    "fields": {
-      "name": "Can delete session",
-      "content_type": 6,
-      "codename": "delete_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 24,
-    "fields": {
-      "name": "Can view session",
-      "content_type": 6,
-      "codename": "view_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 25,
-    "fields": {
-      "name": "Can add blacklisted token",
-      "content_type": 7,
-      "codename": "add_blacklistedtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 26,
-    "fields": {
-      "name": "Can change blacklisted token",
-      "content_type": 7,
-      "codename": "change_blacklistedtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 27,
-    "fields": {
-      "name": "Can delete blacklisted token",
-      "content_type": 7,
-      "codename": "delete_blacklistedtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 28,
-    "fields": {
-      "name": "Can view blacklisted token",
-      "content_type": 7,
-      "codename": "view_blacklistedtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 29,
-    "fields": {
-      "name": "Can add outstanding token",
-      "content_type": 8,
-      "codename": "add_outstandingtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 30,
-    "fields": {
-      "name": "Can change outstanding token",
-      "content_type": 8,
-      "codename": "change_outstandingtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 31,
-    "fields": {
-      "name": "Can delete outstanding token",
-      "content_type": 8,
-      "codename": "delete_outstandingtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 32,
-    "fields": {
-      "name": "Can view outstanding token",
-      "content_type": 8,
-      "codename": "view_outstandingtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 33,
-    "fields": {
-      "name": "Can add profile",
-      "content_type": 9,
-      "codename": "add_profile"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 34,
-    "fields": {
-      "name": "Can change profile",
-      "content_type": 9,
-      "codename": "change_profile"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 35,
-    "fields": {
-      "name": "Can delete profile",
-      "content_type": 9,
-      "codename": "delete_profile"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 36,
-    "fields": {
-      "name": "Can view profile",
-      "content_type": 9,
-      "codename": "view_profile"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 37,
-    "fields": {
-      "name": "Can add order_status",
-      "content_type": 10,
-      "codename": "add_order_status"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 38,
-    "fields": {
-      "name": "Can change order_status",
-      "content_type": 10,
-      "codename": "change_order_status"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 39,
-    "fields": {
-      "name": "Can delete order_status",
-      "content_type": 10,
-      "codename": "delete_order_status"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 40,
-    "fields": {
-      "name": "Can view order_status",
-      "content_type": 10,
-      "codename": "view_order_status"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 41,
-    "fields": {
-      "name": "Can add medicine",
-      "content_type": 11,
-      "codename": "add_medicine"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 42,
-    "fields": {
-      "name": "Can change medicine",
-      "content_type": 11,
-      "codename": "change_medicine"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 43,
-    "fields": {
-      "name": "Can delete medicine",
-      "content_type": 11,
-      "codename": "delete_medicine"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 44,
-    "fields": {
-      "name": "Can view medicine",
-      "content_type": 11,
-      "codename": "view_medicine"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 45,
-    "fields": {
-      "name": "Can add vending_machines",
-      "content_type": 12,
-      "codename": "add_vending_machines"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 46,
-    "fields": {
-      "name": "Can change vending_machines",
-      "content_type": 12,
-      "codename": "change_vending_machines"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 47,
-    "fields": {
-      "name": "Can delete vending_machines",
-      "content_type": 12,
-      "codename": "delete_vending_machines"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 48,
-    "fields": {
-      "name": "Can view vending_machines",
-      "content_type": 12,
-      "codename": "view_vending_machines"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 49,
-    "fields": {
-      "name": "Can add products",
-      "content_type": 13,
-      "codename": "add_products"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 50,
-    "fields": {
-      "name": "Can change products",
-      "content_type": 13,
-      "codename": "change_products"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 51,
-    "fields": {
-      "name": "Can delete products",
-      "content_type": 13,
-      "codename": "delete_products"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 52,
-    "fields": {
-      "name": "Can view products",
-      "content_type": 13,
-      "codename": "view_products"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 53,
-    "fields": {
-      "name": "Can add orders",
-      "content_type": 14,
-      "codename": "add_orders"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 54,
-    "fields": {
-      "name": "Can change orders",
-      "content_type": 14,
-      "codename": "change_orders"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 55,
-    "fields": {
-      "name": "Can delete orders",
-      "content_type": 14,
-      "codename": "delete_orders"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 56,
-    "fields": {
-      "name": "Can view orders",
-      "content_type": 14,
-      "codename": "view_orders"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 57,
-    "fields": {
-      "name": "Can add inventory",
-      "content_type": 15,
-      "codename": "add_inventory"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 58,
-    "fields": {
-      "name": "Can change inventory",
-      "content_type": 15,
-      "codename": "change_inventory"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 59,
-    "fields": {
-      "name": "Can delete inventory",
-      "content_type": 15,
-      "codename": "delete_inventory"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 60,
-    "fields": {
-      "name": "Can view inventory",
-      "content_type": 15,
-      "codename": "view_inventory"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 61,
-    "fields": {
-      "name": "Can add link counter",
-      "content_type": 16,
-      "codename": "add_linkcounter"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 62,
-    "fields": {
-      "name": "Can change link counter",
-      "content_type": 16,
-      "codename": "change_linkcounter"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 63,
-    "fields": {
-      "name": "Can delete link counter",
-      "content_type": 16,
-      "codename": "delete_linkcounter"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 64,
-    "fields": {
-      "name": "Can view link counter",
-      "content_type": 16,
-      "codename": "view_linkcounter"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 65,
-    "fields": {
-      "name": "Can add Password Reset Token",
-      "content_type": 17,
-      "codename": "add_resetpasswordtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 66,
-    "fields": {
-      "name": "Can change Password Reset Token",
-      "content_type": 17,
-      "codename": "change_resetpasswordtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 67,
-    "fields": {
-      "name": "Can delete Password Reset Token",
-      "content_type": 17,
-      "codename": "delete_resetpasswordtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 68,
-    "fields": {
-      "name": "Can view Password Reset Token",
-      "content_type": 17,
-      "codename": "view_resetpasswordtoken"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 69,
-    "fields": {
-      "name": "Can add video_ channels",
-      "content_type": 18,
-      "codename": "add_video_channels"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 70,
-    "fields": {
-      "name": "Can change video_ channels",
-      "content_type": 18,
-      "codename": "change_video_channels"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 71,
-    "fields": {
-      "name": "Can delete video_ channels",
-      "content_type": 18,
-      "codename": "delete_video_channels"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 72,
-    "fields": {
-      "name": "Can view video_ channels",
-      "content_type": 18,
-      "codename": "view_video_channels"
-    }
-  },
-  {
     "model": "auth.group",
     "pk": 1,
     "fields": {
@@ -683,7 +35,7 @@
     "pk": 3,
     "fields": {
       "password": "pbkdf2_sha256$390000$BpO2lnUUVZd1mcuv52SeV4$bOt6Gh0JTq2rBG5GEo2rJ6G2GlnK5Eaoui9oTzJIXKA=",
-      "last_login": "2023-05-07T17:40:16.766Z",
+      "last_login": "2023-05-18T17:36:45.114Z",
       "is_superuser": true,
       "username": "admin",
       "first_name": "",
@@ -859,6 +211,24 @@
     }
   },
   {
+    "model": "auth.user",
+    "pk": 72,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$xeBwABTTV0OM81j6uZs8d0$RLbT2hn23L7nZ2TI9f+rDfULgiORCPqn2WAKOT+YoYM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "shiko",
+      "first_name": "שיקו",
+      "last_name": "ואזאנה",
+      "email": "shiko@shiko.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-05-22T10:10:43.142Z",
+      "groups": [2],
+      "user_permissions": []
+    }
+  },
+  {
     "model": "polls.profile",
     "pk": 15,
     "fields": { "user": 35, "id_user": "123456789", "phone": "0524646489" }
@@ -892,6 +262,11 @@
     "model": "polls.profile",
     "pk": 51,
     "fields": { "user": 71, "id_user": "987654213", "phone": "0556649497" }
+  },
+  {
+    "model": "polls.profile",
+    "pk": 52,
+    "fields": { "user": 72, "id_user": "115648798", "phone": "0545646499" }
   },
   {
     "model": "polls.medicine",
@@ -1355,6 +730,414 @@
     }
   },
   {
+    "model": "polls.orders",
+    "pk": 356,
+    "fields": {
+      "user_id": 35,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-05-16",
+      "pharmacist_instruction": "מאושר",
+      "qr_code": "qr_codes/qr_2fyni5M.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 357,
+    "fields": {
+      "user_id": 69,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-05-18",
+      "pharmacist_instruction": "מאושר",
+      "qr_code": "qr_codes/qr_LVwnMmU.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 358,
+    "fields": {
+      "user_id": 35,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-05-18",
+      "pharmacist_instruction": "מאושר",
+      "qr_code": "qr_codes/qr_k8glrmi.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 359,
+    "fields": {
+      "user_id": 69,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "מאושר",
+      "qr_code": "qr_codes/qr_xuivFGc.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 360,
+    "fields": {
+      "user_id": 69,
+      "product_id": 12,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "מאושר",
+      "qr_code": "qr_codes/qr_wxomoSe.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 361,
+    "fields": {
+      "user_id": 69,
+      "product_id": 19,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "מאושר",
+      "qr_code": "qr_codes/qr_IqGgqC0.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 362,
+    "fields": {
+      "user_id": 35,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "מאושר",
+      "qr_code": "qr_codes/qr_nHvOiCK.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 363,
+    "fields": {
+      "user_id": 69,
+      "product_id": 12,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "פעמיים ביום על בטן ריקה",
+      "qr_code": "qr_codes/qr_qpiSAtf.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 364,
+    "fields": {
+      "user_id": 69,
+      "product_id": 19,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "פעם ביום לפני שינה",
+      "qr_code": "qr_codes/qr_zg3ftpK.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 365,
+    "fields": {
+      "user_id": 69,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_dBtM6Ke.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 366,
+    "fields": {
+      "user_id": 69,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_fYAjitw.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 367,
+    "fields": {
+      "user_id": 69,
+      "product_id": 10,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_EZ8JdtZ.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 368,
+    "fields": {
+      "user_id": 35,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_or1RG9v.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 369,
+    "fields": {
+      "user_id": 69,
+      "product_id": 12,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "פעמיים ביום",
+      "qr_code": "qr_codes/qr_yw09zbs.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 370,
+    "fields": {
+      "user_id": 35,
+      "product_id": 4,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_1Tkiymd.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 371,
+    "fields": {
+      "user_id": 69,
+      "product_id": 12,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "vhvhvh",
+      "qr_code": "qr_codes/qr_iwrNAp6.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 372,
+    "fields": {
+      "user_id": 35,
+      "product_id": 2,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_HXGs4zh.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 373,
+    "fields": {
+      "user_id": 69,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_FcbMxmv.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 374,
+    "fields": {
+      "user_id": 69,
+      "product_id": 7,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_kcLrHCZ.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 375,
+    "fields": {
+      "user_id": 69,
+      "product_id": 8,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_mq9HmVQ.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 376,
+    "fields": {
+      "user_id": 35,
+      "product_id": 8,
+      "order_status": 3,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_R1Kz6mn.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 377,
+    "fields": {
+      "user_id": 69,
+      "product_id": 8,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_RrJFYd2.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 378,
+    "fields": {
+      "user_id": 35,
+      "product_id": 8,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_U2NLQAH.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 379,
+    "fields": {
+      "user_id": 69,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_xGHFIfd.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 380,
+    "fields": {
+      "user_id": 69,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_tBJErCw.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 381,
+    "fields": {
+      "user_id": 69,
+      "product_id": 12,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "אחי",
+      "qr_code": "qr_codes/qr_1GvzcJX.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 382,
+    "fields": {
+      "user_id": 69,
+      "product_id": 14,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "איש",
+      "qr_code": "qr_codes/qr_lC5Sbcm.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 383,
+    "fields": {
+      "user_id": 69,
+      "product_id": 12,
+      "order_status": 1,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "זין",
+      "qr_code": "qr_codes/qr_oPl8rCn.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 384,
+    "fields": {
+      "user_id": 35,
+      "product_id": 12,
+      "order_status": 3,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "פעם ביום",
+      "qr_code": "qr_codes/qr_vKdc3sg.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 385,
+    "fields": {
+      "user_id": 35,
+      "product_id": 8,
+      "order_status": 3,
+      "order_date": "2023-05-20",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_FBrsxZd.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 386,
+    "fields": {
+      "user_id": 69,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-05-22",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_FeyblWj.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 387,
+    "fields": {
+      "user_id": 72,
+      "product_id": 1,
+      "order_status": 1,
+      "order_date": "2023-05-22",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_sLTY7nc.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 388,
+    "fields": {
+      "user_id": 72,
+      "product_id": 10,
+      "order_status": 1,
+      "order_date": "2023-05-22",
+      "pharmacist_instruction": "ללא מרשם",
+      "qr_code": "qr_codes/qr_B9E8oJQ.jpg"
+    }
+  },
+  {
+    "model": "polls.orders",
+    "pk": 389,
+    "fields": {
+      "user_id": 72,
+      "product_id": 12,
+      "order_status": 1,
+      "order_date": "2023-05-22",
+      "pharmacist_instruction": "על בטן מלאה עד פעמיים ביום",
+      "qr_code": "qr_codes/qr_A4U35Xr.jpg"
+    }
+  },
+  {
     "model": "polls.vending_machines",
     "pk": 1,
     "fields": { "address": "יהודה הלוי 36", "city": "באר שבע" }
@@ -1470,267 +1253,1323 @@
     "fields": { "machine_id": 5, "product_id": 12 }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 1,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAAzRCGxfJ2UtyHur4XRqPG9x3Vgxcshbjtxtumm7JGgumTNKL8AAAAAIgDehw0BOHtiZAQAAQDIN2FkAgDIN2FkAwDIN2FkBADIN2Fk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIADUvTVIGwvPJsKM78y5nQYYITAnJxD8uhN1gCorswolxmTNKL8AAAAAIgCjZWEEh7JoZAQAAQAXb2dkAgAXb2dkAwAXb2dkBAAXb2dk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 2,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIACUedvxBPuqsLOeRo0OT+5psjcNmN6vZx8wp62F5vzysWTNKL8AAAAAIgDkSMcDVX1iZAQAAQDlOWFkAgDlOWFkAwDlOWFkBADlOWFk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAB6BJPXJ84aupbIPafMWaqTCzrvVkLxx8QtUnxN8LHF12TNKL8AAAAAIgA+Li0Cj7RoZAQAAQAfcWdkAgAfcWdkAwAfcWdkBAAfcWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 3,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAByM35BNIDWjNfureB1mZ6tWZQQgiewz3LbcMXYOuP+eGTNKL8AAAAAIgDSr3oA9X1iZAQAAQCFOmFkAgCFOmFkAwCFOmFkBACFOmFk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIADBlE/C/oMvYvxdIym/k8vhN7rjjQDKXw67oZLQ30JNfWTNKL8AAAAAIgA1SagCa7VoZAQAAQD7cWdkAgD7cWdkAwD7cWdkBAD7cWdk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 4,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIADvKcwAaL0CITp+M9YD/YA9c+CfjleITDpG7eNSMRsKTmTNKL8AAAAAIgACi7YCYzljZAQAAQDz9WFkAgDz9WFkAwDz9WFkBADz9WFk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIABDAG5Jk3h/sdOpG4hnW5uirlgAFqc/DNouu6khQOE2pmTNKL8AAAAAIgDUt0cEGrhoZAQAAQCqdGdkAgCqdGdkAwCqdGdkBACqdGdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 5,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAAEtfYSkBXN1IWhIOwvQzI/7rjepCfwuzwOBMteRCsrUmTNKL8AAAAAIgC3rdgFiT1jZAQAAQAZ+mFkAgAZ+mFkAwAZ+mFkBAAZ+mFk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAjJac3CzDbk0jWIGJQsoPxvUALN/76AuY3x0S9nHdH1WTNKL8AAAAAIgBeieYDyrhoZAQAAQBadWdkAgBadWdkAwBadWdkBABadWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 6,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIADp+P0TR4/5o9RqygbMHiGHeAXj9cwO6wfFAOLU30TPG2TNKL8AAAAAIgBeAZMCKj5jZAQAAQC6+mFkAgC6+mFkAwC6+mFkBAC6+mFk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIABeaIRrJGo69K+nzEo31GYUBphx1UGzENHQNciDQjS/PGTNKL8AAAAAIgBeg2UFprloZAQAAQA2dmdkAgA2dmdkAwA2dmdkBAA2dmdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 7,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAAVEQzeVELtzGbXrqqR/yxWolQMs2F6qM2nHwfSzeYOVWTNKL8AAAAAIgAXA8EBmkZjZAQAAQAqA2JkAgAqA2JkAwAqA2JkBAAqA2Jk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA9kiHE8PjoZcFsFVLZCG2WwlQIbqmWwRxj7Bay77iEy2TNKL8AAAAAIgDxsGAD/rloZAQAAQCOdmdkAgCOdmdkAwCOdmdkBACOdmdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 8,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAAFt9htZanGsEBm1DhgsgtltNNJxlFa9ioDrnnOE1XedGTNKL8AAAAAIgCOvtkE0E5jZAQAAQBgC2JkAgBgC2JkAwBgC2JkBABgC2Jk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAKhiAzJPCnm6ZhIZqNu+S/HY1WasmA0MOIPTqeyWdY0mTNKL8AAAAAIgAq5KMBMbpoZAQAAQDBdmdkAgDBdmdkAwDBdmdkBADBdmdk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 9,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIADRrxt6DbhZ7x/Ya3ObRjkL+rUxmwleGXUjAiHyt4ozmGTNKL8AAAAAIgDzyv0D5GRjZAQAAQB0IWJkAgB0IWJkAwB0IWJkBAB0IWJk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAC1Y453biQMO8P5GOsG+Nc3nSPVtSIAJvE6KFbVN06sdGTNKL8AAAAAIgC121YBZ8RoZAQAAQD3gGdkAgD3gGdkAwD3gGdkBAD3gGdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 10,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIABEcIqimFw5wD7/bUjzwglnOOyQV2uYH2Lr34Bj3+HFcGTNKL8AAAAAIgBI2gkB+WRjZAQAAQCJIWJkAgCJIWJkAwCJIWJkBACJIWJk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIADDK79xCD8Hm6Zt1sTPyUsA7GP/CioFcOK0GGl0FT4OlWTNKL8AAAAAIgCSDVQBdsRoZAQAAQAGgWdkAgAGgWdkAwAGgWdkBAAGgWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 11,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAAL42p7uzN9PPVRSlJpztGyJ9bT3CQskSzx3sJx/5Sl3GTNKL8AAAAAIgClhkUFAZdjZAQAAQCRU2JkAgCRU2JkAwCRU2JkBACRU2Jk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAWK/UN6f7OFg0WMrm9VUq9RikSzikyaXpDi4qj/nSLQGTNKL8AAAAAIgD0UtMAhsRoZAQAAQAWgWdkAgAWgWdkAwAWgWdkBAAWgWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 12,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIABKMLcHKw4OoFyKGeWtT2kKrGem2OYENfXUKoqp+QW2O2TNKL8AAAAAIgCenQMFHJdjZAQAAQCsU2JkAgCsU2JkAwCsU2JkBACsU2Jk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAC31LTQvGQS8K5uJq/IefZVn1R9zPPEg9TpzazBymhlFWTNKL8AAAAAIgAKblsFycRoZAQAAQBZgWdkAgBZgWdkAwBZgWdkBABZgWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 13,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAC/du1+MI27E7VA26V9jXTsNaXiFyD9lHWXO24tYGhHmWTNKL8AAAAAIgD7/4sFRZdjZAQAAQDVU2JkAgDVU2JkAwDVU2JkBADVU2Jk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIADy/B6hxX7Ri/IruXYbvGyA8CGyMfxkkqJsNQrEIfei92TNKL8AAAAAIgAxCN8E8sRoZAQAAQCCgWdkAgCCgWdkAwCCgWdkBACCgWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 14,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIADJRaXBPUU9AVqH4lhA2DoVOLdTdudG/F/wa4aod//SxGTNKL8AAAAAIgCvFoYDHJtjZAQAAQCsV2JkAgCsV2JkAwCsV2JkBACsV2Jk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIACtfS+wqZtb5KMEydR7gYS4zEsg1X1vLMs7Vt+bksVOLGTNKL8AAAAAIgDe0xMF88doZAQAAQCDhGdkAgCDhGdkAwCDhGdkBACDhGdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 15,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAD8sk8wITuP5j2+pR4PJOZnvticuB0Y2nRhII0z1VlwQmTNKL8AAAAAIgA84pkA55xjZAQAAQB3WWJkAgB3WWJkAwB3WWJkBAB3WWJk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA5LvKGL40wTOdc3m5iri54G9yVqzy4/xxNZAf+B/0L12TNKL8AAAAAIgBa6QsD98doZAQAAQCHhGdkAgCHhGdkAwCHhGdkBACHhGdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 16,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIACjezaZ12EZOmP+dOoGT70WcQWuvtAFn3TQTiYIIAqKIWTNKL8AAAAAIgDYRI8CeYlkZAQAAQAJRmNkAgAJRmNkAwAJRmNkBAAJRmNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAD4QJEpoVz9Np04RPaqgaCuB503ckqJa2aVyX/A7pNcvmTNKL8AAAAAIgBLpd8CJ8hoZAQAAQC3hGdkAgC3hGdkAwC3hGdkBAC3hGdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 17,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIACOjw4yDlyaDxDLudDRToIgXfzS1D/Q465hacLSORlaXmTNKL8AAAAAIgCabDcEp4lkZAQAAQA3RmNkAgA3RmNkAwA3RmNkBAA3RmNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIACGikcvP4ckeMpI1kYTZmMbkFOIDwUekhvLk09t2QxO4WTNKL8AAAAAIgBvp+EEX8hoZAQAAQDvhGdkAgDvhGdkAwDvhGdkBADvhGdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 18,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIACjWa/kJw/FM06NURztA9Pf3oNZ1RZBcnIuLYtaaXz2wWTNKL8AAAAAIgARB64AI5NkZAQAAQCzT2NkAgCzT2NkAwCzT2NkBACzT2Nk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIABV2dEpW6POyY/zq+XEsvs1n3DU+jQSHu45YxQ6A4hmf2TNKL8AAAAAIgAjFAYFBMloZAQAAQCUhWdkAgCUhWdkAwCUhWdkBACUhWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 19,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIABDIPiempUMArurwRRM88Wtk+5VR1yRVkFjIFNPX63xkWTNKL8AAAAAIgBo2Z4F/ZZkZAQAAQCNU2NkAgCNU2NkAwCNU2NkBACNU2Nk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIABSreji0CJIG/j1/VVMEEuVtohwFfNZn7ErgzcjC28m0GTNKL8AAAAAIgAE25kEXcloZAQAAQDthWdkAgDthWdkAwDthWdkBADthWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 20,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIABhhj1o8Au3uyi9LxM+KBb1ZaYgGNnuwF6zGk7BLKt7rmTNKL8AAAAAIgCRMTkBA5pkZAQAAQCTVmNkAgCTVmNkAwCTVmNkBACTVmNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAC6jfZW+ImCMnbidM+osrvExSeiuQp4LPLdDIimLXg5XGTNKL8AAAAAIgDM89YAcMloZAQAAQAAhmdkAgAAhmdkAwAAhmdkBAAAhmdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 21,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAC4OlKi/qHx2ItmQ4bBs7muqXWexIjcr8IOlty3gHjz12TNKL8AAAAAIgBsP+4FMppkZAQAAQDCVmNkAgDCVmNkAwDCVmNkBADCVmNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIACiq6Um7+LZFvic/CvxC/b5pzrYQ+PbAii2zBneUBDFomTNKL8AAAAAIgCnpCEE/MpoZAQAAQCMh2dkAgCMh2dkAwCMh2dkBACMh2dk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "Approved",
+      "instructions": "sdmks",
+      "anamnesis": "mkmsk"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 22,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAAwlXk/TRkPpVD71+CB963wx9ag5IyRNzQ/vLKO3hdnYGTNKL8AAAAAIgAZg9sC2JpkZAQAAQBoV2NkAgBoV2NkAwBoV2NkBABoV2Nk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIADh9atyWys/ly8u8veyOgcaeM6k28DQvLrnVusvMmVdFWTNKL8AAAAAIgA+DH0D38xoZAQAAQBviWdkAgBviWdkAwBviWdkBABviWdk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "לכל היותר פעמיים ביום לקחת על בטן מלאה.",
+      "anamnesis": "מטופל בשם רון וקנין , בעל מרשם לתרופת אטנט \nמאשר הנפקה"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 23,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIADyPfL7QtLShTBrtsoDokqWU2K9Aiu2c0CVcUq+Fe+qL2TNKL8AAAAAIgDRA5MFAJtkZAQAAQCQV2NkAgCQV2NkAwCQV2NkBACQV2Nk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAB6m9+0inn3J3zUNmkp59AYx+H4drwC5Gkf4Jzub1Obi2TNKL8AAAAAIgBZDIUDi81oZAQAAQAbimdkAgAbimdkAwAbimdkBAAbimdk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "פעם ביום",
+      "anamnesis": "מטופל דורש אטנט\nמאושר"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 24,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIACnV5nqnskGQBFhKeE2NhMGURDNDhFG5RE32L92nvSmdmTNKL8AAAAAIgD+lV8FkJtkZAQAAQAgWGNkAgAgWGNkAwAgWGNkBAAgWGNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAARXLgO9XHhwKMMJsYvAZ41qpGWjh2MqHmcw+AkIo4S7mTNKL8AAAAAIgCJYBIFls5oZAQAAQAmi2dkAgAmi2dkAwAmi2dkBAAmi2dk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 25,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIACwrjDIDz2XRn9L4reoN5l8OSMoTeDof0bsnif6OGL/jmTNKL8AAAAAIgD33pID/ZtkZAQAAQCNWGNkAgCNWGNkAwCNWGNkBACNWGNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAB/DG2AGtXizzrhKXZ2CxguIi4Ep0wJ9OcMT3C5OV1U1mTNKL8AAAAAIgCbC98DnM5oZAQAAQAsi2dkAgAsi2dkAwAsi2dkBAAsi2dk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 26,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIABrIzHA43mwpBEWxebzOYVWqaroGxE3AbY+xTiKTRQEWGTNKL8AAAAAIgAwvD4BHpxkZAQAAQCuWGNkAgCuWGNkAwCuWGNkBACuWGNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIADaja1DCxwG8j44DVgEejWe8p/CXVndwSlSzI7vnaRkzWTNKL8AAAAAIgDwlVgEsM5oZAQAAQBAi2dkAgBAi2dkAwBAi2dkBABAi2dk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "Disapproved",
+      "instructions": "",
+      "anamnesis": ""
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 27,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIABhrLcRHyk2/AIW+9FN5DZuN/5LBh4uVarD1H/rXCQHKmTNKL8AAAAAIgDafe4FQZxkZAQAAQDRWGNkAgDRWGNkAwDRWGNkBADRWGNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAuxAMGB0xXr8/ijldoLtmI6XZ16O8Os0oOfnILr+x2zmTNKL8AAAAAIgBtnp0Eps9oZAQAAQA2jGdkAgA2jGdkAwA2jGdkBAA2jGdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "Approved",
+      "instructions": "bgbgb",
+      "anamnesis": "fdfd"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 28,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAC0hsg6b3zPJv9cNsUgL3S74p5s6KwJB+mu4RjNsKkKnWTNKL8AAAAAIgAa+YoB9Z1kZAQAAQCFWmNkAgCFWmNkAwCFWmNkBACFWmNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIADYf5n6VBO3OpBva16pO3LnAuq0LibSjvwTsdi4fRRyRGTNKL8AAAAAIgB0AaoDE9BoZAQAAQCjjGdkAgCjjGdkAwCjjGdkBACjjGdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "Approved",
+      "instructions": "vfvfvf",
+      "anamnesis": "dsdv"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 29,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAB8PyKs1z4a0OFI0cJMbvgN/6gW0xPV/QZXs5AAp5qsW2TNKL8AAAAAIgBASiYCj55kZAQAAQAfW2NkAgAfW2NkAwAfW2NkBAAfW2Nk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAsbHLrMWu5ppzNxJLTUBOXjke2l+hUuqTqFVHfjGWbmGTNKL8AAAAAIgBY3LsFnNBoZAQAAQAsjWdkAgAsjWdkAwAsjWdkBAAsjWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "Approved",
+      "instructions": "דמחדמגח",
+      "anamnesis": "גחמחגמח"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 30,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIAB0bOtQrf2gJA6jV61YDYHB8xKsKwMWE8K8Bej8J0ZHyGTNKL8AAAAAIgDGf0ICxp5kZAQAAQBWW2NkAgBWW2NkAwBWW2NkBABWW2Nk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA7qpVEFulYyPFv9/+SMbmzJIQRuP6lwX57BsZQHYZpGmTNKL8AAAAAIgAZmrADs9BoZAQAAQBDjWdkAgBDjWdkAwBDjWdkBABDjWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "Disapproved",
+      "instructions": "דלצלצל",
+      "anamnesis": "גכלגצל"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 31,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIABfEJJ9gojI/DrFM2IiDobm8wRBNeTdXInSvllSVCuuK2TNKL8AAAAAIgBFj0oAaqFkZAQAAQD6XWNkAgD6XWNkAwD6XWNkBAD6XWNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAWkAQxyKaLbtK4V5inp08/rAVV7u1k7XNNmCL1JU6TjGTNKL8AAAAAIgAkFB0B1dBoZAQAAQBljWdkAgBljWdkAwBljWdkBABljWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "Approved",
+      "instructions": "אווו יהה",
+      "anamnesis": "ללחל"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 32,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIACshO6oHl8FS3FuoveR9SKV2IE9ddFjgR6nDvj4YW8iNWTNKL8AAAAAIgCQFvUCP6JkZAQAAQDPXmNkAgDPXmNkAwDPXmNkBADPXmNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIAD7g1SvgTyADMe77DLeGYDAkfLsR1bxxjvv1bMW4PdQ7GTNKL8AAAAAIgCyN5kBctFoZAQAAQACjmdkAgACjmdkAwACjmdkBAACjmdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
     }
   },
   {
-    "model": "polls.video_channels",
+    "model": "polls.pharmacist_call",
     "pk": 33,
     "fields": {
-      "token": "006d3754641865b422f90f234d5766a4d8aIACykYnNbClvGeF3jKIGxggBl/AJ2Pn8QXILKg+CHGr6uWTNKL8AAAAAIgB/4NsFX6ZkZAQAAQDvYmNkAgDvYmNkAwDvYmNkBADvYmNk",
-      "pharmacist": 71
+      "token": "006d3754641865b422f90f234d5766a4d8aIABA6eKiivCWViRea32hCgc0uOvR94Z9gCFMx2koW6mJJGTNKL8AAAAAIgAPQMAB4NFoZAQAAQBwjmdkAgBwjmdkAwBwjmdkBABwjmdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 34,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAC+Q/dNExRPcw0p720LbwafnEDDcahKnfsZnrM2xskm5GTNKL8AAAAAIgCg4lQF5dFoZAQAAQB1jmdkAgB1jmdkAwB1jmdkBAB1jmdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 35,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABwtcRuWLoukSTlpkNGqT0pNQCD4Ev/6xMnjsCXdhSmxGTNKL8AAAAAIgA6JuMFDNNoZAQAAQCcj2dkAgCcj2dkAwCcj2dkBACcj2dk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "Approved",
+      "instructions": "אמן עובד",
+      "anamnesis": "הייי"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 36,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABnsyf6Bzzvk9Ev9BUTUO3MFT7IKx/2l1YYYYojXbNqr2TNKL8AAAAAIgAZxh4DitNoZAQAAQAakGdkAgAakGdkAwAakGdkBAAakGdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "Approved",
+      "instructions": "sdsdsd",
+      "anamnesis": "sdsd"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 37,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABcBnLachWvOTcRolmjodRJDhQjjjyET4JOIz+aZGBvomTNKL8AAAAAIgCnQ4IDXtVoZAQAAQDukWdkAgDukWdkAwDukWdkBADukWdk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "Approved",
+      "instructions": "vfbgbgb",
+      "anamnesis": "sdsds"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 38,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAEzc2/vSD3O6Z+1kKOCUpma6E3+2i8+TieVKKA5TcKbGTNKL8AAAAAIgCyvmcAvNhoZAQAAQBMlWdkAgBMlWdkAwBMlWdkBABMlWdk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "פעמיים ביום על בטן מלאה",
+      "anamnesis": "מטופל בשם נועם עזרא. \nבתקופת מבחנים בעל מרשם לתרופת אטנט.\n"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 39,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACqLkOm6Jaq8HJTHZHX4rp5sHvKSbYoq8tW8haBXYdd42TNKL8AAAAAIgDjw9gDTdpoZAQAAQDdlmdkAgDdlmdkAwDdlmdkBADdlmdk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 40,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA2QVFSGYVy5J7cJs0T0ZlIXt82TFb1xgtVfBWEpGkjP2TNKL8AAAAAIgDebU8FbOFoZAQAAQD8nWdkAgD8nWdkAwD8nWdkBAD8nWdk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "פעם ביום",
+      "anamnesis": "אחלה גבר"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 41,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAB9Y7AsLoeczuqV5TqtQN3td4E0K6e2zTJu3Pe/UbZmK2TNKL8AAAAAIgBQNHoF2OFoZAQAAQBonmdkAgBonmdkAwBonmdkBABonmdk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "sjnjns",
+      "anamnesis": "jjj"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 42,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABFA+Uybs1JyBpX8UZA/ekBW7QZ2yY5/CjRl5V1iU/jG2TNKL8AAAAAIgBKABUAPeJoZAQAAQDNnmdkAgDNnmdkAwDNnmdkBADNnmdk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "kjkjkjk",
+      "anamnesis": "jkjkj"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 43,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACRMBOdluKGbgyDYO7ge5xYzQyu92sHvyAgzhwFbxqzRWTNKL8AAAAAIgA7Cc0Df0RpZAQAAQAPAWhkAgAPAWhkAwAPAWhkBAAPAWhk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 44,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAoAtkGrpGxWu6bXO8lpDCk76M06eTU+KmwORyDJmP3fmTNKL8AAAAAIgC1F98EkkRpZAQAAQAiAWhkAgAiAWhkAwAiAWhkBAAiAWhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "פעמיים ביום",
+      "anamnesis": "אחלה גבר"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 45,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABVoI1g68QowWifSyFFo3kxS9ozwbFvcDeWobOB4GeKO2TNKL8AAAAAIgDwhiwAjUVpZAQAAQAdAmhkAgAdAmhkAwAdAmhkBAAdAmhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "sdsd",
+      "anamnesis": "sdsd"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 46,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABY7DINJaqZhXGYHIqTD9/C7+5i0zDWg8MxTsBH8D6zi2TNKL8AAAAAIgBMVe0DHkZpZAQAAQCuAmhkAgCuAmhkAwCuAmhkBACuAmhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "jkjkjkj",
+      "anamnesis": "jkjkj"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 47,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAD1aucMxnbx/xScKaviP5ntZ8dyN5M0xopEtwb/cbDCLmTNKL8AAAAAIgAjttUC+EZpZAQAAQCIA2hkAgCIA2hkAwCIA2hkBACIA2hk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "dfdfdf",
+      "anamnesis": "dfdf"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 48,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAg2+7LH9TpjyoHfNqygEcFoguqNSmpQmIWm5RmC9SdBWTNKL8AAAAAIgCS4uEF80dpZAQAAQCDBGhkAgCDBGhkAwCDBGhkBACDBGhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "חופשי חודשי כמה שבאלו",
+      "anamnesis": "אחלה של גבר"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 49,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACl/3BDCOdn/h7Pqktmj8KJBTFFsBbPZ/Z5U5+2z+AB7GTNKL8AAAAAIgD4w7MBwkhpZAQAAQBSBWhkAgBSBWhkAwBSBWhkBABSBWhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 50,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA9br0oWrV899xi9yZc1bLzMWtKjllTIH4Utb3A4nG6FGTNKL8AAAAAIgB0NmgAzEppZAQAAQBcB2hkAgBcB2hkAwBcB2hkBABcB2hk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "dfdfdfdf",
+      "anamnesis": "dfdfd"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 51,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAD3gwSQawAdhmCKwUJYazC0NmqePOF14JkhzRL3dy5QD2TNKL8AAAAAIgCkU5cEr0tpZAQAAQA/CGhkAgA/CGhkAwA/CGhkBAA/CGhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "מאושר זין פעם ביום",
+      "anamnesis": "נועם עזרא בדכאון בן זונה"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 52,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACVusQMSDsGHBSiAl2lVBqa1WPi+sqh1HN/GgrUINU5PmTNKL8AAAAAIgCqZH0AXUxpZAQAAQDtCGhkAgDtCGhkAwDtCGhkBADtCGhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "זין ביום",
+      "anamnesis": "אחלה ביץ"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 53,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAC5kt/NrXRm7aQUOs3GD7kJshnjBEir8vcAceuDihKubGTNKL8AAAAAIgAQYF8B+k5pZAQAAQCKC2hkAgCKC2hkAwCKC2hkBACKC2hk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "מאושר",
+      "anamnesis": "מה המצב"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 54,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAD0DvYKkYu4bAmxjrFONSMsX6XerZUKOjkclnzorjkS2TNKL8AAAAAIgDXax0Djk9pZAQAAQAeDGhkAgAeDGhkAwAeDGhkBAAeDGhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "nknknknk",
+      "anamnesis": "nknknk"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 55,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIADRfg3KEZDhEqYe82mG/vQu/ea5wV9EKeSlpew36hajAWTNKL8AAAAAIgARCbMC/E9pZAQAAQCMDGhkAgCMDGhkAwCMDGhkBACMDGhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "חופשי חודשי",
+      "anamnesis": "מגיע לו כל תרופה בעטלם"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 56,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAbqsxvIE2mkteAQ9p7ESCCF+iZ4Hzo+RGXB0gQbJedoGTNKL8AAAAAIgD6+NkEA1FpZAQAAQCTDWhkAgCTDWhkAwCTDWhkBACTDWhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "gcgcgcg",
+      "anamnesis": "jjhjhj"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 57,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABxtrdjrcpY6l4lNBb4+fLod4nk0s2HMEvtgKx9biOzsGTNKL8AAAAAIgDPv2IFBlJpZAQAAQCWDmhkAgCWDmhkAwCWDmhkBACWDmhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "פעם ביום ",
+      "anamnesis": "בחור חתיך רוצה אטנט"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 58,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABvMqLbNAlYbmQnkPs3f4KQ18WENVd2aNMl7lkxV1knxGTNKL8AAAAAIgAde+MER1JpZAQAAQDXDmhkAgDXDmhkAwDXDmhkBADXDmhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "פעמיים ביום",
+      "anamnesis": "אחלה גבר"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 59,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA0+oLq1hnmaQ0ptYEwUYT8CkEOlg5rMpyJ4OhjIvrzcWTNKL8AAAAAIgDE+UkDeWVpZAQAAQAJImhkAgAJImhkAwAJImhkBAAJImhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "גבקר",
+      "anamnesis": "אחלה"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 60,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABQENWj9axjyk0cq5OyScoWUsEhw+8h/9L+X5N9CCxzpWTNKL8AAAAAIgCI7LoC7gNqZAQAAQB+wGhkAgB+wGhkAwB+wGhkBAB+wGhk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 61,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAFpwUNxiKLRb2sbUNO2f+k6WKw64J+Ev2f/jDhIQSCOWTNKL8AAAAAIgCUvacA+QNqZAQAAQCJwGhkAgCJwGhkAwCJwGhkBACJwGhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "שיקח כמה שרוצה",
+      "anamnesis": "אחלה גבר"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 62,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACnDbvTVY1dUHoqdWpuQFWdVEkDBPTM9+kiTMiKzDyCBGTNKL8AAAAAIgBONDUC5R1qZAQAAQB12mhkAgB12mhkAwB12mhkBAB12mhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "חופשי שיקח כמה שבאלו",
+      "anamnesis": "מלך גדול"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 63,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAs7Ye72P+sXuY1WICaiOW9jApzahTnrM7EqryMH/tZU2TNKL8AAAAAIgBxSB8AGx5qZAQAAQCr2mhkAgCr2mhkAwCr2mhkBACr2mhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "ממממ",
+      "anamnesis": "מחח"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 64,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA8dG5lzouSHXyJTJRoNwmVa0QJrFu6V6enCyqNp24fXWTNKL8AAAAAIgAvEWAAjR5qZAQAAQAd22hkAgAd22hkAwAd22hkBAAd22hk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "חרא",
+      "anamnesis": "חרא"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 65,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIADAC5A/D+DYLPuEwcXJFkxx6MczWTgXQD4FLMJxB6nJOWTNKL8AAAAAIgDG4gcFliFqZAQAAQAm3mhkAgAm3mhkAwAm3mhkBAAm3mhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "פעמיים ביום על בטן ריקה",
+      "anamnesis": "יופי של ילד"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 66,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA7KWm4ouaypWj9FsMVCY2Y3wL1i5tKmZTOq+0HIHn5KmTNKL8AAAAAIgCquf4CKEJqZAQAAQC4/mhkAgC4/mhkAwC4/mhkBAC4/mhk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "פעם ביום לפני שינה",
+      "anamnesis": "מטופל בשם ראמזי\nמבקש תרופה בשם אטנט \nמאושר "
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 67,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAC5Wu/qz2aUHgV/+zz0sEmzOk0iNs2lIuppR9IsWUeFX2TNKL8AAAAAIgAP6JsBtVBqZAQAAQBFDWlkAgBFDWlkAwBFDWlkBABFDWlk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 68,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIADPGyrwCO3/1ioVkLqsvoOLqryKS6KIi0AqkekuGWJXk2TNKL8AAAAAIgDvECsFaFZqZAQAAQD4EmlkAgD4EmlkAwD4EmlkBAD4Emlk",
+      "pharmacist": 71,
+      "patient": 35,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 69,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAANpFRk4U9IDAb6Q08Ki3yWoFnN+/yamEuoVla/kUQ902TNKL8AAAAAIgDtl2sCzlZqZAQAAQBeE2lkAgBeE2lkAwBeE2lkBABeE2lk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 70,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACh5G+BNNF4p1YgnWkzJE6NudqktM15p042Q4uEFcZ/e2TNKL8AAAAAIgCTe/MDTFdqZAQAAQDcE2lkAgDcE2lkAwDcE2lkBADcE2lk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 71,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAD82G1gOnZs7uabiA8sCbIaT76LU7TtTRPTdkmbOn3f+mTNKL8AAAAAIgC+O84FaVdqZAQAAQD5E2lkAgD5E2lkAwD5E2lkBAD5E2lk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "פעמיים ביום",
+      "anamnesis": "יופי של ילד"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 72,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABEO5AVxVBF6umBtYT/zckMxPb8Lji2ILrkZG6du8lEF2TNKL8AAAAAIgBXHM0E4VdqZAQAAQBxFGlkAgBxFGlkAwBxFGlkBABxFGlk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "vhvhvh",
+      "anamnesis": "njnj"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 73,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA4ZA51ivAAWJcZir/m0iSIYGI+mkjhZ1t0hiCuF/yzkGTNKL8AAAAAIgDhU4sENmFqZAQAAQDGHWlkAgDGHWlkAwDGHWlkBADGHWlk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Disapproved",
+      "instructions": "",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 74,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABR6P0kN/jn0ZfCQ1kEqNwC6nfloQT9rDuMAlmuLJRmOWTNKL8AAAAAIgCCa7sBjWFqZAQAAQAdHmlkAgAdHmlkAwAdHmlkBAAdHmlk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 75,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABcj2W/yv5+prIlvHqYYLtSqhR6q5oTl+SkJLCvUVVqi2TNKL8AAAAAIgBOCZwEsWFqZAQAAQBBHmlkAgBBHmlkAwBBHmlkBABBHmlk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 76,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACeBODISTMtRI1/pO6Nue6Pgcx9BmDB157Ts9zJqbTKNGTNKL8AAAAAIgBJrvUB32FqZAQAAQBvHmlkAgBvHmlkAwBvHmlkBABvHmlk",
+      "pharmacist": 71,
+      "patient": 35,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 77,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABKfGM3NmQ1+prthNVJ0bZ6qOBvjMXCAp04qJ0oSXWX52TNKL8AAAAAIgBTvdwB/WFqZAQAAQCNHmlkAgCNHmlkAwCNHmlkBACNHmlk",
+      "pharmacist": 71,
+      "patient": 35,
+      "status": "Approved",
+      "instructions": "",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 78,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACHgLFXcuOz2HlBROnVV2Dr5Zg6HnaPKLv9m6rGbGwIA2TNKL8AAAAAIgCbFYsAPWJqZAQAAQDNHmlkAgDNHmlkAwDNHmlkBADNHmlk",
+      "pharmacist": 71,
+      "patient": 3,
+      "status": "pending",
+      "instructions": "None",
+      "anamnesis": "None"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 79,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIADxZGgG+bGgBtCPoZY3EBXOZYwqALywbSqlnNWeDkVg+2TNKL8AAAAAIgCHpukEtGJqZAQAAQBEH2lkAgBEH2lkAwBEH2lkBABEH2lk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "אחי",
+      "anamnesis": "מושלם"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 80,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABEYsukabsdSRaF63K1pSzVGkgY6bdYgqp/kqlpGExtJmTNKL8AAAAAIgDqkgsAJWNqZAQAAQC1H2lkAgC1H2lkAwC1H2lkBAC1H2lk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "איש",
+      "anamnesis": "אחלה"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 81,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABJrmlqAf91K/xgC0uGPVrVrfPCehbLC0oG0I9tU6h50GTNKL8AAAAAIgATJhUATmRqZAQAAQDeIGlkAgDeIGlkAwDeIGlkBADeIGlk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "זין ",
+      "anamnesis": "אחלה גבר"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 82,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA1aJYIKf5OsniX4HMFHUc8iibMYsk4NhNTuYGmBZ64FmTNKL8AAAAAIgAEc4MFpmdqZAQAAQA2JGlkAgA2JGlkAwA2JGlkBAA2JGlk",
+      "pharmacist": 71,
+      "patient": 35,
+      "status": "Approved",
+      "instructions": "פעם ביום ",
+      "anamnesis": "מטופל בשם נועם מבקש תרופת אטנט\n"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 83,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAApuqLWrk2XO80/CwGmIcMHVFHWth70BPM09hEadNQRlmTNKL8AAAAAIgBNwuUCXoJsZAQAAQDuPmtkAgDuPmtkAwDuPmtkBADuPmtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "פעם ביום",
+      "anamnesis": "מטופל \nמאושר "
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 84,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAA+WYZAbsRCJuJd6Dy8nBvcXia5tqE74xHay11Lr9gAGWTNKL8AAAAAIgBcA3IAhoRsZAQAAQAWQWtkAgAWQWtkAwAWQWtkBAAWQWtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "גבר",
+      "anamnesis": "אחלה"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 85,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIADJaIoPUkwVJSAkZeYQryWQyilbYcbgwrNYHWgFwFvRB2TNKL8AAAAAIgCQQEkCmoVsZAQAAQAqQmtkAgAqQmtkAwAqQmtkBAAqQmtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "גבר",
+      "anamnesis": "אחלה"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 86,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAB8SJwqu8gvR/XYjAts4dvCn0zTQXO7nuuiDJTGL8CWq2TNKL8AAAAAIgAUXq0A84ZsZAQAAQCDQ2tkAgCDQ2tkAwCDQ2tkBACDQ2tk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "dfdfdf",
+      "anamnesis": "fdfd"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 87,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAC4bPgYNtWkdxLbdf8sK713prFW4sD1F3XcPtVwMWKBUWTNKL8AAAAAIgAk68MEM4dsZAQAAQDDQ2tkAgDDQ2tkAwDDQ2tkBADDQ2tk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "כן",
+      "anamnesis": "כן"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 88,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIADLFKuwshyZh63s6Zmbv2Rmg8WlRYGSw2UHZUBuezZCw2TNKL8AAAAAIgDqj1oEUIdsZAQAAQDgQ2tkAgDgQ2tkAwDgQ2tkBADgQ2tk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "כן",
+      "anamnesis": "כן"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 89,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAW4Rj/1qUuuAw6gGTpOMBJqu/Ku6euBDoPiG0tDxBcaGTNKL8AAAAAIgCUTbUCoIdsZAQAAQAwRGtkAgAwRGtkAwAwRGtkBAAwRGtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "ssss",
+      "anamnesis": "haa"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 90,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACmqh61rN042bsuj926InwZpfFJSLE3r5hAh8HdlE14Y2TNKL8AAAAAIgC6mKMBxIdsZAQAAQBURGtkAgBURGtkAwBURGtkBABURGtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "ha",
+      "anamnesis": "ha"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 91,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABZa0sPLV/HPOjhTyjQL4A+9MBZqy1IHwhwoXHy7ShErmTNKL8AAAAAIgC28NYC5odsZAQAAQB2RGtkAgB2RGtkAwB2RGtkBAB2RGtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "ffff",
+      "anamnesis": "ff"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 92,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAC5pYJI2LJ8GQS+3cea3WypdMXTYI9jIYh4rACmBoWaf2TNKL8AAAAAIgAbSYgAAohsZAQAAQCSRGtkAgCSRGtkAwCSRGtkBACSRGtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "ff",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 93,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABFU4BFHnUbpy7TnuinHmgPsZEz47W3YOgPh0VDrhk3R2TNKL8AAAAAIgB3hisBI4hsZAQAAQCzRGtkAgCzRGtkAwCzRGtkBACzRGtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "dfdfdf",
+      "anamnesis": "fff"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 94,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAB56VczZ2OAY/XrWlkte1jfRg5pvJ2RtdZka/l2QTmMZmTNKL8AAAAAIgD2VUkFSohsZAQAAQDaRGtkAgDaRGtkAwDaRGtkBADaRGtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "fff",
+      "anamnesis": "fffff"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 95,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACkFYwM1hIqRFtD3A9iJS5KTr3HjJQU5VCcL9SDCOHuMWTNKL8AAAAAIgBsxNAAcYhsZAQAAQABRWtkAgABRWtkAwABRWtkBAABRWtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "ddd",
+      "anamnesis": "dd"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 96,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACCG4uKdBk3YCykuYiBHj9//PcHxDjEz1LAFA5Nw+rcbGTNKL8AAAAAIgABRjEDkYhsZAQAAQAhRWtkAgAhRWtkAwAhRWtkBAAhRWtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "dd",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 97,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAdxz02PNUwaYCq49Kcz5skZfC3M8YHkuyiiQ3bWaTVyWTNKL8AAAAAIgA41usEsohsZAQAAQBCRWtkAgBCRWtkAwBCRWtkBABCRWtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "dd",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 98,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAB9817oZYRYrHPdgkJorIrJHEXgEbByk2CvKsMGNfIkWTNKL8AAAAAIgBtxQcBqIlsZAQAAQA4RmtkAgA4RmtkAwA4RmtkBAA4Rmtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "dddd",
+      "anamnesis": "ddd"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 99,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABgqZUHWMkw9SIBGdT6jraJQ66uVAnxsxLRN5TiEKNMhGTNKL8AAAAAIgA8G3ACh4tsZAQAAQAXSGtkAgAXSGtkAwAXSGtkBAAXSGtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "ff",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 100,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAB6Kjo/daOZF3fKZAaaV1L0Qa32uRrL+8rtNXK4apedVmTNKL8AAAAAIgBs3QQDo4tsZAQAAQAzSGtkAgAzSGtkAwAzSGtkBAAzSGtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "ddd",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 101,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAnJ6Ynt0mO0ZBrgZ3J/QbvN+sNbTSUfiCm6hkqdJ4ST2TNKL8AAAAAIgC/LaEEDo1sZAQAAQCeSWtkAgCeSWtkAwCeSWtkBACeSWtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Disapproved",
+      "instructions": "ddd",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 102,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACaHCV4GsyBPc815ZUl+2hoh9uY/O+0pKWU2mP5FaZosWTNKL8AAAAAIgA9qaUFtI1sZAQAAQBESmtkAgBESmtkAwBESmtkBABESmtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Disapproved",
+      "instructions": "ddd",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 103,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAB0urltQk0gYpz3jruVPcsJcYLzzOXC4R5hNOclpcFjBWTNKL8AAAAAIgAc6QYCwY1sZAQAAQBRSmtkAgBRSmtkAwBRSmtkBABRSmtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Disapproved",
+      "instructions": "ddd",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 104,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABS/mx+C7MSzx65JyFh7p1HdHbJxFFRAKeRZ8ZK2KFXJGTNKL8AAAAAIgBK4EgFEY5sZAQAAQChSmtkAgChSmtkAwChSmtkBAChSmtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Disapproved",
+      "instructions": "dd",
+      "anamnesis": ""
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 105,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIADUmyvI4GlL0geccd6WehhhQ7yGA1MU7XNoe5TcOSZpOmTNKL8AAAAAIgCBaFgEXI5sZAQAAQDsSmtkAgDsSmtkAwDsSmtkBADsSmtk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Disapproved",
+      "instructions": "dddd",
+      "anamnesis": "ddd"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 106,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAAhi4W+KcqeE2g6rmulmcpJbAQuVXPlt1fJZBYh8Shq4WTNKL8AAAAAIgD7vDgDvo5sZAQAAQBOS2tkAgBOS2tkAwBOS2tkBABOS2tk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Approved",
+      "instructions": "ddd",
+      "anamnesis": "fff"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 107,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIACBkY9uvUUL0+WrkqxN9q/fFw8m5/WZHJbUz21jd4atb2TNKL8AAAAAIgCuKa4D3I5sZAQAAQBsS2tkAgBsS2tkAwBsS2tkBABsS2tk",
+      "pharmacist": 71,
+      "patient": 69,
+      "status": "Disapproved",
+      "instructions": "fdfdfff",
+      "anamnesis": "gggfgff"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 108,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAD+XHcUNLyW8M0+BqLtTyqh+YpkyaTrp542nGbE3x0UFmTNKL8AAAAAIgCPk/EFnpdsZAQAAQAuVGtkAgAuVGtkAwAuVGtkBAAuVGtk",
+      "pharmacist": 71,
+      "patient": 72,
+      "status": "Approved",
+      "instructions": "על בטן מלאה עד פעמיים ביום",
+      "anamnesis": "מטופל בשם שיקו מבקש לקיחת תרופת אטנט\nקיבל הנחיות מאושר."
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 109,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIABe3G8zw2XxLU/p/2ngEmSV5fEkYOIurYXiPjk7hxFEdWTNKL8AAAAAIgC778ABKZtsZAQAAQC5V2tkAgC5V2tkAwC5V2tkBAC5V2tk",
+      "pharmacist": 71,
+      "patient": 72,
+      "status": "Approved",
+      "instructions": "פעם ביום על בטן מלאה",
+      "anamnesis": "המטופל שיקו רוצה תרופת אטנט תקופה לחוצה בלימודים"
+    }
+  },
+  {
+    "model": "polls.pharmacist_call",
+    "pk": 110,
+    "fields": {
+      "token": "006d3754641865b422f90f234d5766a4d8aIAB0ma3TB7qqvWcgVp2MKOoCUPah8ESvHA5SBIOhzXApYGTNKL8AAAAAIgBV1HUDdZtsZAQAAQAFWGtkAgAFWGtkAwAFWGtkBAAFWGtk",
+      "pharmacist": 71,
+      "patient": 72,
+      "status": "Disapproved",
+      "instructions": "לא מאושר",
+      "anamnesis": "בחור בשם מושיקוקי ואזאנה מקלל את הרוקח,\nלא מאושר."
     }
   }
 ]

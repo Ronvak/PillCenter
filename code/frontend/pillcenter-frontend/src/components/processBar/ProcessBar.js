@@ -4,19 +4,18 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-
 import MedicineChoose from "../orderFlow/MedicineChoose";
 import MachinesList from "../orderFlow/MachinesList";
 import PaymentNConfirm from "../orderFlow/PaymentNConfirm";
 import Questionnaire from "../questionnaire/Questionnaire";
 import VideoCallMessage from "../modals/VideoCallMessage";
 import WaitingRoom from "../pharamacist/WaitingRoom";
-
+import { useNavigate } from "react-router-dom";
 export default function ProcessBar(props) {
   const [steps, setSteps] = useState([
     "בחירת מרשם",
     "מיקום איסוף",
-    "שאלון",
+    "שאלון רפואי",
     "תשלום ואישור",
   ]);
   const { prescriptioned } = props;
@@ -29,7 +28,7 @@ export default function ProcessBar(props) {
   const [questionnaire, setQuestionnaire] = useState({});
   const [oneTime, setOneTime] = useState(0);
   const [openVideoCallMessage, setOpenVideoCallMessage] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (prescriptioned === "True" && oneTime === 0) {
       let newSteps = [...steps];
@@ -47,10 +46,13 @@ export default function ProcessBar(props) {
     return skipped.has(step);
   };
 
-  const handleFinishVideoSession = (input) => {
-    setPharmacistInstructions(input);
-    handleNext();
-  };
+  function handleFinishVideoSession(instructions, isApproved) {
+    console.log(isApproved);
+    if (isApproved) {
+      setPharmacistInstructions(instructions);
+      handleNext();
+    } else navigate("/");
+  }
   const handlePrescriptionChoose = (input) => {
     if (isNaN(input) === false) {
       setMedicineChoice(input);

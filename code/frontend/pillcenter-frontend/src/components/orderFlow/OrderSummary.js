@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Navigation from "./Navigation";
 import GoogleMaps from "./GoogleMaps";
 import { useNavigate } from "react-router-dom";
+
 export default function OrderSummary(props) {
   const { machineChoice, order } = props;
   const [distance, setDistance] = useState();

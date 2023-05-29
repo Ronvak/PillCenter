@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Link from "@mui/material/Link";
@@ -107,9 +106,8 @@ export default function SignUp() {
       profile: { phone: phone, id_user: id },
     };
     var response = signUp(user);
-    console.log(response);
+
     response.then((value) => {
-      console.log(value);
       if (value.includes("username already exists")) setUserTaken(true);
       if (value.includes("address already exists")) setEmailTaken(true);
       if (value.includes("User Created Successfully")) navigate("/login");

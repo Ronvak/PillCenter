@@ -1,5 +1,4 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -52,7 +51,7 @@ export default function CancelOrder(props) {
       <MyButton
         variant="outlined"
         onClick={handleClickOpen}
-        sx={{ width: "50%", marginBottom: 3 }}
+        sx={{ width: "51%", marginBottom: 3 }}
         orderid={orderid}
       >
         ביטול הזמנה
@@ -72,10 +71,12 @@ export default function CancelOrder(props) {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleCancel}>
+          <MyButton fullWidth onClick={handleCancel}>
             כן אני בטוח
-          </Button>
-          <Button onClick={handleClose}>לא</Button>
+          </MyButton>
+          <MyButton fullWidth onClick={handleClose}>
+            לא
+          </MyButton>
         </DialogActions>
       </Dialog>
     </div>
