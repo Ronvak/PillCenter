@@ -7,7 +7,7 @@ import VideoCall from "../../agora/VideoCall";
 import TextField from "@mui/material/TextField";
 import useAuth from "../../hooks/useAuth";
 import EndSession from "../modals/EndSession";
-
+import { Await, useNavigate } from "react-router-dom";
 export default function VideoRoom() {
   const [inCall, setInCall] = useState(false);
   const [token, setToken] = useState();
@@ -15,7 +15,6 @@ export default function VideoRoom() {
   const [instructions, setInstructions] = useState("");
   const [anamnesis, setAnamnesis] = useState("");
   const [finish, setFinish] = useState(false);
-
   const { auth } = useAuth();
   async function createChannel() {
     let data = {
@@ -43,6 +42,7 @@ export default function VideoRoom() {
       anamnesis: anamnesis,
       session: session,
     };
+
     await axios.post("/api/endsession/", data).catch((e) => console.log(e));
     setFinish(true);
   }
@@ -87,7 +87,10 @@ export default function VideoRoom() {
           <MyButton
             sx={{ marginTop: 3 }}
             fullWidth
-            onClick={() => handleVideoSession()}
+            onClick={() => {
+              setFinish(false);
+              handleVideoSession();
+            }}
           >
             התחל שיחה{" "}
           </MyButton>
