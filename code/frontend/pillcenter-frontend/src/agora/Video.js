@@ -1,8 +1,7 @@
 import { AgoraVideoPlayer } from "agora-rtc-react";
 import Grid from "@mui/material/Grid";
 import Controls from "./Controls";
-import Paper from "@mui/material/Grid";
-import Box from "@mui/system/Box";
+import Paper from "@mui/material/Paper";
 import { useState, useEffect } from "react";
 
 export default function Video(props) {
@@ -31,13 +30,17 @@ export default function Video(props) {
                   style={{
                     height: "100%",
                     width: "80%",
+                    position: "relative",
                   }}
                 >
                   <AgoraVideoPlayer
                     videoTrack={user.videoTrack}
                     key={user.uid}
-                    style={{ height: "300px", width: "100%" }}
-                  ></AgoraVideoPlayer>
+                    style={{
+                      height: "300px",
+                      width: "100%",
+                    }}
+                  />
                 </Paper>
               </Grid>
             );
@@ -52,16 +55,20 @@ export default function Video(props) {
             borderTop: "solid",
             borderTopWidth: "14px",
             borderTopColor: "#C0C0C0",
+            position: "relative",
           }}
         >
           <AgoraVideoPlayer
             videoTrack={tracks[1]}
-            style={{ height: "200px", width: "100%" }}
-          ></AgoraVideoPlayer>
-          <Paper
-            elevation={13}
-            sx={{
-              backgroundColor: "#C0C0C0",
+            key={tracks[1].getTrackId()}
+            style={{ height: "220px", width: "100%" }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              bottom: "1px",
+              left: "20px",
+              zIndex: 1,
             }}
           >
             <Controls
@@ -70,7 +77,7 @@ export default function Video(props) {
               setInCall={setInCall}
               finish={finish}
             />
-          </Paper>
+          </div>
         </Paper>
       </Grid>
     </Grid>
