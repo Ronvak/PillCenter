@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
-
+import * as React from "react";
 import { Box, Typography } from "@mui/material";
 import PharmacistOpt from "../components/pharmacistLanding/PharmacistOpt";
 import useAuth from "../hooks/useAuth";

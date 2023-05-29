@@ -1,6 +1,5 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-
 import Avatar from "@mui/material/Avatar";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -10,7 +9,6 @@ import ListItemText from "@mui/material/ListItemText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import VaccinesIcon from "@mui/icons-material/Vaccines";
-
 import { blue } from "@mui/material/colors";
 
 const messageAccept = "הרוקח אישר את לקיחת התרופה בעבורך. אתה מועבר לשלב הבא.";

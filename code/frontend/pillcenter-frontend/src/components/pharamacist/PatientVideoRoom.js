@@ -3,7 +3,6 @@ import axios from "axios";
 import MyButton from "../buttons/ButtonTemplate";
 import Box from "@mui/material/Box";
 import VideoCall from "../../agora/VideoCall";
-
 import useAuth from "../../hooks/useAuth";
 
 export default function PatientVideoRoom(props) {

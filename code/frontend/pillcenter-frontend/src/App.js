@@ -17,10 +17,11 @@ import MyOrdersPage from "./pages/MyOrdersPage";
 import PharmacistLandingPage from "./pages/PharmacistLandingPage";
 import Consultant from "./components/pharmacist/Consultant";
 import VideoRoom from "./components/pharmacist/VideoRoom";
-import React from "react";
+import React, { useState } from "react";
 import WaitingRoom from "./components/pharamacist/WaitingRoom";
 
 import PatientVideoRoom from "./components/pharamacist/PatientVideoRoom";
+import LoginMessage from "./components/modals/LoginMessage";
 
 const cacheRtl = createCache({
   key: "muirtl",
@@ -32,13 +33,16 @@ const theme = createTheme({
 });
 
 function App() {
+  const [hasLoggedIn, setHasLoggedIn] = useState(false);
   return (
     <div className="App">
       <CacheProvider value={cacheRtl}>
         <ThemeProvider theme={theme}>
           <div dir="rtl">
+            {hasLoggedIn && <LoginMessage />}
+
             <Router>
-              <AuthProvider>
+              <AuthProvider setHasLoggedIn={setHasLoggedIn}>
                 <Routes>
                   <Route element={<PrivateRoute allowedRoles={["patient"]} />}>
                     <Route path="/" element={<PatientLandingPage />} exact />

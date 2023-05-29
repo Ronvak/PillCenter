@@ -53,10 +53,10 @@ export default function Questionnaire(props) {
   return (
     <center>
       <br></br>
-      <br></br>
+
       <Box sx={{ width: "80%" }}>
         <Typography variant="h6" component="h2" gutterBottom>
-          שאלון רפואי
+          <strong>שאלון רפואי</strong>
         </Typography>
         <FormControl component="fieldset">
           <FormGroup>
@@ -207,11 +207,11 @@ export default function Questionnaire(props) {
                   {questions.question4 === "כן" && (
                     <TextField
                       id="standard-basic"
-                      label="אנא ציין את שם התרופה,המינון והתדירות"
+                      label="אנא ציין את שם התרופה,מינון ותדירות"
                       name="question4Details"
                       value={questions.question4Details}
                       onChange={handleQuestionChange}
-                      sx={{ m: 1, width: "100%", height: "10%" }}
+                      sx={{ m: 1, width: "98%", height: "10%" }}
                     />
                   )}
                 </FormControl>
@@ -365,11 +365,11 @@ export default function Questionnaire(props) {
                   {questions.question8 === "כן" && (
                     <TextField
                       id="standard-basic"
-                      label="ציין את שם הרופא הרושם,פרטי התקשרות ותאריך "
+                      label="ציין שם רופא,פרטי התקשרות ותאריך "
                       name="question8Details"
                       value={questions.question8Details}
                       onChange={handleQuestionChange}
-                      sx={{ m: 1, width: "102%", height: "10%" }}
+                      sx={{ m: 1, width: "98%", height: "10%" }}
                     />
                   )}
                 </FormControl>
