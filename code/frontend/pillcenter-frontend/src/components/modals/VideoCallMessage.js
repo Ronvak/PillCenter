@@ -3,11 +3,9 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-
 import MyButton from "../buttons/ButtonTemplate";
 import Draggable from "react-draggable";
 import * as React from "react";
-
 import { Paper } from "@mui/material";
 
 export default function VideoCallMessage({ open, handleClose, handleNext }) {

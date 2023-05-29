@@ -4,7 +4,6 @@ import Item from "../buttons/Item";
 import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import VideoCallMessage from "../modals/VideoCallMessage";
 
 export default function PatientOpt() {
   const navigate = useNavigate();
@@ -12,7 +11,7 @@ export default function PatientOpt() {
 
   return (
     <>
-      <Box sx={{ width: "82%" }}>
+      <Box sx={{ width: "84%" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid xs={6}>
             <Item
