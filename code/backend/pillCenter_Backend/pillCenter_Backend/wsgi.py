@@ -12,7 +12,7 @@ import sys
 
 from django.core.wsgi import get_wsgi_application
 
-SERVER_BASE = 'c:/Apache24/_projects/pillcenter/server'
+SERVER_BASE = '/var/www/pillcenter/server'
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pillCenter_Backend.settings')
 
 sys.path.append(SERVER_BASE)
