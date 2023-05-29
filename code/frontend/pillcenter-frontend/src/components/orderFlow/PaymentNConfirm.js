@@ -10,7 +10,6 @@ export default function PaymentNConfirm(props) {
   const { auth } = useAuth();
   const { machineChoice, medicineChoice, pharmacistInstruction } = props;
   const [order, setOrder] = useState();
-
   function handleComplete() {
     completeOrder();
     setCompleted(true);
@@ -21,7 +20,9 @@ export default function PaymentNConfirm(props) {
       user_id: auth?.id,
       medicine_id: medicineChoice,
       machine_id: machineChoice?.id,
-      pharmacist_instruction: pharmacistInstruction,
+      pharmacist_instruction: !pharmacistInstruction
+        ? "אין הוראות מיוחדות"
+        : pharmacistInstruction,
     };
     const res = await axios
       .post("/api/completeorder/", orderDetails)
@@ -29,7 +30,9 @@ export default function PaymentNConfirm(props) {
         setOrder(response.data);
         return response;
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   }
   return (
     <center>
