@@ -18,5 +18,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pillCenter_Backend.settings')
 sys.path.append(SERVER_BASE)
 sys.path.append(f'{SERVER_BASE}/pillCenter_Backend')
 sys.path.append(f'{SERVER_BASE}/polls')
+sys.path.append(f'{SERVER_BASE}/media/qr_codes')
 
 application = get_wsgi_application()
