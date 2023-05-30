@@ -7,7 +7,6 @@ import MicOffIcon from "@mui/icons-material/MicOff";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import VideocamoffIcon from "@mui/icons-material/VideocamOff";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-
 export default function Controls(props) {
   const client = useClient();
   const { tracks, setStart, setInCall, finish } = props;
@@ -39,21 +38,29 @@ export default function Controls(props) {
     if (finish) leaveChannel();
   }, [finish]);
   return (
-    <Grid container spacing={4} alignItems="center">
+    <Grid container spacing={4}>
       <Grid item>
         <Button onClick={() => mute("audio")}>
-          {trackState.audio ? <MicIcon /> : <MicOffIcon />}
+          {trackState.audio ? (
+            <MicIcon color="error" />
+          ) : (
+            <MicOffIcon color="error" />
+          )}
         </Button>
       </Grid>
       <Grid item>
         <Button onClick={() => mute("video")}>
-          {trackState.video ? <VideocamIcon /> : <VideocamoffIcon />}
+          {trackState.video ? (
+            <VideocamIcon color="error" />
+          ) : (
+            <VideocamoffIcon color="error" />
+          )}
         </Button>
       </Grid>
       <Grid item>
-        <Button onClick={() => leaveChannel()}>
-          התנתקות
-          <ExitToAppIcon />
+        <Button color="error" onClick={() => leaveChannel()}>
+          התנתקות&nbsp;
+          <ExitToAppIcon color="error" />
         </Button>
       </Grid>
     </Grid>

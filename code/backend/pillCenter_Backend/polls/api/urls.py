@@ -19,5 +19,6 @@ urlpatterns = [
     path('generatetoken/', views.tokenGenerator),
     path('joinchannel/', views.joinChannel),
     path('endsession/', views.endSession),
-    path('getchannel/' , views.getChannel)
+    path('getchannel/' , views.getChannel),
+    path('getmedicine/', views.get_medicine),
 ] + static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)

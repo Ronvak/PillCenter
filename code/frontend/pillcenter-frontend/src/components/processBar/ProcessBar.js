@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-
 import MedicineChoose from "../orderFlow/MedicineChoose";
 import MachinesList from "../orderFlow/MachinesList";
 import PaymentNConfirm from "../orderFlow/PaymentNConfirm";
@@ -16,7 +15,7 @@ export default function ProcessBar(props) {
   const [steps, setSteps] = useState([
     "בחירת מרשם",
     "מיקום איסוף",
-    "שאלון",
+    "שאלון רפואי",
     "תשלום ואישור",
   ]);
   const { prescriptioned } = props;

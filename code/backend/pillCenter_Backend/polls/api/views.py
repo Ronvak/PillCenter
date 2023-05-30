@@ -10,6 +10,7 @@ from rest_framework import generics
 from polls.models import Medicine, Inventory, Products, Vending_machines, Orders , Pharmacist_Call
 from django.contrib.auth import get_user_model
 from agora_token_builder import RtcTokenBuilder
+from polls import serializers
 import time
 
 User = get_user_model()
@@ -214,3 +215,13 @@ def endSession(request):
     pharmacist_call.save()
 
     return Response(status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def get_medicine(request):
+    query = request.GET.get('q',None)
+    medicine = Medicine.objects
+    if query is not None:
+        medicine =medicine.get(id = query)
+    serializer = serializers.MedicineSerializer(medicine)
+    return Response(serializer.data)
