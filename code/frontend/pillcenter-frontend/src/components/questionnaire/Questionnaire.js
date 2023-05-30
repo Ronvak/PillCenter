@@ -94,7 +94,7 @@ export default function Questionnaire(props) {
                       name="question1Details"
                       value={questions.question1Details}
                       onChange={handleQuestionChange}
-                      sx={{ m: 1, width: "98%", height: "10%" }}
+                      sx={{ m: 1, width: "95%", height: "10%" }}
                     />
                   )}
                 </FormControl>
@@ -133,7 +133,7 @@ export default function Questionnaire(props) {
                       name="question2Details"
                       value={questions.question2Details}
                       onChange={handleQuestionChange}
-                      sx={{ m: 1, width: "98%", height: "10%" }}
+                      sx={{ m: 1, width: "95%", height: "10%" }}
                     />
                   )}
                 </FormControl>
@@ -172,7 +172,7 @@ export default function Questionnaire(props) {
                       name="question3Details"
                       value={questions.question3Details}
                       onChange={handleQuestionChange}
-                      sx={{ m: 1, width: "98%", height: "10%" }}
+                      sx={{ m: 1, width: "95%", height: "10%" }}
                     />
                   )}
                 </FormControl>
@@ -211,7 +211,7 @@ export default function Questionnaire(props) {
                       name="question4Details"
                       value={questions.question4Details}
                       onChange={handleQuestionChange}
-                      sx={{ m: 1, width: "98%", height: "10%" }}
+                      sx={{ m: 1, width: "95%", height: "10%" }}
                     />
                   )}
                 </FormControl>
@@ -250,7 +250,7 @@ export default function Questionnaire(props) {
                       name="question5Details"
                       value={questions.question5Details}
                       onChange={handleQuestionChange}
-                      sx={{ m: 1, width: "98%", height: "10%" }}
+                      sx={{ m: 1, width: "95%", height: "10%" }}
                     />
                   )}
                 </FormControl>
@@ -290,7 +290,7 @@ export default function Questionnaire(props) {
                       name="question6Details"
                       value={questions.question6Details}
                       onChange={handleQuestionChange}
-                      sx={{ m: 1, width: "98%", height: "10%" }}
+                      sx={{ m: 1, width: "95%", height: "10%" }}
                     />
                   )}
                 </FormControl>
@@ -329,7 +329,7 @@ export default function Questionnaire(props) {
                       name="question7Details"
                       value={questions.question7Details}
                       onChange={handleQuestionChange}
-                      sx={{ m: 1, width: "98%", height: "10%" }}
+                      sx={{ m: 1, width: "95%", height: "10%" }}
                     />
                   )}
                 </FormControl>
@@ -369,7 +369,7 @@ export default function Questionnaire(props) {
                       name="question8Details"
                       value={questions.question8Details}
                       onChange={handleQuestionChange}
-                      sx={{ m: 1, width: "98%", height: "10%" }}
+                      sx={{ m: 1, width: "95%", height: "10%" }}
                     />
                   )}
                 </FormControl>
@@ -442,9 +442,13 @@ export default function Questionnaire(props) {
                   >
                     לאלו תסמינים או מצבים אתה מחפש טיפול? נא לתאר אותם
                     בפירוט,כולל משך הזמן והחומרה:
+                    <br></br>
                     <TextField
-                      id="standard-basic"
-                      sx={{ m: 1, width: "98%", height: "10%" }}
+                      id="outlined-multiline-static"
+                      label="אנא ציין כאן"
+                      multiline
+                      maxrows={5}
+                      sx={{ m: 1, width: "95%", height: "10%" }}
                     />
                   </RadioGroup>
                 </FormControl>
