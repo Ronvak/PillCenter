@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Cards from "react-credit-cards";
+import Cards from "react-credit-cards-2";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import "react-credit-cards/es/styles-compiled.css";
+import "react-credit-cards-2/dist/es/styles-compiled.css";
 import MyButton from "../buttons/ButtonTemplate";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
