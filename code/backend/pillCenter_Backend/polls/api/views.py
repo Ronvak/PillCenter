@@ -11,6 +11,7 @@ from polls.models import Medicine, Inventory, Products, Vending_machines, Orders
 from django.contrib.auth import get_user_model
 from agora_token_builder import RtcTokenBuilder
 from polls import serializers
+from django.conf import settings
 import time
 
 User = get_user_model()
@@ -186,8 +187,8 @@ def getChannel(request):
 @api_view(['POST'])
 def tokenGenerator(request):
     
-    appId = "AGORA_APP_ID"
-    appCertificate = "AGORA_APP_CERTIFICATE" 
+    appId = settings.AGORA_APP_ID
+    appCertificate = settings.AGORA_APP_CERTIFICATE
     channelName = "main"
     uid = 0
     role = 1
