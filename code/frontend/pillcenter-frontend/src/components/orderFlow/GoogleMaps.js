@@ -10,11 +10,11 @@ export default function GoogleMaps(props) {
   const [currLocation, setCurrLocation] = useState({ lat: 3, lng: 3 });
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCyF66ttzw2cSYnzbKY5Wyeuuiqdsl4oZ8",
+    googleMapsApiKey: "GOOGLE_API_KEY",
   });
 
   useEffect(() => {
-    Geocode.setApiKey("AIzaSyCyF66ttzw2cSYnzbKY5Wyeuuiqdsl4oZ8");
+    Geocode.setApiKey("GOOGLE_API_KEY");
     Geocode.setLanguage("he");
     Geocode.setRegion("il");
     Geocode.fromAddress(

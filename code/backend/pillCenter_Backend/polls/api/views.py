@@ -186,8 +186,8 @@ def getChannel(request):
 @api_view(['POST'])
 def tokenGenerator(request):
     
-    appId = "d3754641865b422f90f234d5766a4d8a"
-    appCertificate = "086e46eb10be41a5b00982c16279b6e6"
+    appId = "AGORA_APP_ID"
+    appCertificate = "AGORA_APP_CERTIFICATE" 
     channelName = "main"
     uid = 0
     role = 1

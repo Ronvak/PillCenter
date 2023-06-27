@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-n=&*upr9t_86romk(fs^1#*hbq_g(8b#dzxchg0zhwi&$qnm7+'
+SECRET_KEY = 'your-secret-key-here'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -183,7 +183,7 @@ def verified_callback(user):
 
 EMAIL_VERIFIED_CALLBACK = verified_callback
 
-EMAIL_FROM_ADDRESS = 'pillcenterdev@gmail.com'
+EMAIL_FROM_ADDRESS = 'TYPE_YOUR_EMAIL_HERE'
 EMAIL_MAIL_SUBJECT = 'אימות הדואר אלקטרוני שלך'
 EMAIL_MAIL_HTML = 'mail.html'
 EMAIL_MAIL_PLAIN = 'plainmail.txt'
@@ -197,8 +197,9 @@ MAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'pillcenterdev@gmail.com'
-EMAIL_HOST_PASSWORD ="wlop nymn bxzd totq"
+
+EMAIL_HOST_USER = 'TYPE_YOUR_EMAIL_HERE'
+EMAIL_HOST_PASSWORD ="TYPE_YOUR_EMAIL_PASSWORD_HERE"
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SERVER_EMAIL = EMAIL_HOST_USER
